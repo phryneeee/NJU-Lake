@@ -21,5 +21,8 @@
   { "id": "letter_paper", "name": "信纸", "color": "#E8DCC0", "descTextId": "items.letter_paper" },
   { "id": "signed_letter", "name": "签了名的信", "color": "#D8C8A8", "descTextId": "items.signed_letter" },
   { "id": "waxed_boat", "name": "封蜡纸船", "color": "#B8A888", "descTextId": "items.waxed_boat" },
-  { "id": "file_half_2001", "name": "档案404·2001半卷", "color": "#A98E6F", "descTextId": "items.file_half_2001" }
+  { "id": "file_half_2001", "name": "档案404·2001半卷", "color": "#A98E6F", "descTextId": "items.file_half_2001" },
+  { "id": "desk_lamp", "name": "台灯", "color": "#E8C84A", "descTextId": "items.desk_lamp" },
+  { "id": "chalk_piece", "name": "半截粉笔", "color": "#F0F0E8", "descTextId": "items.chalk_piece" },
+  { "id": "archive_r6", "name": "残缺档案⑥", "color": "#8C3B2E", "descTextId": "items.archive_r6" }
 ]

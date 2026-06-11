@@ -137,6 +137,7 @@
       "onTap": [
         { "type": "say", "textId": "ch4.self35_1" },
         { "type": "say", "textId": "ch4.self35_2" },
+        { "type": "give", "item": "chalk_piece" },
         { "type": "say", "textId": "ch4.self35_3" },
         { "type": "setFlag", "flag": "ch4_complete" },
         { "type": "goRoom", "room": "ch5_lab" },

@@ -1,0 +1,64 @@
+{
+  "id": "ch6_cabinets",
+  "label": "归档（乌鸦推来四个档案柜。无论选哪个——）",
+  "color": "#1f3328",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "cab_phd",
+      "rect": [240, 560, 320, 520],
+      "hiddenIfFlag": "ch6_archived",
+      "onTap": [
+        { "type": "say", "textId": "ch6.chose_phd" },
+        { "type": "setFlag", "flag": "ch6_archived" },
+        { "type": "say", "textId": "ch6.archived_common" }
+      ]
+    },
+    {
+      "id": "cab_abroad",
+      "rect": [680, 560, 320, 520],
+      "hiddenIfFlag": "ch6_archived",
+      "onTap": [
+        { "type": "say", "textId": "ch6.chose_abroad" },
+        { "type": "setFlag", "flag": "ch6_archived" },
+        { "type": "say", "textId": "ch6.archived_common" }
+      ]
+    },
+    {
+      "id": "cab_leave",
+      "rect": [1120, 560, 320, 520],
+      "hiddenIfFlag": "ch6_archived",
+      "onTap": [
+        { "type": "say", "textId": "ch6.chose_leave" },
+        { "type": "setFlag", "flag": "ch6_archived" },
+        { "type": "say", "textId": "ch6.archived_common" }
+      ]
+    },
+    {
+      "id": "cab_blank",
+      "rect": [1560, 560, 320, 520],
+      "hiddenIfFlag": "ch6_archived",
+      "onTap": [
+        { "type": "say", "textId": "ch6.chose_blank" },
+        { "type": "setFlag", "flag": "ch6_archived" },
+        { "type": "say", "textId": "ch6.archived_common" }
+      ]
+    },
+    {
+      "id": "exit_morning",
+      "rect": [880, 1160, 320, 220],
+      "requiresFlag": "ch6_archived",
+      "onTap": [{ "type": "goRoom", "room": "ch6_ending" }]
+    },
+    {
+      "id": "binf_elevator",
+      "rect": [1700, 1160, 280, 220],
+      "requiresFlag": "ch6_archived",
+      "requiresItems": ["burned_slip", "archive_r2", "archive_r3", "archive_r4", "archive_r5", "archive_r6"],
+      "onTap": [
+        { "type": "say", "textId": "ch6.binf_appears" },
+        { "type": "goRoom", "room": "ch6_infinity" }
+      ]
+    }
+  ]
+}

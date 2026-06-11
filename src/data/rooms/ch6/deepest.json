@@ -1,0 +1,36 @@
+{
+  "id": "ch6_deepest",
+  "label": "最深档案室（一盏台灯，一位档案管理员）",
+  "color": "#2a2218",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "old_labels",
+      "rect": [320, 480, 380, 520],
+      "onTap": [{ "type": "say", "textId": "ch6.old_labels" }]
+    },
+    {
+      "id": "self50",
+      "rect": [920, 540, 360, 520],
+      "hiddenIfFlag": "hidden_complete",
+      "onTap": [
+        { "type": "say", "textId": "ch6.self50_1" },
+        { "type": "say", "textId": "ch6.self50_2" },
+        { "type": "say", "textId": "ch6.self50_3" },
+        { "type": "say", "textId": "ch6.self50_4" },
+        { "type": "setFlag", "flag": "hidden_complete" },
+        {
+          "type": "chapterCard",
+          "title": "隐藏结局 · 历史学者",
+          "subtitle": "历史学家的工作不是评判过去，而是温柔地保存它。"
+        }
+      ]
+    },
+    {
+      "id": "after_hidden",
+      "rect": [920, 540, 360, 520],
+      "requiresFlag": "hidden_complete",
+      "onTap": [{ "type": "say", "textId": "ch6.after_hidden" }]
+    }
+  ]
+}

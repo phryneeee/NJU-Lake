@@ -46,7 +46,11 @@ export class RoomScene extends Phaser.Scene {
       this.time.delayedCall(0, () => this.buildHotspots());
     };
     GameState.on('flag', onFlag);
-    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => GameState.off('flag', onFlag));
+    GameState.on('inventory', onFlag); // requiresItems 条件也需要随物品栏刷新
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
+      GameState.off('flag', onFlag);
+      GameState.off('inventory', onFlag);
+    });
 
     if (!this.scene.isActive('UI')) this.scene.launch('UI');
   }
@@ -63,7 +67,9 @@ export class RoomScene extends Phaser.Scene {
     this.hotspotLayer.removeAll(true);
     for (const h of this.room.hotspots) {
       if (h.requiresFlag && !GameState.hasFlag(h.requiresFlag)) continue;
+      if (h.requiresFlags && !h.requiresFlags.every((f) => GameState.hasFlag(f))) continue;
       if (h.hiddenIfFlag && GameState.hasFlag(h.hiddenIfFlag)) continue;
+      if (h.requiresItems && !h.requiresItems.every((it) => GameState.hasItem(it))) continue;
       this.addHotspot(h);
     }
   }

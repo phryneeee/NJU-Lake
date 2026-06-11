@@ -33,6 +33,10 @@ export interface HotspotDef {
   rect: [number, number, number, number];
   /** 仅当持有该 flag 时显示 */
   requiresFlag?: string;
+  /** 仅当同时持有这些 flag 时显示（如三件信物都已归还） */
+  requiresFlags?: string[];
+  /** 仅当物品栏持有这些物品时显示（如隐藏结局需集齐6份残缺档案） */
+  requiresItems?: string[];
   /** 持有该 flag 后隐藏（如已解开的锁） */
   hiddenIfFlag?: string;
   /** 直接点击触发 */

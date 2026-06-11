@@ -36,6 +36,7 @@
         { "type": "say", "textId": "ch2.self26_1" },
         { "type": "say", "textId": "ch2.self26_2" },
         { "type": "say", "textId": "ch2.self26_3" },
+        { "type": "give", "item": "desk_lamp" },
         { "type": "setFlag", "flag": "ch2_complete" },
         { "type": "goRoom", "room": "ch3_dorm" },
         {

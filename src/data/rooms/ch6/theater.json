@@ -1,0 +1,133 @@
+{
+  "id": "ch6_theater",
+  "label": "恩玲剧场（梦境版：观众席无限延伸进黑暗）",
+  "color": "#231c1c",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "committee",
+      "rect": [300, 480, 560, 320],
+      "onTap": [{ "type": "say", "textId": "ch6.committee" }]
+    },
+    {
+      "id": "projector",
+      "rect": [920, 760, 320, 260],
+      "hiddenIfFlag": "ch6_slides_done",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "SortPuzzle",
+          "config": {
+            "prompt": "答辩第一环节。老式幻灯机，六张幻灯片散落——我的论文，就是这一路收集的全部校史。\n按时间顺序排入卡槽。",
+            "cards": [
+              { "id": "k4", "label": "2009\n杜厦图书馆\n开馆" },
+              { "id": "k1", "label": "1919\n北大楼\n落成" },
+              { "id": "k6", "label": "2026\n答辩\n此刻" },
+              { "id": "k2", "label": "2001\n鼓楼老馆\n与羊山奠基" },
+              { "id": "k5", "label": "2012\n成为\n主校区" },
+              { "id": "k3", "label": "2009前\n仙林\n动工" }
+            ],
+            "correctOrder": ["k1", "k2", "k3", "k4", "k5", "k6"],
+            "wrongText": "幻灯机咔哒一声卡住了。乌鸦先生抬了抬笔尖——顺序不对。",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch6_slides_done" },
+              { "type": "say", "textId": "ch6.slides_done" },
+              { "type": "say", "textId": "ch6.three_rise" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "rect": [1300, 460, 220, 380],
+      "requiresFlag": "ch6_slides_done",
+      "hiddenIfFlag": "ch6_gave_lamp",
+      "useItem": {
+        "item": "desk_lamp",
+        "consume": true,
+        "actions": [
+          { "type": "setFlag", "flag": "ch6_gave_lamp" },
+          { "type": "say", "textId": "ch6.gave_lamp" }
+        ]
+      },
+      "wrongTextId": "ch6.q26_ask"
+    },
+    {
+      "id": "q30",
+      "rect": [1540, 460, 220, 380],
+      "requiresFlag": "ch6_slides_done",
+      "hiddenIfFlag": "ch6_gave_photo",
+      "useItem": {
+        "item": "half_photo",
+        "consume": true,
+        "actions": [
+          { "type": "setFlag", "flag": "ch6_gave_photo" },
+          { "type": "say", "textId": "ch6.gave_photo" }
+        ]
+      },
+      "wrongTextId": "ch6.q30_ask"
+    },
+    {
+      "id": "q35",
+      "rect": [1780, 460, 220, 380],
+      "requiresFlag": "ch6_slides_done",
+      "hiddenIfFlag": "ch6_gave_chalk",
+      "useItem": {
+        "item": "chalk_piece",
+        "consume": true,
+        "actions": [
+          { "type": "setFlag", "flag": "ch6_gave_chalk" },
+          { "type": "say", "textId": "ch6.gave_chalk" }
+        ]
+      },
+      "wrongTextId": "ch6.q35_ask"
+    },
+    {
+      "id": "fox_seat",
+      "rect": [560, 880, 260, 240],
+      "requiresFlag": "ch6_slides_done",
+      "hiddenIfFlag": "ch6_got_r6",
+      "useItem": {
+        "item": "fox_mask",
+        "consume": true,
+        "actions": [
+          { "type": "say", "textId": "ch6.fox_seat" },
+          { "type": "give", "item": "archive_r6" },
+          { "type": "setFlag", "flag": "ch6_got_r6" },
+          { "type": "say", "textId": "ch6.r6_found" }
+        ]
+      },
+      "wrongTextId": "ch6.fox_seat_hint"
+    },
+    {
+      "id": "sign_desk",
+      "rect": [920, 1080, 320, 220],
+      "requiresFlags": ["ch6_gave_lamp", "ch6_gave_photo", "ch6_gave_chalk"],
+      "hiddenIfFlag": "ch6_signed",
+      "onTap": [
+        { "type": "say", "textId": "ch6.final_stage" },
+        {
+          "type": "openPuzzle",
+          "puzzle": "SignPuzzle",
+          "config": {
+            "prompt": "最终环节。空白档案摊开在桌上。章盘里有四枚章——墨水台旁，乌鸦先生把他的羽毛笔轻轻推了过来。",
+            "stamps": [
+              { "label": "优", "reaction": "印面落纸，碎成了灰。猫头鹰摇头：「这不是考卷。」" },
+              { "label": "良", "reaction": "灰。鹿女士的怀表走了一格：「人生不打分。」" },
+              { "label": "正确", "reaction": "灰。整个剧场安静了一瞬——观众席深处传来狐狸短促的笑，又戛然而止。" },
+              { "label": "错误", "reaction": "灰。白兔捂住了怀表，鲤鱼吐了个泡。乌鸦先生终于开口：「试完了？」" }
+            ],
+            "signHint": "（评价体系全部失效。桌上还剩一支笔。）",
+            "signedText": "落笔的瞬间，剧场所有的灯一起转暖。观众席亮起——座无虚席，全是各个年龄的我。第二排，周韵秋安静地坐着，微笑。",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch6_signed" },
+              { "type": "say", "textId": "ch6.signed_after" },
+              { "type": "goRoom", "room": "ch6_cabinets" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

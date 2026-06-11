@@ -1,0 +1,30 @@
+{
+  "id": "ch6_ending",
+  "label": "杜厦图书馆门口（清晨六点，湖面晨雾）",
+  "color": "#4a5a66",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "dawn",
+      "rect": [620, 480, 820, 560],
+      "hiddenIfFlag": "ch6_complete",
+      "onTap": [
+        { "type": "say", "textId": "ch6.dawn_1" },
+        { "type": "say", "textId": "ch6.dawn_2" },
+        { "type": "say", "textId": "ch6.dawn_3" },
+        { "type": "setFlag", "flag": "ch6_complete" },
+        {
+          "type": "chapterCard",
+          "title": "真结局 · 归档",
+          "subtitle": "历史不记录正确答案，只记录被勇敢选择过的人生。"
+        }
+      ]
+    },
+    {
+      "id": "after_ending",
+      "rect": [620, 480, 820, 560],
+      "requiresFlag": "ch6_complete",
+      "onTap": [{ "type": "say", "textId": "ch6.after_ending" }]
+    }
+  ]
+}

@@ -61,8 +61,11 @@ for (const room of rooms) {
   }
   for (const h of room.hotspots ?? []) {
     const where = `${room.id}#${h.id}`;
-    for (const f of [h.requiresFlag, h.hiddenIfFlag].filter(Boolean)) {
+    for (const f of [h.requiresFlag, h.hiddenIfFlag, ...(h.requiresFlags ?? [])].filter(Boolean)) {
       if (!knownFlags.has(f)) errors.push(`${where}: 未登记 flag ${f}`);
+    }
+    for (const it of h.requiresItems ?? []) {
+      if (!knownItems.has(it)) errors.push(`${where}: 未知物品 ${it}`);
     }
     if (h.wrongTextId && !knownTexts.has(h.wrongTextId)) errors.push(`${where}: 缺文案 ${h.wrongTextId}`);
     for (const a of h.onTap ?? []) checkAction(a, where);
