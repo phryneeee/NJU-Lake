@@ -11,6 +11,19 @@
 - 24 个主线谜题 + 6 份残缺档案收集
 - Phaser 3 + TypeScript + Capacitor → iPad / TestFlight
 
+## 运行（灰盒开发版）
+
+```bash
+npm install
+npm run dev        # 浏览器打开提示的地址（iPad 同局域网可直接访问调试）
+npm run typecheck  # TS 严格检查
+npm run validate   # 数据一致性校验（房间JSON引用的flag/物品/文案/谜题）
+npm run build      # 产物在 dist/，可直接作为 Capacitor webDir
+```
+
+当前进度：**阶段0–3 完成**——引擎核心（数据驱动房间/状态机/存档/物品栏/字幕）+ 第一章《失踪的档案》5个房间、4个谜题灰盒可玩。
+灰盒模式下热区有描边和 id 标注（`RoomScene.ts` 的 `GREYBOX` 开关）。
+
 ## 设计文档索引
 
 | 文档 | 内容 |

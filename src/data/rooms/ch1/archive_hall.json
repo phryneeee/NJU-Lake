@@ -1,0 +1,43 @@
+{
+  "id": "ch1_archive_hall",
+  "label": "档案馆 · 查档大厅（嫏嬛路 · 怀安楼）",
+  "color": "#3E5C4B",
+  "exits": { "left": "ch1_corridor" },
+  "hotspots": [
+    {
+      "id": "rules_board",
+      "rect": [330, 430, 420, 320],
+      "onTap": [{ "type": "say", "textId": "ch1.rules" }]
+    },
+    {
+      "id": "register_desk",
+      "rect": [880, 760, 380, 240],
+      "hiddenIfFlag": "ch1_registered",
+      "useItem": {
+        "item": "library_card",
+        "actions": [
+          { "type": "setFlag", "flag": "ch1_registered" },
+          { "type": "say", "textId": "ch1.registered" }
+        ]
+      },
+      "wrongTextId": "ch1.desk_need_card"
+    },
+    {
+      "id": "storage_door",
+      "rect": [1480, 560, 240, 400],
+      "requiresFlag": "ch1_registered",
+      "onTap": [{ "type": "goRoom", "room": "ch1_storage" }]
+    },
+    {
+      "id": "storage_door_locked",
+      "rect": [1480, 560, 240, 400],
+      "hiddenIfFlag": "ch1_registered",
+      "onTap": [{ "type": "say", "textId": "ch1.storage_locked" }]
+    },
+    {
+      "id": "reading_door",
+      "rect": [180, 900, 220, 360],
+      "onTap": [{ "type": "goRoom", "room": "ch1_reading" }]
+    }
+  ]
+}

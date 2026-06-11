@@ -1,0 +1,6 @@
+[
+  { "id": "library_card", "name": "借阅证", "color": "#E8DCC0", "descTextId": "items.library_card" },
+  { "id": "crow_feather", "name": "乌鸦羽毛", "color": "#2B2B33", "descTextId": "items.crow_feather" },
+  { "id": "vhs_tape", "name": "录像带", "color": "#3E5C4B", "descTextId": "items.vhs_tape" },
+  { "id": "burned_slip", "name": "烧痕借阅单", "color": "#8C3B2E", "descTextId": "items.burned_slip" }
+]

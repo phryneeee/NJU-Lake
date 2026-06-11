@@ -1,0 +1,58 @@
+{
+  "id": "ch1_reading",
+  "label": "档案馆 · 资料室",
+  "color": "#41372b",
+  "exits": { "right": "ch1_archive_hall" },
+  "hotspots": [
+    {
+      "id": "vcr",
+      "rect": [880, 980, 320, 140],
+      "hiddenIfFlag": "ch1_inserted_tape",
+      "useItem": {
+        "item": "vhs_tape",
+        "consume": true,
+        "actions": [
+          { "type": "setFlag", "flag": "ch1_inserted_tape" },
+          { "type": "say", "textId": "ch1.vcr_in" }
+        ]
+      },
+      "wrongTextId": "ch1.vcr_need"
+    },
+    {
+      "id": "tv_static",
+      "rect": [820, 520, 440, 400],
+      "hiddenIfFlag": "ch1_inserted_tape",
+      "onTap": [{ "type": "say", "textId": "ch1.tv_static" }]
+    },
+    {
+      "id": "tv_play",
+      "rect": [820, 520, 440, 400],
+      "requiresFlag": "ch1_inserted_tape",
+      "hiddenIfFlag": "ch1_watched_vhs",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "VhsTuningPuzzle",
+          "config": {
+            "prompt": "录像机吱呀地转了起来。拖动两个跟踪旋钮，把噪声带分别压回画面上下边缘。",
+            "captions": [
+              "【画面一】2001年。鼓楼校区，老图书馆。一个穿白衬衫的年轻女人背对镜头，正把一卷档案放上书架。",
+              "【画面二】她停下了。窗外的梧桐影子落在地板上。她侧过头，像是听见了什么。",
+              "【画面三】镜头的尽头，书架之间，站着一个人。他有一颗乌鸦的头。他正看着镜头——看着你。画面定格：架上的索书号清晰可见，K295.3/2001。"
+            ],
+            "successActions": [
+              { "type": "setFlag", "flag": "ch1_watched_vhs" },
+              { "type": "say", "textId": "ch1.after_vhs" },
+              { "type": "setFlag", "flag": "ch1_complete" },
+              {
+                "type": "chapterCard",
+                "title": "第一章 · 失踪的档案",
+                "subtitle": "档案不在的地方，一定有人去过。——未完待续"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

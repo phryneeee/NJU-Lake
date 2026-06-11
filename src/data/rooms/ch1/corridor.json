@@ -1,0 +1,43 @@
+{
+  "id": "ch1_corridor",
+  "label": "历史学院 · 走廊（2026年6月，午后）",
+  "color": "#4a4438",
+  "exits": { "right": "ch1_archive_hall" },
+  "hotspots": [
+    {
+      "id": "note",
+      "rect": [560, 480, 240, 180],
+      "onTap": [{ "type": "say", "textId": "ch1.note" }]
+    },
+    {
+      "id": "board",
+      "rect": [1180, 430, 420, 320],
+      "onTap": [{ "type": "say", "textId": "ch1.board" }]
+    },
+    {
+      "id": "office_lock",
+      "rect": [860, 620, 200, 280],
+      "hiddenIfFlag": "ch1_unlocked_office",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "DialLockPuzzle",
+          "config": {
+            "answer": "1919",
+            "prompt": "办公室门锁：四位转盘。\n便条背面：「密码是校史的开端——北边那座楼落成的那一年。」",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch1_unlocked_office" },
+              { "type": "say", "textId": "ch1.lock_open" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "office_door",
+      "rect": [860, 620, 200, 280],
+      "requiresFlag": "ch1_unlocked_office",
+      "onTap": [{ "type": "goRoom", "room": "ch1_office" }]
+    }
+  ]
+}
