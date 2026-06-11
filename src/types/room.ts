@@ -60,6 +60,8 @@ export interface RoomDef {
   color: string;
   /** 后期滤镜：grain=2026/梦境胶片颗粒，vhs=2001时间线 */
   filter?: 'grain' | 'vhs';
+  /** 环境底噪 key（对应 src/assets/audio/<key>.*），缺资产时静默 */
+  ambience?: string;
   exits?: { left?: string; right?: string };
   hotspots: HotspotDef[];
 }

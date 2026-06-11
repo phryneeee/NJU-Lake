@@ -9,7 +9,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "validate": "node scripts/validate-data.mjs"
+    "validate": "node scripts/validate-data.mjs",
+    "playtest": "node scripts/playtest.mjs",
+    "art-checklist": "node scripts/art-checklist.mjs"
   },
   "dependencies": {
     "phaser": "^3.80.1"

@@ -10,6 +10,46 @@
       "onTap": [{ "type": "say", "textId": "ch6.committee" }]
     },
     {
+      "id": "lost_found_r1",
+      "rect": [180, 1180, 180, 160],
+      "hiddenIfFlag": "ch1_got_r1",
+      "onTap": [
+        { "type": "give", "item": "burned_slip" },
+        { "type": "setFlag", "flag": "ch1_got_r1" },
+        { "type": "say", "textId": "ch6.lost_found" }
+      ]
+    },
+    {
+      "id": "lost_found_r2",
+      "rect": [380, 1180, 180, 160],
+      "hiddenIfFlag": "ch2_got_r2",
+      "onTap": [
+        { "type": "give", "item": "archive_r2" },
+        { "type": "setFlag", "flag": "ch2_got_r2" },
+        { "type": "say", "textId": "ch6.lost_found" }
+      ]
+    },
+    {
+      "id": "lost_found_r3",
+      "rect": [580, 1180, 180, 160],
+      "hiddenIfFlag": "ch3_got_r3",
+      "onTap": [
+        { "type": "give", "item": "archive_r3" },
+        { "type": "setFlag", "flag": "ch3_got_r3" },
+        { "type": "say", "textId": "ch6.lost_found" }
+      ]
+    },
+    {
+      "id": "lost_found_r5",
+      "rect": [780, 1180, 180, 160],
+      "hiddenIfFlag": "ch5_got_r5",
+      "onTap": [
+        { "type": "give", "item": "archive_r5" },
+        { "type": "setFlag", "flag": "ch5_got_r5" },
+        { "type": "say", "textId": "ch6.lost_found" }
+      ]
+    },
+    {
       "id": "projector",
       "rect": [920, 760, 320, 260],
       "hiddenIfFlag": "ch6_slides_done",
