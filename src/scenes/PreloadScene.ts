@@ -21,7 +21,14 @@ export class PreloadScene extends Phaser.Scene {
       this.load.on('progress', (p: number) => bar.setSize(Math.max(4, 800 * p), 24));
     }
 
-    for (const [roomId, url] of bgUrls) this.load.image(`bg_${roomId}`, url);
+    for (const [roomId, asset] of bgUrls) {
+      if (asset.isSvg) {
+        // SVG 按逻辑分辨率栅格化（retina 下清晰）
+        this.load.svg(`bg_${roomId}`, asset.url, { width: W, height: H });
+      } else {
+        this.load.image(`bg_${roomId}`, asset.url);
+      }
+    }
     for (const [key, url] of audioUrls) this.load.audio(key, url);
   }
 

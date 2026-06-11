@@ -25,6 +25,7 @@ export class RoomScene extends Phaser.Scene {
   private zones: Phaser.GameObjects.Rectangle[] = [];
   private lastProgress = 0;
   private hintShown = false;
+  private hasArt = false;
 
   constructor() {
     super('Room');
@@ -35,7 +36,8 @@ export class RoomScene extends Phaser.Scene {
 
     // 背景：有正式美术用图，否则灰盒底色+场景名
     const bgKey = `bg_${this.room.id}`;
-    if (this.textures.exists(bgKey)) {
+    this.hasArt = this.textures.exists(bgKey);
+    if (this.hasArt) {
       this.add.image(W / 2, H / 2, bgKey).setDisplaySize(W, H);
     } else {
       this.add.rectangle(W / 2, H / 2, W, H, Phaser.Display.Color.HexStringToColor(this.room.color).color);
@@ -117,8 +119,9 @@ export class RoomScene extends Phaser.Scene {
 
   private addHotspot(h: HotspotDef): void {
     const [x, y, w, hh] = h.rect;
+    const greybox = GREYBOX && !this.hasArt; // 有正式美术的房间不画灰盒描边
     const zone = this.add
-      .rectangle(x + w / 2, y + hh / 2, w, hh, 0xffffff, GREYBOX ? 0.08 : 0.001)
+      .rectangle(x + w / 2, y + hh / 2, w, hh, 0xffffff, greybox ? 0.08 : 0.001)
       .setInteractive({ useHandCursor: true });
     this.zones.push(zone);
 
@@ -127,7 +130,7 @@ export class RoomScene extends Phaser.Scene {
       this.tweens.add({ targets: zone, fillAlpha: 0.15, duration: 1400, yoyo: true, repeat: -1 });
     }
 
-    if (GREYBOX) {
+    if (greybox) {
       zone.setStrokeStyle(3, 0xe8dcc0, 0.5);
       const label = this.add
         .text(x + w / 2, y + hh / 2, h.id, {

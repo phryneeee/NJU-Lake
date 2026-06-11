@@ -11,12 +11,14 @@
     "typecheck": "tsc --noEmit",
     "validate": "node scripts/validate-data.mjs",
     "playtest": "node scripts/playtest.mjs",
-    "art-checklist": "node scripts/art-checklist.mjs"
+    "art-checklist": "node scripts/art-checklist.mjs",
+    "previews": "node scripts/render-previews.mjs"
   },
   "dependencies": {
     "phaser": "^3.80.1"
   },
   "devDependencies": {
+    "sharp": "^0.35.1",
     "typescript": "^5.5.0",
     "vite": "^5.4.0"
   }

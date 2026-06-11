@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="46%" r="75%">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.42"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 墙与地面 -->
+  <rect width="2048" height="1536" fill="#6e5b41"/>
+  <rect y="0" width="2048" height="130" fill="#3a2f22"/>
+  <rect y="130" width="2048" height="18" fill="#574733"/>
+  <rect y="880" width="2048" height="230" fill="#4a3b2a"/>
+  <rect y="880" width="2048" height="14" fill="#3a2e20"/>
+  <g fill="#3a2e20" opacity="0.5">
+    <rect x="120" y="910" width="10" height="180"/><rect x="420" y="910" width="10" height="180"/>
+    <rect x="720" y="910" width="10" height="180"/><rect x="1320" y="910" width="10" height="180"/>
+    <rect x="1620" y="910" width="10" height="180"/><rect x="1920" y="910" width="10" height="180"/>
+  </g>
+  <rect y="1110" width="2048" height="426" fill="#38302a"/>
+  <g fill="#2e2722">
+    <rect y="1180" width="2048" height="8"/><rect y="1280" width="2048" height="8"/>
+    <rect y="1400" width="2048" height="8"/>
+  </g>
+
+  <!-- 左侧木格窗：午后光 -->
+  <g>
+    <rect x="150" y="300" width="400" height="560" fill="#2e2418"/>
+    <rect x="170" y="320" width="360" height="520" fill="#e3d3ae"/>
+    <!-- 窗外树影 -->
+    <g fill="#b9a982">
+      <circle cx="260" cy="430" r="70"/><circle cx="330" cy="380" r="55"/><circle cx="420" cy="450" r="80"/>
+      <rect x="300" y="430" width="14" height="410"/>
+    </g>
+    <!-- 木格 -->
+    <g fill="#2e2418">
+      <rect x="340" y="320" width="20" height="520"/>
+      <rect x="170" y="480" width="360" height="20"/>
+      <rect x="170" y="660" width="360" height="20"/>
+      <rect x="255" y="320" width="10" height="520"/><rect x="435" y="320" width="10" height="520"/>
+    </g>
+    <!-- 窗台上的乌鸦剪影 -->
+    <g fill="#1c1a17">
+      <ellipse cx="470" cy="828" rx="36" ry="22"/>
+      <circle cx="500" cy="806" r="14"/>
+      <polygon points="512,804 538,810 512,816"/>
+      <rect x="455" y="845" width="4" height="14"/><rect x="478" y="845" width="4" height="14"/>
+    </g>
+    <rect x="140" y="852" width="420" height="20" fill="#2e2418"/>
+  </g>
+  <!-- 窗光投在地板上 -->
+  <polygon points="200,1110 560,1110 760,1480 60,1480" fill="#e8dcc0" opacity="0.10"/>
+
+  <!-- 办公室门 -->
+  <g>
+    <rect x="800" y="450" width="340" height="660" fill="#3a2e20"/>
+    <rect x="822" y="472" width="296" height="638" fill="#3E5C4B"/>
+    <rect x="846" y="500" width="248" height="180" fill="#324b3d"/>
+    <rect x="846" y="710" width="248" height="180" fill="#324b3d"/>
+    <rect x="846" y="920" width="248" height="160" fill="#324b3d"/>
+    <!-- 亮着的气窗 -->
+    <rect x="836" y="380" width="268" height="56" fill="#e8dcc0" opacity="0.85"/>
+    <rect x="822" y="366" width="296" height="14" fill="#3a2e20"/>
+    <rect x="960" y="380" width="12" height="56" fill="#3a2e20"/>
+    <!-- 门牌 -->
+    <rect x="900" y="412" width="140" height="34" fill="#e8dcc0"/>
+    <text x="970" y="438" font-family="serif" font-size="24" fill="#3a2e20" text-anchor="middle">办公室</text>
+    <!-- 转盘锁（热区 860,620,200,280） -->
+    <circle cx="960" cy="760" r="58" fill="#8a7032"/>
+    <circle cx="960" cy="760" r="44" fill="#b08d3f"/>
+    <circle cx="960" cy="760" r="10" fill="#3a2e20"/>
+    <g stroke="#3a2e20" stroke-width="6">
+      <line x1="960" y1="722" x2="960" y2="738"/><line x1="998" y1="760" x2="982" y2="760"/>
+      <line x1="960" y1="798" x2="960" y2="782"/><line x1="922" y1="760" x2="938" y2="760"/>
+    </g>
+    <rect x="1052" y="742" width="16" height="60" rx="6" fill="#8a7032"/>
+  </g>
+  <!-- 门上方挂钟 -->
+  <circle cx="970" cy="250" r="56" fill="#e8dcc0"/>
+  <circle cx="970" cy="250" r="56" fill="none" stroke="#3a2e20" stroke-width="10"/>
+  <line x1="970" y1="250" x2="970" y2="212" stroke="#3a2e20" stroke-width="7"/>
+  <line x1="970" y1="250" x2="996" y2="266" stroke="#3a2e20" stroke-width="5"/>
+
+  <!-- 便条（热区 560,480,240,180） -->
+  <g transform="rotate(-4 680 570)">
+    <rect x="576" y="488" width="208" height="164" fill="#e8dcc0"/>
+    <g stroke="#a59777" stroke-width="6">
+      <line x1="600" y1="530" x2="760" y2="530"/><line x1="600" y1="566" x2="744" y2="566"/>
+      <line x1="600" y1="602" x2="752" y2="602"/>
+    </g>
+    <text x="680" y="640" font-family="serif" font-size="26" fill="#8C3B2E" text-anchor="middle">——周韵秋</text>
+  </g>
+  <circle cx="680" cy="492" r="11" fill="#8C3B2E"/>
+
+  <!-- 校史展板（热区 1180,430,420,320） -->
+  <g>
+    <rect x="1166" y="416" width="448" height="348" fill="#3a2e20"/>
+    <rect x="1184" y="434" width="412" height="312" fill="#d8c8a8"/>
+    <rect x="1184" y="434" width="412" height="56" fill="#8C3B2E"/>
+    <text x="1390" y="474" font-family="serif" font-size="30" fill="#e8dcc0" text-anchor="middle">校 史 长 廊</text>
+    <!-- 北大楼剪影照片 -->
+    <rect x="1208" y="514" width="170" height="130" fill="#a98e6f"/>
+    <g fill="#4a3b2a">
+      <rect x="1238" y="566" width="110" height="78"/>
+      <rect x="1276" y="528" width="34" height="48"/>
+      <polygon points="1268,532 1293,506 1318,532"/>
+    </g>
+    <text x="1293" y="672" font-family="serif" font-size="24" fill="#3a2e20" text-anchor="middle">北大楼 · 1919</text>
+    <g stroke="#a59777" stroke-width="6">
+      <line x1="1410" y1="540" x2="1572" y2="540"/><line x1="1410" y1="576" x2="1560" y2="576"/>
+      <line x1="1410" y1="612" x2="1572" y2="612"/><line x1="1410" y1="648" x2="1540" y2="648"/>
+    </g>
+    <rect x="1208" y="690" width="364" height="8" fill="#a59777"/>
+  </g>
+
+  <!-- 吊灯×2 -->
+  <g>
+    <rect x="446" y="0" width="8" height="170" fill="#1c1a17"/>
+    <polygon points="400,170 500,170 478,220 422,220" fill="#2e2418"/>
+    <ellipse cx="450" cy="222" rx="28" ry="10" fill="#e8dcc0" opacity="0.9"/>
+    <rect x="1646" y="0" width="8" height="170" fill="#1c1a17"/>
+    <polygon points="1600,170 1700,170 1678,220 1622,220" fill="#2e2418"/>
+    <ellipse cx="1650" cy="222" rx="28" ry="10" fill="#e8dcc0" opacity="0.9"/>
+  </g>
+
+  <!-- 门下阴影/地面投影 -->
+  <ellipse cx="970" cy="1124" rx="220" ry="26" fill="#000" opacity="0.25"/>
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>
