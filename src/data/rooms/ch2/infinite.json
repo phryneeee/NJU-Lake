@@ -1,0 +1,70 @@
+{
+  "id": "ch2_infinite",
+  "label": "无限图书馆（午夜的五层C区）",
+  "color": "#1f2d26",
+  "filter": "grain",
+  "exits": { "left": "ch2_infinite", "right": "ch2_infinite" },
+  "hotspots": [
+    {
+      "id": "same_shelf",
+      "rect": [420, 540, 300, 440],
+      "onTap": [{ "type": "say", "textId": "ch2.loop_shelf" }]
+    },
+    {
+      "id": "bigger_moon",
+      "rect": [1560, 420, 320, 320],
+      "onTap": [{ "type": "say", "textId": "ch2.bigger_moon" }]
+    },
+    {
+      "id": "owl",
+      "rect": [960, 600, 260, 420],
+      "hiddenIfFlag": "ch2_quiz_passed",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "QuizPuzzle",
+          "config": {
+            "prompt": "猫头鹰馆员推了推圆眼镜：「答对三题，路就直了。答案都在这一层——你刚才路过它们至少四次了。」",
+            "wrongText": "猫头鹰缓缓摇头。书架在你身后重新闭合了一圈。",
+            "questions": [
+              {
+                "q": "这座图书馆哪一年开放？",
+                "options": ["2009年", "2012年", "1999年"],
+                "correct": 0
+              },
+              {
+                "q": "这个校区哪一年成为主校区？",
+                "options": ["2009年", "2012年", "2021年"],
+                "correct": 1
+              },
+              {
+                "q": "鼓楼校区的校史馆，原本是什么建筑？",
+                "options": ["北大楼", "金陵大学图书馆", "大礼堂"],
+                "correct": 1
+              }
+            ],
+            "perfectActions": [
+              { "type": "give", "item": "archive_r2" },
+              { "type": "setFlag", "flag": "ch2_got_r2" },
+              { "type": "say", "textId": "ch2.r2_found" }
+            ],
+            "successActions": [
+              { "type": "setFlag", "flag": "ch2_quiz_passed" },
+              { "type": "give", "item": "brass_key" },
+              { "type": "say", "textId": "ch2.quiz_done" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "exit_out",
+      "rect": [1700, 760, 260, 420],
+      "requiresFlag": "ch2_quiz_passed",
+      "onTap": [
+        { "type": "say", "textId": "ch2.exit_out" },
+        { "type": "goRoom", "room": "ch2_street" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ch1_storage",
+  "label": "档案馆 · 库房",
+  "color": "#2f4438",
+  "exits": { "left": "ch1_archive_hall" },
+  "hotspots": [
+    {
+      "id": "cabinets",
+      "rect": [620, 420, 820, 620],
+      "hiddenIfFlag": "ch1_got_vhs",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "IndexCabinetPuzzle",
+          "config": {
+            "prompt": "墙上的档号规则牌：「年份区 - 全宗 - 卷号」。\n2001年归档属【叁】区；历史学院全宗为【丙】。\n卷宗 NJU-2001-404 应该在哪一格？",
+            "cols": ["壹", "贰", "叁", "肆", "伍", "陆"],
+            "rows": ["甲", "乙", "丙", "丁", "戊", "己"],
+            "correct": "叁-丙",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch1_got_vhs" },
+              { "type": "say", "textId": "ch1.drawer_empty" },
+              { "type": "give", "item": "vhs_tape" },
+              { "type": "say", "textId": "ch1.drawer_vhs" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cabinets_after",
+      "rect": [620, 420, 820, 620],
+      "requiresFlag": "ch1_got_vhs",
+      "onTap": [{ "type": "say", "textId": "ch1.cabinet_again" }]
+    },
+    {
+      "id": "burned_corner",
+      "rect": [1700, 1150, 160, 140],
+      "hiddenIfFlag": "ch1_got_r1",
+      "onTap": [
+        { "type": "give", "item": "burned_slip" },
+        { "type": "setFlag", "flag": "ch1_got_r1" },
+        { "type": "say", "textId": "ch1.r1_found" }
+      ]
+    }
+  ]
+}

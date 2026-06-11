@@ -1,0 +1,57 @@
+{
+  "id": "ch1_office",
+  "label": "周韵秋的办公室",
+  "color": "#5a4632",
+  "exits": { "left": "ch1_corridor" },
+  "hotspots": [
+    {
+      "id": "desk_card",
+      "rect": [700, 880, 200, 140],
+      "hiddenIfFlag": "ch1_got_card",
+      "onTap": [
+        { "type": "give", "item": "library_card" },
+        { "type": "setFlag", "flag": "ch1_got_card" },
+        { "type": "say", "textId": "ch1.card_get" }
+      ]
+    },
+    {
+      "id": "slips",
+      "rect": [1050, 850, 300, 200],
+      "hiddenIfFlag": "ch1_sorted_slips",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "SortPuzzle",
+          "config": {
+            "prompt": "桌上散落着五张旧借阅单。按借阅日期从早到晚，插入档案夹的卡槽。",
+            "cards": [
+              { "id": "s3", "label": "2000年\n11月8日\n《金陵旧影》" },
+              { "id": "s1", "label": "1999年\n3月12日\n《校史资料汇编》" },
+              { "id": "s5", "label": "2001年\n6月3日\n《档案管理条例》" },
+              { "id": "s2", "label": "1999年\n3月26日\n《仙林乡土志》" },
+              { "id": "s4", "label": "2001年\n4月5日\n《口述校史》" }
+            ],
+            "correctOrder": ["s1", "s2", "s3", "s4", "s5"],
+            "successActions": [
+              { "type": "setFlag", "flag": "ch1_sorted_slips" },
+              { "type": "say", "textId": "ch1.slips_reveal" },
+              { "type": "give", "item": "crow_feather" },
+              { "type": "say", "textId": "ch1.slips_feather" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "bookshelf",
+      "rect": [260, 500, 360, 500],
+      "onTap": [{ "type": "say", "textId": "ch1.office_books" }]
+    },
+    {
+      "id": "slips_done",
+      "rect": [1050, 850, 300, 200],
+      "requiresFlag": "ch1_sorted_slips",
+      "onTap": [{ "type": "say", "textId": "ch1.slips_again" }]
+    }
+  ]
+}

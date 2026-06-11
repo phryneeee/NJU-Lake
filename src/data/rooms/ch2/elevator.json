@@ -1,0 +1,41 @@
+{
+  "id": "ch2_elevator",
+  "label": "怀安楼 · 电梯间",
+  "color": "#2a2a2e",
+  "filter": "grain",
+  "exits": { "left": "ch2_street" },
+  "hotspots": [
+    {
+      "id": "panel",
+      "rect": [880, 560, 300, 480],
+      "hiddenIfFlag": "ch2_unlocked_b7",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "ElevatorPuzzle",
+          "config": {
+            "prompt": "电梯面板：1–5，B1。\n口袋里的乌鸦羽毛在发烫，羽毛上浮现出刻痕：●●●●\n——指示灯亮起时按下B1，连续四次。",
+            "requiredItem": "brass_key",
+            "missingText": "按钮旁有一个钥匙孔，形状像一个「七」字。",
+            "successActions": [
+              { "type": "take", "item": "brass_key" },
+              { "type": "setFlag", "flag": "ch2_unlocked_b7" },
+              { "type": "say", "textId": "ch2.b7_open" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "b7_door",
+      "rect": [880, 560, 300, 480],
+      "requiresFlag": "ch2_unlocked_b7",
+      "onTap": [{ "type": "goRoom", "room": "ch2_b7" }]
+    },
+    {
+      "id": "notice",
+      "rect": [420, 600, 240, 200],
+      "onTap": [{ "type": "say", "textId": "ch2.notice" }]
+    }
+  ]
+}

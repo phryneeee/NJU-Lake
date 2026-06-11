@@ -1,0 +1,27 @@
+{
+  "id": "ch3_corridor_2",
+  "label": "循环走廊 · 第二圈（哪扇门后的怀表声最响？）",
+  "color": "#28242f",
+  "filter": "grain",
+  "exits": { "left": "ch3_corridor_2", "right": "ch3_corridor_2" },
+  "hotspots": [
+    {
+      "id": "quiet_door_a",
+      "rect": [420, 600, 220, 400],
+      "onTap": [{ "type": "say", "textId": "ch3.tick_faint" }]
+    },
+    {
+      "id": "quiet_door_b",
+      "rect": [1500, 600, 220, 400],
+      "onTap": [{ "type": "say", "textId": "ch3.tick_faraway" }]
+    },
+    {
+      "id": "ticking_door",
+      "rect": [960, 600, 220, 400],
+      "onTap": [
+        { "type": "say", "textId": "ch3.tick_loud" },
+        { "type": "goRoom", "room": "ch3_corridor_3" }
+      ]
+    }
+  ]
+}

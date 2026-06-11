@@ -1,0 +1,27 @@
+{
+  "id": "ch3_corridor_1",
+  "label": "循环走廊（每走完一圈，有一处不一样）",
+  "color": "#2b2733",
+  "filter": "grain",
+  "exits": { "left": "ch3_corridor_1", "right": "ch3_corridor_1" },
+  "hotspots": [
+    {
+      "id": "door_304",
+      "rect": [520, 600, 220, 400],
+      "onTap": [{ "type": "say", "textId": "ch3.door_normal" }]
+    },
+    {
+      "id": "extinguisher",
+      "rect": [1060, 820, 140, 220],
+      "onTap": [{ "type": "say", "textId": "ch3.extinguisher" }]
+    },
+    {
+      "id": "plate_403",
+      "rect": [1480, 560, 200, 140],
+      "onTap": [
+        { "type": "say", "textId": "ch3.plate_403" },
+        { "type": "goRoom", "room": "ch3_corridor_2" }
+      ]
+    }
+  ]
+}

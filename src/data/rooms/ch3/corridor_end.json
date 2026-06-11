@@ -1,0 +1,63 @@
+{
+  "id": "ch3_corridor_end",
+  "label": "走廊尽头（白兔在等你）",
+  "color": "#2e2a38",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "rabbit",
+      "rect": [560, 620, 240, 420],
+      "hiddenIfFlag": "ch3_timeline_done",
+      "onTap": [
+        { "type": "say", "textId": "ch3.rabbit_speaks" },
+        {
+          "type": "openPuzzle",
+          "puzzle": "SortPuzzle",
+          "config": {
+            "prompt": "白兔展开一条发光的轨道，递来六张照片。\n「不按年份，按节点。每个人的路，站名是一样的。」",
+            "slotLabels": ["入学", "入学·旧照", "确定方向", "抉择", "抉择·旧照", "出发"],
+            "cards": [
+              { "id": "lw3", "label": "2026春\n我收到\n答辩通知" },
+              { "id": "zq1", "label": "1999\n黑白照片\n她入学" },
+              { "id": "lw1", "label": "2018\n我考入\n南大" },
+              { "id": "zq2", "label": "2001\n黑白照片\n她的抉择" },
+              { "id": "lw4", "label": "2026·6月\n答辩\n在即" },
+              { "id": "lw2", "label": "2021\n我选了\n校史方向" }
+            ],
+            "correctOrder": ["lw1", "zq1", "lw2", "lw3", "zq2", "lw4"],
+            "wrongText": "白兔的怀表停了一拍。「节点，不是年份。」",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch3_timeline_done" },
+              { "type": "say", "textId": "ch3.timeline_done" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "crt_call",
+      "rect": [1320, 560, 400, 360],
+      "requiresFlag": "ch3_timeline_done",
+      "hiddenIfFlag": "ch3_complete",
+      "onTap": [
+        { "type": "say", "textId": "ch3.crt_static" },
+        { "type": "say", "textId": "ch3.self30_1" },
+        { "type": "say", "textId": "ch3.self30_2" },
+        { "type": "say", "textId": "ch3.self30_3" },
+        { "type": "setFlag", "flag": "ch3_complete" },
+        { "type": "goRoom", "room": "ch4_museum" },
+        {
+          "type": "chapterCard",
+          "title": "第三章 · 白兔时间线",
+          "subtitle": "「我过得很好——也很想家。这两件事不矛盾。」——未完待续"
+        }
+      ]
+    },
+    {
+      "id": "morning",
+      "rect": [1320, 560, 400, 360],
+      "requiresFlag": "ch3_complete",
+      "onTap": [{ "type": "say", "textId": "ch3.to_be_continued" }]
+    }
+  ]
+}

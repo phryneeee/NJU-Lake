@@ -1,0 +1,52 @@
+{
+  "id": "ch2_library_hall",
+  "label": "杜厦图书馆 · 大厅（夜，闭馆前）",
+  "color": "#33402f",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "opac",
+      "rect": [820, 700, 400, 320],
+      "hiddenIfFlag": "ch2_searched_opac",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "OpacPuzzle",
+          "config": {
+            "options": ["K250.1/1998", "K295.3/2001", "G641/2005"],
+            "correct": "K295.3/2001",
+            "requiredItem": "library_card",
+            "resultText": "> 题名：《校史编年·未刊稿》\n> 索书号：K295.3/2001\n> 馆藏地：五层C区\n> 状态：在架",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch2_searched_opac" },
+              { "type": "say", "textId": "ch2.opac_done" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "opac_after",
+      "rect": [820, 700, 400, 320],
+      "requiresFlag": "ch2_searched_opac",
+      "onTap": [{ "type": "say", "textId": "ch2.opac_again" }]
+    },
+    {
+      "id": "stairs",
+      "rect": [1520, 480, 300, 540],
+      "requiresFlag": "ch2_searched_opac",
+      "onTap": [{ "type": "goRoom", "room": "ch2_floor5" }]
+    },
+    {
+      "id": "stairs_dark",
+      "rect": [1520, 480, 300, 540],
+      "hiddenIfFlag": "ch2_searched_opac",
+      "onTap": [{ "type": "say", "textId": "ch2.stairs_dark" }]
+    },
+    {
+      "id": "closing_pa",
+      "rect": [300, 420, 240, 200],
+      "onTap": [{ "type": "say", "textId": "ch2.closing_pa" }]
+    }
+  ]
+}

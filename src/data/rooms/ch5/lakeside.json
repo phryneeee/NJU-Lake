@@ -1,0 +1,50 @@
+{
+  "id": "ch5_lakeside",
+  "label": "校园湖边（湖心有一盏纸灯，明明灭灭）",
+  "color": "#16202a",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "stone_table",
+      "rect": [1280, 880, 360, 240],
+      "hiddenIfFlag": "ch5_got_paper",
+      "onTap": [
+        { "type": "give", "item": "letter_paper" },
+        { "type": "setFlag", "flag": "ch5_got_paper" },
+        { "type": "say", "textId": "ch5.stone_table" }
+      ]
+    },
+    {
+      "id": "candle",
+      "rect": [1280, 700, 200, 160],
+      "useItem": {
+        "item": "signed_letter",
+        "consume": true,
+        "actions": [
+          { "type": "say", "textId": "ch5.fold_boat" },
+          { "type": "give", "item": "waxed_boat" }
+        ]
+      },
+      "wrongTextId": "ch5.candle_hint"
+    },
+    {
+      "id": "lake_water",
+      "rect": [360, 880, 720, 360],
+      "useItem": {
+        "item": "waxed_boat",
+        "consume": true,
+        "actions": [
+          { "type": "say", "textId": "ch5.koi_appears" },
+          { "type": "say", "textId": "ch5.koi_cross" },
+          { "type": "goRoom", "room": "ch5_dual" }
+        ]
+      },
+      "wrongTextId": "ch5.lake_hint"
+    },
+    {
+      "id": "paper_lantern",
+      "rect": [620, 620, 160, 160],
+      "onTap": [{ "type": "say", "textId": "ch5.paper_lantern" }]
+    }
+  ]
+}

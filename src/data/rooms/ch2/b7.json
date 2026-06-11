@@ -1,0 +1,49 @@
+{
+  "id": "ch2_b7",
+  "label": "第七档案库 · B7",
+  "color": "#1f3328",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "crow",
+      "rect": [840, 520, 320, 520],
+      "hiddenIfFlag": "ch2_met_crow",
+      "onTap": [
+        { "type": "say", "textId": "ch2.crow_1" },
+        { "type": "say", "textId": "ch2.crow_2" },
+        { "type": "say", "textId": "ch2.crow_3" },
+        { "type": "say", "textId": "ch2.crow_4" },
+        { "type": "setFlag", "flag": "ch2_met_crow" }
+      ]
+    },
+    {
+      "id": "crow_after",
+      "rect": [840, 520, 320, 520],
+      "requiresFlag": "ch2_met_crow",
+      "onTap": [{ "type": "say", "textId": "ch2.crow_again" }]
+    },
+    {
+      "id": "cabinets_endless",
+      "rect": [260, 480, 440, 560],
+      "onTap": [{ "type": "say", "textId": "ch2.cabinets" }]
+    },
+    {
+      "id": "ajar_cabinet",
+      "rect": [1480, 560, 320, 480],
+      "requiresFlag": "ch2_met_crow",
+      "hiddenIfFlag": "ch2_complete",
+      "onTap": [
+        { "type": "say", "textId": "ch2.self26_1" },
+        { "type": "say", "textId": "ch2.self26_2" },
+        { "type": "say", "textId": "ch2.self26_3" },
+        { "type": "setFlag", "flag": "ch2_complete" },
+        { "type": "goRoom", "room": "ch3_dorm" },
+        {
+          "type": "chapterCard",
+          "title": "第二章 · 第七档案库",
+          "subtitle": "「你来得比我想象的晚。」——未完待续"
+        }
+      ]
+    }
+  ]
+}

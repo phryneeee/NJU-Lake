@@ -1,0 +1,51 @@
+{
+  "id": "ch4_clock",
+  "label": "鹿的时钟走廊（四扇门，四个年代）",
+  "color": "#2e2a24",
+  "filter": "grain",
+  "exits": { "left": "ch4_records" },
+  "hotspots": [
+    {
+      "id": "deer",
+      "rect": [380, 560, 260, 480],
+      "onTap": [{ "type": "say", "textId": "ch4.deer_hint" }]
+    },
+    {
+      "id": "four_doors",
+      "rect": [820, 540, 700, 460],
+      "hiddenIfFlag": "ch4_clock_done",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "SortPuzzle",
+          "config": {
+            "prompt": "四扇门旁各有一个空托盘。鹿女士的鹿角是一对时针。\n「把信物放进它所属的年代——按顺序来。时间不接受跳跃。」",
+            "slotLabels": ["1919\n北大楼", "2001\n羊山", "2009\n开馆", "2026\n此刻"],
+            "cards": [
+              { "id": "ticket", "label": "开馆\n纪念票" },
+              { "id": "brick", "label": "一块\n青砖" },
+              { "id": "card", "label": "我的\n学生卡" },
+              { "id": "blueprint", "label": "工地\n图纸" }
+            ],
+            "correctOrder": ["brick", "blueprint", "ticket", "card"],
+            "wrongText": "鹿角时针倒着转了半圈。「时间不接受跳跃。」",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch4_clock_done" },
+              { "type": "say", "textId": "ch4.vignette_1919" },
+              { "type": "say", "textId": "ch4.vignette_2001" },
+              { "type": "say", "textId": "ch4.vignette_2009" },
+              { "type": "say", "textId": "ch4.vignette_2026" },
+              { "type": "say", "textId": "ch4.mirror_appears" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mirror_door",
+      "rect": [1700, 560, 240, 480],
+      "requiresFlag": "ch4_clock_done",
+      "onTap": [{ "type": "goRoom", "room": "ch4_mirror" }]
+    }
+  ]
+}
