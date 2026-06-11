@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="80%">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+    </radialGradient>
+    <radialGradient id="moonglow" cx="50%" cy="50%" r="50%">
+      <stop offset="40%" stop-color="#e8e2cc" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#e8e2cc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="2048" height="1536" fill="#1f2a22"/>
+  <rect y="0" width="2048" height="80" fill="#10160f"/>
+  <rect y="1130" width="2048" height="406" fill="#171f17"/>
+  <g fill="#121911">
+    <rect y="1220" width="2048" height="8"/><rect y="1330" width="2048" height="8"/><rect y="1440" width="2048" height="8"/>
+  </g>
+
+  <!-- 不该在室内的巨月（热区 1560,420,320,320） -->
+  <circle cx="1720" cy="580" r="260" fill="url(#moonglow)"/>
+  <circle cx="1720" cy="580" r="170" fill="#e8e2cc"/>
+  <circle cx="1668" cy="532" r="28" fill="#cfc9b2"/>
+  <circle cx="1780" cy="630" r="20" fill="#cfc9b2"/>
+  <circle cx="1730" cy="568" r="12" fill="#cfc9b2"/>
+
+  <!-- 一模一样的书架×3（循环感） -->
+  <g id="shelfA">
+    <rect x="400" y="440" width="340" height="640" fill="#241d14"/>
+    <rect x="416" y="456" width="308" height="608" fill="#161209"/>
+    <g fill="#241d14"><rect x="416" y="610" width="308" height="12"/><rect x="416" y="764" width="308" height="12"/><rect x="416" y="918" width="308" height="12"/></g>
+    <g>
+      <rect x="430" y="484" width="28" height="126" fill="#3E5C4B"/><rect x="462" y="490" width="24" height="120" fill="#8C3B2E"/>
+      <rect x="490" y="480" width="32" height="130" fill="#a98e6f"/><rect x="526" y="492" width="22" height="118" fill="#4a5a66"/>
+      <rect x="552" y="484" width="28" height="126" fill="#6b5a3f"/><rect x="584" y="488" width="26" height="122" fill="#3E5C4B"/>
+      <rect x="614" y="482" width="30" height="128" fill="#8C3B2E"/><rect x="648" y="490" width="24" height="120" fill="#a98e6f"/>
+      <rect x="676" y="484" width="28" height="126" fill="#4a5a66"/>
+      <rect x="430" y="648" width="26" height="116" fill="#8C3B2E"/><rect x="460" y="654" width="30" height="110" fill="#3E5C4B"/>
+      <rect x="494" y="646" width="24" height="118" fill="#6b5a3f"/><rect x="522" y="652" width="28" height="112" fill="#a98e6f"/>
+      <rect x="554" y="648" width="26" height="116" fill="#4a5a66"/><rect x="584" y="654" width="30" height="110" fill="#8C3B2E"/>
+      <rect x="618" y="646" width="24" height="118" fill="#3E5C4B"/><rect x="646" y="652" width="28" height="112" fill="#6b5a3f"/>
+      <rect x="678" y="648" width="26" height="116" fill="#a98e6f"/>
+      <rect x="430" y="802" width="30" height="116" fill="#4a5a66"/><rect x="464" y="808" width="24" height="110" fill="#6b5a3f"/>
+      <rect x="492" y="800" width="28" height="118" fill="#8C3B2E"/><rect x="524" y="806" width="26" height="112" fill="#3E5C4B"/>
+      <rect x="554" y="802" width="30" height="116" fill="#a98e6f"/><rect x="588" y="808" width="24" height="110" fill="#4a5a66"/>
+      <rect x="616" y="800" width="28" height="118" fill="#6b5a3f"/><rect x="648" y="806" width="26" height="112" fill="#8C3B2E"/>
+      <rect x="678" y="802" width="24" height="116" fill="#3E5C4B"/>
+    </g>
+  </g>
+  <use href="#shelfA" transform="translate(-340 0)"/>
+  <use href="#shelfA" transform="translate(690 60) scale(0.86)"/>
+
+  <!-- 漂浮的书（超现实） -->
+  <g>
+    <rect x="820" y="320" width="90" height="26" fill="#8C3B2E" transform="rotate(-12 865 333)"/>
+    <rect x="1310" y="260" width="80" height="24" fill="#3E5C4B" transform="rotate(9 1350 272)"/>
+    <rect x="640" y="240" width="76" height="22" fill="#a98e6f" transform="rotate(-6 678 251)"/>
+  </g>
+
+  <!-- 猫头鹰馆员（热区 960,600,260,420） -->
+  <g>
+    <ellipse cx="1090" cy="1040" rx="120" ry="18" fill="#000" opacity="0.35"/>
+    <!-- 长衫身体 -->
+    <path d="M 1020 760 q 70 -46 140 0 l 26 280 l -192 0 z" fill="#2c3a2c"/>
+    <rect x="1062" y="742" width="56" height="40" fill="#e8dcc0"/>
+    <!-- 翅膀执书 -->
+    <path d="M 1018 800 q -40 60 10 120" fill="none" stroke="#2c3a2c" stroke-width="30"/>
+    <rect x="990" y="900" width="84" height="26" fill="#8C3B2E" transform="rotate(-8 1032 913)"/>
+    <!-- 头：圆颅+耳羽 -->
+    <circle cx="1090" cy="660" r="92" fill="#6b5a3f"/>
+    <polygon points="1018,600 1004,540 1058,580" fill="#6b5a3f"/>
+    <polygon points="1162,600 1176,540 1122,580" fill="#6b5a3f"/>
+    <circle cx="1090" cy="688" r="64" fill="#d8c8a8"/>
+    <!-- 圆眼镜 -->
+    <circle cx="1056" cy="652" r="34" fill="#e8e2cc"/>
+    <circle cx="1124" cy="652" r="34" fill="#e8e2cc"/>
+    <circle cx="1056" cy="652" r="34" fill="none" stroke="#1c1a17" stroke-width="6"/>
+    <circle cx="1124" cy="652" r="34" fill="none" stroke="#1c1a17" stroke-width="6"/>
+    <line x1="1090" y1="652" x2="1090" y2="652" stroke="#1c1a17" stroke-width="6"/>
+    <rect x="1086" y="648" width="8" height="8" fill="#1c1a17"/>
+    <circle cx="1056" cy="652" r="9" fill="#1c1a17"/>
+    <circle cx="1124" cy="652" r="9" fill="#1c1a17"/>
+    <!-- 喙 -->
+    <polygon points="1078,690 1102,690 1090,722" fill="#b08d3f"/>
+    <!-- 袖标 -->
+    <rect x="1130" y="820" width="44" height="60" fill="#8C3B2E"/>
+    <text x="1152" y="862" font-family="serif" font-size="28" fill="#e8dcc0" text-anchor="middle">索</text>
+  </g>
+
+  <!-- 出口：书架让开的缝（热区 1700,760,260,420） -->
+  <g>
+    <rect x="1690" y="720" width="300" height="480" fill="#0a0d0a"/>
+    <rect x="1700" y="720" width="40" height="480" fill="#241d14"/>
+    <rect x="1940" y="720" width="40" height="480" fill="#241d14"/>
+    <!-- 门洞深处的微光 -->
+    <rect x="1790" y="760" width="100" height="440" fill="#16332a"/>
+    <rect x="1828" y="760" width="24" height="440" fill="#7FD4C1" opacity="0.35"/>
+    <polygon points="1790,1200 1890,1200 1960,1340 1720,1340" fill="#7FD4C1" opacity="0.08"/>
+  </g>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

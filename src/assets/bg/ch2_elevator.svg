@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="45%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="2048" height="1536" fill="#2c2c30"/>
+  <rect y="0" width="2048" height="100" fill="#1a1a1e"/>
+  <rect y="900" width="2048" height="200" fill="#242428"/>
+  <rect y="900" width="2048" height="14" fill="#1a1a1e"/>
+  <rect y="1100" width="2048" height="436" fill="#1f1f23"/>
+  <g fill="#19191d">
+    <rect y="1190" width="2048" height="8"/><rect y="1300" width="2048" height="8"/><rect y="1410" width="2048" height="8"/>
+  </g>
+
+  <!-- 吸顶灯 -->
+  <ellipse cx="1024" cy="120" rx="130 " ry="26" fill="#e8dcc0" opacity="0.85"/>
+  <polygon points="894,130 1154,130 1330,560 718,560" fill="#e8dcc0" opacity="0.05"/>
+
+  <!-- 电梯门 -->
+  <g>
+    <rect x="780" y="400" width="500 " height="710" fill="#1a1a1e"/>
+    <rect x="804" y="424" width="440" height="686" fill="#3c3c44"/>
+    <rect x="804" y="424" width="216" height="686" fill="#46464e"/>
+    <rect x="1016" y="424" width="16" height="686" fill="#1a1a1e"/>
+    <g fill="#2e2e36">
+      <rect x="826" y="460" width="170" height="610"/>
+      <rect x="1052" y="460" width="170" height="610"/>
+    </g>
+    <!-- 半圆楼层指示 -->
+    <path d="M 920 380 a 105 105 0 0 1 210 0 z" fill="#d8c8a8"/>
+    <g font-family="serif" font-size="24" fill="#3a3326" text-anchor="middle">
+      <text x="936" y="370">B1</text><text x="962" y="336">1</text><text x="996" y="316">2</text>
+      <text x="1024" y="310">3</text><text x="1054" y="316">4</text><text x="1088" y="336">5</text>
+    </g>
+    <line x1="1025" y1="378" x2="952" y2="338" stroke="#8C3B2E" stroke-width="8"/>
+    <circle cx="1025" cy="378" r="10" fill="#8C3B2E"/>
+  </g>
+
+  <!-- 按键面板（热区 880,560,300,480 覆盖门与面板区域；实体面板画在右柱） -->
+  <g>
+    <rect x="1300" y="560" width="120 " height="420" fill="#26262c"/>
+    <rect x="1314" y="576" width="92" height="388" fill="#3c3c44"/>
+    <g fill="#1a1a1e" stroke="#b08d3f" stroke-width="4">
+      <circle cx="1360" cy="630" r="26"/><circle cx="1360" cy="700" r="26"/>
+      <circle cx="1360" cy="770" r="26"/><circle cx="1360" cy="840" r="26"/>
+      <circle cx="1360" cy="910" r="26"/>
+    </g>
+    <g font-family="monospace" font-size="24" fill="#d8c8a8" text-anchor="middle">
+      <text x="1360" y="639">5</text><text x="1360" y="709">3</text><text x="1360" y="779">2</text>
+      <text x="1360" y="849">1</text><text x="1360" y="919">B1</text>
+    </g>
+    <!-- 钥匙孔：七字形 -->
+    <rect x="1340" y="938" width="40" height="6" fill="#0e0e10"/>
+  </g>
+
+  <!-- 检修记录卡（热区 420,600,240,200） -->
+  <g transform="rotate(-2 540 700)">
+    <rect x="424" y="604" width="232" height="192" fill="#2c2318"/>
+    <rect x="438" y="618" width="204" height="164" fill="#d8c8a8"/>
+    <text x="540" y="654" font-family="serif" font-size="24" fill="#3a3326" text-anchor="middle">电梯检修记录</text>
+    <g stroke="#a59777" stroke-width="5">
+      <line x1="458" y1="684" x2="622" y2="684"/><line x1="458" y1="714" x2="606" y2="714"/>
+    </g>
+    <!-- 羽毛形签名 -->
+    <path d="M 560 752 q 30 -24 60 -6 q -26 4 -34 16 q -14 -4 -26 -10 z" fill="#1c1a17"/>
+  </g>
+
+  <!-- 地上的乌鸦羽毛 -->
+  <g transform="rotate(18 700 1240)">
+    <path d="M 660 1230 q 50 -34 100 -10 q -42 8 -56 26 q -24 -6 -44 -16 z" fill="#1c1a17"/>
+  </g>
+
+  <ellipse cx="1024" cy="1130" rx="300" ry="24" fill="#000" opacity="0.3"/>
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>
