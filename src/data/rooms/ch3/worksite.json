@@ -1,0 +1,95 @@
+{
+  "id": "ch3_worksite",
+  "label": "羊山 · 工地（2001年，这里还不是校园）",
+  "color": "#6b5a3f",
+  "filter": "vhs",
+  "hotspots": [
+    {
+      "id": "radio",
+      "rect": [340, 760, 220, 180],
+      "onTap": [{ "type": "say", "textId": "ch3.radio" }]
+    },
+    {
+      "id": "saplings",
+      "rect": [820, 480, 460, 320],
+      "onTap": [{ "type": "say", "textId": "ch3.saplings" }]
+    },
+    {
+      "id": "shed",
+      "rect": [1480, 600, 340, 440],
+      "hiddenIfFlag": "ch3_took_tools",
+      "onTap": [
+        { "type": "give", "item": "shovel_head" },
+        { "type": "give", "item": "stick" },
+        { "type": "give", "item": "tape" },
+        { "type": "setFlag", "flag": "ch3_took_tools" },
+        { "type": "say", "textId": "ch3.shed" }
+      ]
+    },
+    {
+      "id": "old_photo",
+      "rect": [1480, 1080, 220, 160],
+      "requiresFlag": "ch3_took_tools",
+      "hiddenIfFlag": "ch3_read_photo",
+      "onTap": [
+        { "type": "say", "textId": "ch3.old_photo" },
+        { "type": "setFlag", "flag": "ch3_read_photo" }
+      ]
+    },
+    {
+      "id": "dig_spot",
+      "rect": [980, 980, 260, 220],
+      "requiresFlag": "ch3_read_photo",
+      "hiddenIfFlag": "ch3_dug_capsule",
+      "useItem": {
+        "item": "shovel",
+        "consume": true,
+        "actions": [
+          { "type": "setFlag", "flag": "ch3_dug_capsule" },
+          { "type": "say", "textId": "ch3.dug" },
+          { "type": "give", "item": "letter_2001" },
+          { "type": "give", "item": "half_photo" },
+          { "type": "say", "textId": "ch3.capsule_contents" }
+        ]
+      },
+      "wrongTextId": "ch3.need_shovel"
+    },
+    {
+      "id": "diary",
+      "rect": [980, 980, 260, 220],
+      "requiresFlag": "ch3_dug_capsule",
+      "hiddenIfFlag": "ch3_read_diary",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "DialLockPuzzle",
+          "config": {
+            "answer": "0621",
+            "prompt": "铁盒最底下是一本上锁的日记，四位转轮。\n信里有一句没被水渍弄花：「……我在白天最长的那一天做了决定……」",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch3_read_diary" },
+              { "type": "say", "textId": "ch3.diary_1" },
+              { "type": "say", "textId": "ch3.diary_2" },
+              { "type": "say", "textId": "ch3.diary_3" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "return_door",
+      "rect": [180, 480, 220, 480],
+      "requiresFlag": "ch3_read_diary",
+      "onTap": [
+        { "type": "say", "textId": "ch3.return_door" },
+        { "type": "goRoom", "room": "ch3_corridor_end" }
+      ]
+    },
+    {
+      "id": "return_door_early",
+      "rect": [180, 480, 220, 480],
+      "hiddenIfFlag": "ch3_read_diary",
+      "onTap": [{ "type": "say", "textId": "ch3.not_yet" }]
+    }
+  ]
+}

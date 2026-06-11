@@ -8,6 +8,9 @@ import { DialLockPuzzle } from './puzzles/DialLockPuzzle';
 import { SortPuzzle } from './puzzles/SortPuzzle';
 import { IndexCabinetPuzzle } from './puzzles/IndexCabinetPuzzle';
 import { VhsTuningPuzzle } from './puzzles/VhsTuningPuzzle';
+import { OpacPuzzle } from './puzzles/OpacPuzzle';
+import { QuizPuzzle } from './puzzles/QuizPuzzle';
+import { ElevatorPuzzle } from './puzzles/ElevatorPuzzle';
 
 GameState.restore();
 
@@ -29,5 +32,8 @@ new Phaser.Game({
     SortPuzzle,
     IndexCabinetPuzzle,
     VhsTuningPuzzle,
+    OpacPuzzle,
+    QuizPuzzle,
+    ElevatorPuzzle,
   ],
 });

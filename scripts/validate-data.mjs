@@ -51,6 +51,7 @@ function checkAction(a, where) {
   if (a.type === 'openPuzzle') {
     if (!knownPuzzles.has(a.puzzle)) errors.push(`${where}: 未知谜题 ${a.puzzle}`);
     for (const sa of a.config?.successActions ?? []) checkAction(sa, `${where}>success`);
+    for (const sa of a.config?.perfectActions ?? []) checkAction(sa, `${where}>perfect`);
   }
 }
 

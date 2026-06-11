@@ -54,6 +54,8 @@ export interface RoomDef {
   label: string;
   /** 灰盒底色，如 "#3E5C4B" */
   color: string;
+  /** 后期滤镜：grain=2026/梦境胶片颗粒，vhs=2001时间线 */
+  filter?: 'grain' | 'vhs';
   exits?: { left?: string; right?: string };
   hotspots: HotspotDef[];
 }

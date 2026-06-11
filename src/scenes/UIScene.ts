@@ -85,6 +85,16 @@ export class UIScene extends Phaser.Scene {
         tile.setScale(1.08);
       }
       tile.on('pointerdown', () => {
+        const cur = GameState.selectedItem;
+        // 选中另一物品时点击：先尝试合成
+        if (cur && cur !== itemId) {
+          const out = GameState.combine(cur, itemId);
+          if (out) {
+            GameState.select(null);
+            GameState.say(`组合出了：${getItem(out).name}`);
+            return;
+          }
+        }
         GameState.select(selected ? null : itemId);
       });
       c.add([tile, label]);

@@ -4,6 +4,7 @@ import { getRoom, getText } from '../data/registry';
 import { GameState } from '../systems/GameState';
 import { runActions } from '../systems/actions';
 import { W, H, COLORS } from '../ui/theme';
+import { GrainPostFX, VhsPostFX } from '../fx/pipelines';
 
 /** 灰盒模式：显示热区轮廓与 id，便于测试。正式美术阶段关闭。 */
 const GREYBOX = true;
@@ -34,6 +35,8 @@ export class RoomScene extends Phaser.Scene {
       .setOrigin(0.5)
       .setAlpha(0.55);
 
+    this.applyFilter();
+
     this.hotspotLayer = this.add.container(0, 0);
     this.buildHotspots();
     this.buildExits();
@@ -46,6 +49,14 @@ export class RoomScene extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => GameState.off('flag', onFlag));
 
     if (!this.scene.isActive('UI')) this.scene.launch('UI');
+  }
+
+  private applyFilter(): void {
+    const cam = this.cameras.main;
+    cam.resetPostPipeline();
+    if (this.game.renderer.type !== Phaser.WEBGL) return;
+    if (this.room.filter === 'grain') cam.setPostPipeline(GrainPostFX);
+    else if (this.room.filter === 'vhs') cam.setPostPipeline(VhsPostFX);
   }
 
   private buildHotspots(): void {

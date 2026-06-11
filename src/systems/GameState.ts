@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { isKnownFlag } from '../data/flags';
 import { saveState, loadState } from './SaveSystem';
+import recipes from '../data/recipes.json';
 
 export interface SaveData {
   v: number;
@@ -56,6 +57,20 @@ class GameStateImpl extends Phaser.Events.EventEmitter {
   select(item: string | null): void {
     this.selectedItem = item;
     this.emit('select', item);
+  }
+
+  /** 物品合成：a+b 匹配 recipes.json 则消耗两者产出新物品，返回产物 id */
+  combine(a: string, b: string): string | null {
+    const r = (recipes as { inputs: string[]; output: string }[]).find(
+      (rec) =>
+        (rec.inputs[0] === a && rec.inputs[1] === b) ||
+        (rec.inputs[0] === b && rec.inputs[1] === a),
+    );
+    if (!r) return null;
+    this.takeItem(a);
+    this.takeItem(b);
+    this.giveItem(r.output);
+    return r.output;
   }
 
   setRoom(room: string): void {

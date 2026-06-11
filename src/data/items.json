@@ -2,5 +2,15 @@
   { "id": "library_card", "name": "借阅证", "color": "#E8DCC0", "descTextId": "items.library_card" },
   { "id": "crow_feather", "name": "乌鸦羽毛", "color": "#2B2B33", "descTextId": "items.crow_feather" },
   { "id": "vhs_tape", "name": "录像带", "color": "#3E5C4B", "descTextId": "items.vhs_tape" },
-  { "id": "burned_slip", "name": "烧痕借阅单", "color": "#8C3B2E", "descTextId": "items.burned_slip" }
+  { "id": "burned_slip", "name": "烧痕借阅单", "color": "#8C3B2E", "descTextId": "items.burned_slip" },
+  { "id": "brass_key", "name": "黄铜钥匙", "color": "#B08D3F", "descTextId": "items.brass_key" },
+  { "id": "shovel_head", "name": "铁锹头", "color": "#5a5a5a", "descTextId": "items.shovel_head" },
+  { "id": "stick", "name": "木棍", "color": "#8a6b42", "descTextId": "items.stick" },
+  { "id": "tape", "name": "胶带", "color": "#9a9a8a", "descTextId": "items.tape" },
+  { "id": "shovel_frame", "name": "没绑紧的铁锹", "color": "#7a6b52", "descTextId": "items.shovel_frame" },
+  { "id": "shovel", "name": "铁锹", "color": "#6b5a3f", "descTextId": "items.shovel" },
+  { "id": "letter_2001", "name": "周韵秋的信", "color": "#D8C8A8", "descTextId": "items.letter_2001" },
+  { "id": "half_photo", "name": "半张合影", "color": "#A98E6F", "descTextId": "items.half_photo" },
+  { "id": "archive_r2", "name": "残缺档案②", "color": "#8C3B2E", "descTextId": "items.archive_r2" },
+  { "id": "archive_r3", "name": "残缺档案③", "color": "#8C3B2E", "descTextId": "items.archive_r3" }
 ]

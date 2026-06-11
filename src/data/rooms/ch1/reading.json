@@ -44,6 +44,7 @@
               { "type": "setFlag", "flag": "ch1_watched_vhs" },
               { "type": "say", "textId": "ch1.after_vhs" },
               { "type": "setFlag", "flag": "ch1_complete" },
+              { "type": "goRoom", "room": "ch2_library_hall" },
               {
                 "type": "chapterCard",
                 "title": "第一章 · 失踪的档案",

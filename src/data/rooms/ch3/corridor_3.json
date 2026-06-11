@@ -1,0 +1,32 @@
+{
+  "id": "ch3_corridor_3",
+  "label": "循环走廊 · 第三圈（镜子里有什么是走廊里没有的？）",
+  "color": "#25212c",
+  "filter": "grain",
+  "exits": { "left": "ch3_corridor_3", "right": "ch3_corridor_3" },
+  "hotspots": [
+    {
+      "id": "corridor_doors",
+      "rect": [420, 600, 220, 400],
+      "onTap": [{ "type": "say", "textId": "ch3.door_normal" }]
+    },
+    {
+      "id": "r3_slit",
+      "rect": [1500, 980, 200, 100],
+      "hiddenIfFlag": "ch3_got_r3",
+      "onTap": [
+        { "type": "give", "item": "archive_r3" },
+        { "type": "setFlag", "flag": "ch3_got_r3" },
+        { "type": "say", "textId": "ch3.r3_found" }
+      ]
+    },
+    {
+      "id": "mirror_extra_door",
+      "rect": [920, 520, 300, 460],
+      "onTap": [
+        { "type": "say", "textId": "ch3.mirror_door" },
+        { "type": "goRoom", "room": "ch3_corridor_4" }
+      ]
+    }
+  ]
+}

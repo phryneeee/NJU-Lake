@@ -1,0 +1,26 @@
+{
+  "id": "ch3_dorm",
+  "label": "宿舍 · 深夜",
+  "color": "#332e3a",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "mirror",
+      "rect": [420, 520, 240, 360],
+      "onTap": [{ "type": "say", "textId": "ch3.mirror" }]
+    },
+    {
+      "id": "desk_clutter",
+      "rect": [1380, 760, 380, 280],
+      "onTap": [{ "type": "say", "textId": "ch3.desk_clutter" }]
+    },
+    {
+      "id": "bed",
+      "rect": [820, 800, 460, 320],
+      "onTap": [
+        { "type": "say", "textId": "ch3.sleep" },
+        { "type": "goRoom", "room": "ch3_corridor_1" }
+      ]
+    }
+  ]
+}

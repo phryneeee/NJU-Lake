@@ -1,0 +1,22 @@
+{
+  "id": "ch3_corridor_4",
+  "label": "循环走廊 · 第四圈（尽头多了一扇不属于这里的门）",
+  "color": "#221e29",
+  "filter": "grain",
+  "exits": { "left": "ch3_corridor_4", "right": "ch3_corridor_4" },
+  "hotspots": [
+    {
+      "id": "rabbit_shadow",
+      "rect": [480, 700, 220, 300],
+      "onTap": [{ "type": "say", "textId": "ch3.rabbit_shadow" }]
+    },
+    {
+      "id": "wooden_door",
+      "rect": [920, 520, 320, 520],
+      "onTap": [
+        { "type": "say", "textId": "ch3.wooden_door" },
+        { "type": "goRoom", "room": "ch3_worksite" }
+      ]
+    }
+  ]
+}

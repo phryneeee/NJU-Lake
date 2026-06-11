@@ -1,0 +1,26 @@
+{
+  "id": "ch2_street",
+  "label": "嫏嬛路 · 夜（沿湖）",
+  "color": "#171c22",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "lake",
+      "rect": [320, 880, 520, 360],
+      "onTap": [{ "type": "say", "textId": "ch2.lake_night" }]
+    },
+    {
+      "id": "street_sign",
+      "rect": [1060, 520, 220, 180],
+      "onTap": [{ "type": "say", "textId": "ch2.street_sign" }]
+    },
+    {
+      "id": "huaian_gate",
+      "rect": [1480, 540, 340, 520],
+      "onTap": [
+        { "type": "say", "textId": "ch2.huaian_gate" },
+        { "type": "goRoom", "room": "ch2_elevator" }
+      ]
+    }
+  ]
+}
