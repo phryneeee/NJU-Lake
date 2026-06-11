@@ -3,9 +3,9 @@ import { GameState } from '../systems/GameState';
 import { getItem } from '../data/registry';
 import { W, H, COLORS } from '../ui/theme';
 
-const SLOT_COUNT = 8;
-const SLOT_SIZE = 150;
-const SLOT_GAP = 18;
+const SLOT_COUNT = 12;
+const SLOT_SIZE = 140;
+const SLOT_GAP = 16;
 
 /**
  * 常驻覆盖层：物品栏（顶部8格）+ 单行字幕（底部）+ 章节卡。

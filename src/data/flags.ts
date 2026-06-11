@@ -31,6 +31,24 @@ export const FLAGS = {
   ch3_got_r3: '【残缺档案③】循环走廊门缝',
   ch3_timeline_done: '完成记忆时间线拼接（谜题3-4）',
   ch3_complete: '第三章完成（30岁的越洋通话）',
+
+  // 第四章 · 乌鸦记录室
+  ch4_fixed_two: '修复26/30岁两份被篡改档案（谜题4-1前半）',
+  ch4_clock_done: '完成鹿的时钟走廊（谜题4-2）',
+  ch4_got_draft: '从镜像档案室取回最后一份底稿（谜题4-3）',
+  ch4_got_r4: '【残缺档案④】只能在镜中取得',
+  ch4_fixed_all: '修复35岁档案（谜题4-1后半）',
+  ch4_fox_done: '识破狐狸赌局，转出「无解」（谜题4-4）',
+  ch4_complete: '第四章完成（35岁的半截粉笔）',
+
+  // 第五章 · 档案404
+  ch5_got_nib: '在机房抽屉找到钢笔尖',
+  ch5_crt_done: '破解CRT烧屏密码，看到删除日志（谜题5-1）',
+  ch5_got_paper: '拿到石桌上的信纸',
+  ch5_dual_done: '完成双时空联动（谜题5-3）',
+  ch5_got_r5: '【残缺档案⑤】2001书架深处（需传手电筒）',
+  ch5_assembled: '重组档案404（谜题5-4）',
+  ch5_complete: '第五章完成（明天答辩）',
 } as const;
 
 export type FlagId = keyof typeof FLAGS;

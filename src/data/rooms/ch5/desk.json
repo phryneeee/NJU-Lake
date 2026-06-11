@@ -1,0 +1,69 @@
+{
+  "id": "ch5_desk",
+  "label": "第七档案库 · 登记台",
+  "color": "#1f3328",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "crow_gives_half",
+      "rect": [840, 520, 320, 520],
+      "hiddenIfFlag": "ch5_assembled",
+      "onTap": [{ "type": "say", "textId": "ch5.crow_half" }]
+    },
+    {
+      "id": "assembly_table",
+      "rect": [1280, 800, 420, 300],
+      "hiddenIfFlag": "ch5_assembled",
+      "useItem": {
+        "item": "file_half_2001",
+        "consume": true,
+        "actions": [
+          {
+            "type": "openPuzzle",
+            "puzzle": "SortPuzzle",
+            "config": {
+              "prompt": "登记台上：两半档案、空白纸、我的证件照、浆糊、档案线。\n墙上贴着《档案装订规程》四步图示。按规程的顺序排列操作。",
+              "slotLabels": ["第一步", "第二步", "第三步", "第四步"],
+              "cards": [
+                { "id": "p3", "label": "贴上\n照片" },
+                { "id": "p1", "label": "对齐\n两半" },
+                { "id": "p4", "label": "穿线\n装订" },
+                { "id": "p2", "label": "垫入\n空白纸" }
+              ],
+              "correctOrder": ["p1", "p2", "p3", "p4"],
+              "wrongText": "线穿歪了。规程图示再看一眼——先对齐，再垫纸。",
+              "successActions": [
+                { "type": "setFlag", "flag": "ch5_assembled" },
+                { "type": "say", "textId": "ch5.assembled_1" },
+                { "type": "say", "textId": "ch5.assembled_2" }
+              ]
+            }
+          }
+        ]
+      },
+      "wrongTextId": "ch5.table_hint"
+    },
+    {
+      "id": "crow_final",
+      "rect": [840, 520, 320, 520],
+      "requiresFlag": "ch5_assembled",
+      "hiddenIfFlag": "ch5_complete",
+      "onTap": [
+        { "type": "say", "textId": "ch5.crow_final_1" },
+        { "type": "say", "textId": "ch5.crow_final_2" },
+        { "type": "setFlag", "flag": "ch5_complete" },
+        {
+          "type": "chapterCard",
+          "title": "第五章 · 档案404",
+          "subtitle": "404不是丢失，是尚未发生。——未完待续"
+        }
+      ]
+    },
+    {
+      "id": "tbc",
+      "rect": [840, 520, 320, 520],
+      "requiresFlag": "ch5_complete",
+      "onTap": [{ "type": "say", "textId": "ch5.to_be_continued" }]
+    }
+  ]
+}

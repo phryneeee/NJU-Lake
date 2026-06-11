@@ -1,0 +1,26 @@
+{
+  "id": "ch4_museum",
+  "label": "校史博物馆 · 三层（清晨，边界开始失效）",
+  "color": "#3d3830",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "showcase",
+      "rect": [420, 600, 480, 360],
+      "onTap": [{ "type": "say", "textId": "ch4.showcase" }]
+    },
+    {
+      "id": "guide_sign",
+      "rect": [1100, 480, 240, 200],
+      "onTap": [{ "type": "say", "textId": "ch4.guide_sign" }]
+    },
+    {
+      "id": "stairs_reflection",
+      "rect": [1480, 520, 340, 520],
+      "onTap": [
+        { "type": "say", "textId": "ch4.stairs_reflection" },
+        { "type": "goRoom", "room": "ch4_records" }
+      ]
+    }
+  ]
+}

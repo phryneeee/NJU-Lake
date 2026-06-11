@@ -1,0 +1,57 @@
+{
+  "id": "ch4_mirror",
+  "label": "镜像档案室（镜中的房间，左右颠倒）",
+  "color": "#243530",
+  "filter": "grain",
+  "exits": { "left": "ch4_clock" },
+  "hotspots": [
+    {
+      "id": "mirror_room",
+      "rect": [620, 480, 820, 560],
+      "hiddenIfFlag": "ch4_got_draft",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "MirrorRoomPuzzle",
+          "config": {
+            "prompt": "落地镜里的档案室和这间一模一样——只是左右颠倒。镜中那只虚掩的柜子，在现实里锁着。\n镜中的手和你的手反着动：想让它开，你就得反着来。",
+            "cols": 4,
+            "rows": 3,
+            "targetMirrorCol": 2,
+            "targetRow": 2,
+            "steps": [
+              {
+                "prompt": "柜门开了一条缝。镜中把手需要顺时针转——你的手应该：",
+                "options": ["顺时针转", "逆时针转"],
+                "correct": 1
+              },
+              {
+                "prompt": "里层抽屉在镜中偏左——你应该拉：",
+                "options": ["左边的抽屉", "右边的抽屉"],
+                "correct": 1
+              },
+              {
+                "prompt": "镜面泛起涟漪。伸哪只手进去拿？镜中的它用的是左手——",
+                "options": ["伸左手", "伸右手"],
+                "correct": 1
+              }
+            ],
+            "successActions": [
+              { "type": "setFlag", "flag": "ch4_got_draft" },
+              { "type": "say", "textId": "ch4.draft_got" },
+              { "type": "give", "item": "archive_r4" },
+              { "type": "setFlag", "flag": "ch4_got_r4" },
+              { "type": "say", "textId": "ch4.r4_found" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "mirror_calm",
+      "rect": [620, 480, 820, 560],
+      "requiresFlag": "ch4_got_draft",
+      "onTap": [{ "type": "say", "textId": "ch4.mirror_calm" }]
+    }
+  ]
+}

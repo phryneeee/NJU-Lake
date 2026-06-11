@@ -45,6 +45,7 @@
         { "type": "say", "textId": "ch3.self30_2" },
         { "type": "say", "textId": "ch3.self30_3" },
         { "type": "setFlag", "flag": "ch3_complete" },
+        { "type": "goRoom", "room": "ch4_museum" },
         {
           "type": "chapterCard",
           "title": "第三章 · 白兔时间线",

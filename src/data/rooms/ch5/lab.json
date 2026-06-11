@@ -1,0 +1,58 @@
+{
+  "id": "ch5_lab",
+  "label": "旧电脑机房（当晚，只有一台CRT亮着）",
+  "color": "#1d2424",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "badge_board",
+      "rect": [360, 520, 320, 280],
+      "onTap": [{ "type": "say", "textId": "ch5.badge_board" }]
+    },
+    {
+      "id": "desk_drawer",
+      "rect": [1380, 880, 320, 200],
+      "hiddenIfFlag": "ch5_got_nib",
+      "onTap": [
+        { "type": "give", "item": "pen_nib" },
+        { "type": "setFlag", "flag": "ch5_got_nib" },
+        { "type": "say", "textId": "ch5.pen_nib" }
+      ]
+    },
+    {
+      "id": "crt",
+      "rect": [840, 560, 420, 380],
+      "hiddenIfFlag": "ch5_crt_done",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "CrtPuzzle",
+          "config": {
+            "ghostText": "y.q.zhou",
+            "code": "0173",
+            "terms": ["立春", "谷雨", "夏至", "白露", "秋分", "霜降", "冬至", "大寒"],
+            "correctTerm": "夏至",
+            "logText": "> 档案管理系统 v1.04\n> 查询：林晚\n> 结果：HTTP 404 未找到该人生\n>\n> 删除日志：\n> 卷宗 NJU-2001-404\n> 删除时间：2001-06-21 23:59\n> 操作者签名：林 晚",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch5_crt_done" },
+              { "type": "say", "textId": "ch5.log_shock" },
+              { "type": "say", "textId": "ch5.fox_voice" },
+              { "type": "say", "textId": "ch5.flee" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "dead_screens",
+      "rect": [840, 1020, 420, 200],
+      "onTap": [{ "type": "say", "textId": "ch5.dead_screens" }]
+    },
+    {
+      "id": "exit_to_lake",
+      "rect": [1740, 560, 220, 480],
+      "requiresFlag": "ch5_crt_done",
+      "onTap": [{ "type": "goRoom", "room": "ch5_lakeside" }]
+    }
+  ]
+}

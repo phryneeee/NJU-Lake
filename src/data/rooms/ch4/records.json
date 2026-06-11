@@ -1,0 +1,151 @@
+{
+  "id": "ch4_records",
+  "label": "乌鸦记录室（上千支羽毛笔在自动书写）",
+  "color": "#26222b",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "quills_ceiling",
+      "rect": [320, 420, 420, 300],
+      "onTap": [{ "type": "say", "textId": "ch4.quills_ceiling" }]
+    },
+    {
+      "id": "tampered_files",
+      "rect": [880, 700, 400, 320],
+      "hiddenIfFlag": "ch4_fixed_two",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "TamperedFilePuzzle",
+          "config": {
+            "prompt": "案上摊着我三个未来的档案。有几行的墨迹太新了——页脚有狐狸爪印的水印。\n对照乌鸦的镜文底稿，标出每一行谎言，再确认修复。",
+            "files": [
+              {
+                "title": "档案 · 林晚 · 26岁 · 读博",
+                "lines": [
+                  { "text": "26岁，博士一年级，师从周韵秋教授。" },
+                  { "text": "她再也没有发表过任何论文。", "truth": "她的第一篇核心论文发表于博二，写的是嫏嬛路的来历。" },
+                  { "text": "整理档案到深夜是常态。" },
+                  { "text": "她失去了所有朋友。", "truth": "她和同门每周五去吃一次小火锅，雷打不动。" },
+                  { "text": "她常常怀疑自己的选择。", "truth": "她常常怀疑自己的选择——但每次摸到档案纸的纹理，又确定了一次。" }
+                ]
+              },
+              {
+                "title": "档案 · 林晚 · 30岁 · 出国",
+                "lines": [
+                  { "text": "30岁，在海外档案馆做博士后研究。" },
+                  { "text": "她已经忘记了中文怎么写。", "truth": "她教会了同事用中文写「档案」两个字。" },
+                  { "text": "凌晨四点的办公室常常只有她。" },
+                  { "text": "没有人记得她的生日。", "truth": "她生日那天收到三个时区的祝福，最早的来自南京。" },
+                  { "text": "她申请的项目是关于战时大学西迁的。" }
+                ]
+              }
+            ],
+            "successActions": [
+              { "type": "setFlag", "flag": "ch4_fixed_two" },
+              { "type": "say", "textId": "ch4.fixed_two" },
+              { "type": "say", "textId": "ch4.third_missing" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "deer_lady",
+      "rect": [1480, 560, 280, 480],
+      "requiresFlag": "ch4_fixed_two",
+      "hiddenIfFlag": "ch4_clock_done",
+      "onTap": [
+        { "type": "say", "textId": "ch4.deer_intro" },
+        { "type": "goRoom", "room": "ch4_clock" }
+      ]
+    },
+    {
+      "id": "third_file",
+      "rect": [880, 700, 400, 320],
+      "requiresFlag": "ch4_got_draft",
+      "hiddenIfFlag": "ch4_fixed_all",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "TamperedFilePuzzle",
+          "config": {
+            "prompt": "拿到最后一份底稿了。修复35岁的档案。",
+            "files": [
+              {
+                "title": "档案 · 林晚 · 35岁 · 离开学术",
+                "lines": [
+                  { "text": "35岁，中学历史老师。" },
+                  { "text": "她把研究生时代的一切都扔掉了。", "truth": "她的教案里夹着研究生时代的笔记，边角都翻毛了。" },
+                  { "text": "课上她讲到本地校史时，眼睛会亮。" },
+                  { "text": "她认为自己是个失败者。", "truth": "有学生因为她报了历史系。她请那孩子吃了顿小火锅。" },
+                  { "text": "办公桌上有一盒粉笔，断的那截她舍不得扔。" }
+                ]
+              }
+            ],
+            "successActions": [
+              { "type": "setFlag", "flag": "ch4_fixed_all" },
+              { "type": "say", "textId": "ch4.fixed_all" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "fox_safe",
+      "rect": [380, 880, 340, 280],
+      "requiresFlag": "ch4_fixed_all",
+      "hiddenIfFlag": "ch4_fox_done",
+      "onTap": [
+        { "type": "say", "textId": "ch4.fox_intro" },
+        {
+          "type": "openPuzzle",
+          "puzzle": "FoxSafePuzzle",
+          "config": {
+            "prompt": "狐狸倚着一台保险柜，只露出半张脸：「转出『完美人生』，柜子就开。\n你的未来，原件在里面哦。」转盘上是一圈词。",
+            "words": ["读博", "出国", "离开", "留下", "现在", "过去", "成功", "安稳", "自由", "理想", "无解", "重来"],
+            "correct": "无解",
+            "responses": {
+              "读博": "哦？赌上七年青春换一纸文凭？你导师当年也这么想——你看她现在多『风光』。",
+              "出国": "逃这么远，时差会替你挡住凌晨的崩溃吗？",
+              "离开": "半途而废的人，连档案都只配存半卷。",
+              "留下": "留下？留在哪？这地方记得你是谁吗？",
+              "现在": "「现在」不是答案，是你拖延的借口。",
+              "成功": "成功？给它下个定义试试。下不出来吧。",
+              "安稳": "安稳是糖纸，里面包的是不甘心。",
+              "自由": "自由的另一个写法是『没人管你死活』。",
+              "理想": "理想，嗯，理想最好吃了——画在饼上的时候。",
+              "过去": "过去已经归档了，亲爱的，你没有权限修改。",
+              "重来": "重来？这个世界连存档点都没给你设。"
+            },
+            "defaultResponse": "柜身渗出一滴黑墨。",
+            "successActions": [
+              { "type": "setFlag", "flag": "ch4_fox_done" },
+              { "type": "say", "textId": "ch4.fox_open" },
+              { "type": "give", "item": "fox_mask" },
+              { "type": "say", "textId": "ch4.fox_exit" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "self35",
+      "rect": [1480, 560, 280, 480],
+      "requiresFlag": "ch4_fox_done",
+      "hiddenIfFlag": "ch4_complete",
+      "onTap": [
+        { "type": "say", "textId": "ch4.self35_1" },
+        { "type": "say", "textId": "ch4.self35_2" },
+        { "type": "say", "textId": "ch4.self35_3" },
+        { "type": "setFlag", "flag": "ch4_complete" },
+        { "type": "goRoom", "room": "ch5_lab" },
+        {
+          "type": "chapterCard",
+          "title": "第四章 · 乌鸦记录室",
+          "subtitle": "「我没有失败。我只是换了一间教室。」——未完待续"
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 [
   { "inputs": ["shovel_head", "stick"], "output": "shovel_frame" },
-  { "inputs": ["shovel_frame", "tape"], "output": "shovel" }
+  { "inputs": ["shovel_frame", "tape"], "output": "shovel" },
+  { "inputs": ["crow_feather", "pen_nib"], "output": "quill" },
+  { "inputs": ["letter_paper", "quill"], "output": "signed_letter" }
 ]

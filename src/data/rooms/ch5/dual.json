@@ -1,0 +1,44 @@
+{
+  "id": "ch5_dual",
+  "label": "镜湖对岸（上面是2001，下面是2026，中间隔着一个还书箱）",
+  "color": "#1a2630",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "dual_link",
+      "rect": [620, 480, 820, 560],
+      "hiddenIfFlag": "ch5_dual_done",
+      "onTap": [
+        {
+          "type": "openPuzzle",
+          "puzzle": "DualTimelinePuzzle",
+          "config": {
+            "bonusActions": [
+              { "type": "give", "item": "archive_r5" },
+              { "type": "setFlag", "flag": "ch5_got_r5" }
+            ],
+            "successActions": [
+              { "type": "setFlag", "flag": "ch5_dual_done" },
+              { "type": "say", "textId": "ch5.found_half" },
+              { "type": "give", "item": "file_half_2001" },
+              { "type": "say", "textId": "ch5.letter_1" },
+              { "type": "say", "textId": "ch5.letter_2" },
+              { "type": "say", "textId": "ch5.letter_3" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "to_desk",
+      "rect": [1700, 560, 260, 480],
+      "requiresFlag": "ch5_dual_done",
+      "onTap": [{ "type": "goRoom", "room": "ch5_desk" }]
+    },
+    {
+      "id": "lake_reflection",
+      "rect": [300, 1100, 520, 240],
+      "onTap": [{ "type": "say", "textId": "ch5.lake_reflection" }]
+    }
+  ]
+}

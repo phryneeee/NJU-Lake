@@ -11,6 +11,11 @@ import { VhsTuningPuzzle } from './puzzles/VhsTuningPuzzle';
 import { OpacPuzzle } from './puzzles/OpacPuzzle';
 import { QuizPuzzle } from './puzzles/QuizPuzzle';
 import { ElevatorPuzzle } from './puzzles/ElevatorPuzzle';
+import { TamperedFilePuzzle } from './puzzles/TamperedFilePuzzle';
+import { MirrorRoomPuzzle } from './puzzles/MirrorRoomPuzzle';
+import { FoxSafePuzzle } from './puzzles/FoxSafePuzzle';
+import { CrtPuzzle } from './puzzles/CrtPuzzle';
+import { DualTimelinePuzzle } from './puzzles/DualTimelinePuzzle';
 
 GameState.restore();
 
@@ -35,5 +40,10 @@ new Phaser.Game({
     OpacPuzzle,
     QuizPuzzle,
     ElevatorPuzzle,
+    TamperedFilePuzzle,
+    MirrorRoomPuzzle,
+    FoxSafePuzzle,
+    CrtPuzzle,
+    DualTimelinePuzzle,
   ],
 });
