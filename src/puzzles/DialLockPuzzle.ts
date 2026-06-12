@@ -58,6 +58,7 @@ export class DialLockPuzzle extends PuzzleScene {
   }
 
   private bump(i: number, d: number): void {
+    this.sfx('sfx_dial');
     this.values[i] = (this.values[i] + d + 10) % 10;
     this.digits[i].setText(String(this.values[i]));
   }
@@ -67,6 +68,7 @@ export class DialLockPuzzle extends PuzzleScene {
       this.cameras.main.flash(300, 127, 212, 193);
       this.time.delayedCall(350, () => this.succeed());
     } else {
+      this.sfx('sfx_error');
       this.cameras.main.shake(180, 0.006);
     }
   }

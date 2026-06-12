@@ -47,6 +47,7 @@ export class IndexCabinetPuzzle extends PuzzleScene {
   }
 
   private open(key: string, correct: string, drawer: Phaser.GameObjects.Rectangle): void {
+    this.sfx('sfx_drawer');
     if (key === correct) {
       this.cameras.main.flash(300, 127, 212, 193);
       this.time.delayedCall(400, () => this.succeed());

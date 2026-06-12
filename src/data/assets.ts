@@ -24,7 +24,7 @@ for (const path of Object.keys(bgModules)) {
   bgUrls.set(id, { url: bgModules[path], isSvg: path.endsWith('.svg') });
 }
 
-const audioModules = import.meta.glob<string>('../assets/audio/*.{m4a,ogg,mp3}', {
+const audioModules = import.meta.glob<string>('../assets/audio/*.{m4a,ogg,mp3,wav}', {
   eager: true,
   query: '?url',
   import: 'default',

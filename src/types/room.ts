@@ -1,9 +1,11 @@
 /** 房间/热区/动作的数据驱动定义。新增房间 = 一张背景 + 一个 JSON，不写新代码。 */
 
 export interface RoomAction {
-  type: 'say' | 'give' | 'take' | 'setFlag' | 'goRoom' | 'openPuzzle' | 'chapterCard';
+  type: 'say' | 'give' | 'take' | 'setFlag' | 'goRoom' | 'openPuzzle' | 'chapterCard' | 'playSfx';
   /** say: 文案 id（dialogue/chN.json 的 key） */
   textId?: string;
+  /** playSfx: 音效 key（assets/audio/sfx_*.wav） */
+  sfx?: string;
   /** give/take: 物品 id */
   item?: string;
   /** setFlag: flag id */

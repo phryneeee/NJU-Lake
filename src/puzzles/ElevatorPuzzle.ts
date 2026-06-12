@@ -59,6 +59,7 @@ export class ElevatorPuzzle extends PuzzleScene {
 
   private press(floor: string, btn: Phaser.GameObjects.Arc): void {
     if (this.revealed) return;
+    this.sfx('sfx_dial');
     this.tweens.add({ targets: btn, scale: 0.9, duration: 70, yoyo: true });
 
     if (floor === 'B1' && this.lampOn) {
@@ -75,6 +76,7 @@ export class ElevatorPuzzle extends PuzzleScene {
 
   private revealB7(): void {
     this.revealed = true;
+    this.sfx('sfx_bell');
     this.cameras.main.shake(400, 0.012);
     const b7 = this.add
       .circle(220, 420, 52, 0x8c3b2e)

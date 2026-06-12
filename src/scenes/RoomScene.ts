@@ -7,6 +7,7 @@ import { W, H, COLORS } from '../ui/theme';
 import { GrainPostFX, VhsPostFX } from '../fx/pipelines';
 import { Settings } from '../systems/Settings';
 import { AudioSystem } from '../systems/AudioSystem';
+import { AMBIENCE_MAP } from '../data/ambience';
 
 /** 灰盒模式：显示热区轮廓与 id，便于测试。正式美术阶段关闭。 */
 const GREYBOX = true;
@@ -52,7 +53,7 @@ export class RoomScene extends Phaser.Scene {
     }
 
     this.applyFilter();
-    AudioSystem.setAmbience(this, this.room.ambience);
+    AudioSystem.setAmbience(this, this.room.ambience ?? AMBIENCE_MAP[this.room.id]);
 
     this.hotspotLayer = this.add.container(0, 0);
     this.buildHotspots();
@@ -155,16 +156,19 @@ export class RoomScene extends Phaser.Scene {
       if (selected === h.useItem.item) {
         if (h.useItem.consume) GameState.takeItem(h.useItem.item);
         GameState.select(null);
+        AudioSystem.sfx(this, 'sfx_pickup');
         runActions(this, h.useItem.actions);
         return;
       }
       // 需要物品但没选对：给提示
       GameState.say(getText(h.wrongTextId ?? 'common.nothing'));
+      AudioSystem.sfx(this, 'sfx_error');
       this.shake(zone);
       return;
     }
 
     if (h.onTap) {
+      AudioSystem.sfx(this, 'sfx_click');
       runActions(this, h.onTap);
       this.tweens.add({ targets: zone, scale: 0.96, duration: 70, yoyo: true });
       return;

@@ -11,7 +11,7 @@ class AudioSystemImpl {
   private currentKey?: string;
 
   /** 切换环境底噪（淡出旧的、淡入新的）。key 为空则只淡出。 */
-  setAmbience(scene: Phaser.Scene, key?: string): void {
+  setAmbience(scene: Phaser.Scene, key?: string, volume = 0.6): void {
     if (key === this.currentKey) return;
 
     const old = this.currentAmbience;
@@ -30,7 +30,7 @@ class AudioSystemImpl {
 
     const snd = scene.sound.add(key, { loop: true, volume: 0 });
     snd.play();
-    scene.tweens.add({ targets: snd, volume: 0.6, duration: 1200 });
+    scene.tweens.add({ targets: snd, volume, duration: 1200 });
     this.currentAmbience = snd;
     this.currentKey = key;
   }

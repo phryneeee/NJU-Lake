@@ -49,6 +49,7 @@ export class SignPuzzle extends PuzzleScene {
       seal.on('pointerdown', () => {
         if (this.signed) return;
         // 印面落纸即碎成灰
+        this.sfx('sfx_error');
         this.cameras.main.shake(140, 0.004);
         this.tweens.add({
           targets: [seal, t],

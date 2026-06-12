@@ -4,6 +4,7 @@ import { getItem, getText } from '../data/registry';
 import { W, H, COLORS } from '../ui/theme';
 import { Settings } from '../systems/Settings';
 import { clearState } from '../systems/SaveSystem';
+import { AudioSystem } from '../systems/AudioSystem';
 
 const SLOT_COUNT = 12;
 const SLOT_SIZE = 140;
@@ -34,14 +35,20 @@ export class UIScene extends Phaser.Scene {
     GameState.on('select', this.refreshInventory, this);
     GameState.on('say', this.enqueueSay, this);
     GameState.on('chapterCard', this.showChapterCard, this);
+    GameState.on('gain', this.onGain, this);
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
       GameState.off('inventory', this.refreshInventory, this);
       GameState.off('select', this.refreshInventory, this);
       GameState.off('say', this.enqueueSay, this);
       GameState.off('chapterCard', this.showChapterCard, this);
+      GameState.off('gain', this.onGain, this);
     });
 
     this.refreshInventory();
+  }
+
+  private onGain(): void {
+    AudioSystem.sfx(this, 'sfx_pickup');
   }
 
   // ---- 物品栏 ----

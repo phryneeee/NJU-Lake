@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import type { RoomAction } from '../types/room';
 import { GameState } from './GameState';
 import { getText } from '../data/registry';
+import { AudioSystem } from './AudioSystem';
 
 /**
  * 动作解释器：热区点击 / 谜题成功后统一执行。
@@ -36,6 +37,9 @@ export function runActions(scene: Phaser.Scene, actions: RoomAction[]): void {
         break;
       case 'chapterCard':
         GameState.emit('chapterCard', a.title ?? '', a.subtitle ?? '');
+        break;
+      case 'playSfx':
+        if (a.sfx) AudioSystem.sfx(scene, a.sfx);
         break;
     }
   }

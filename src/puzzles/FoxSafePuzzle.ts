@@ -65,6 +65,7 @@ export class FoxSafePuzzle extends PuzzleScene {
   }
 
   private spin(d: number): void {
+    this.sfx('sfx_dial');
     const words = this.words();
     this.index = (this.index + d + words.length) % words.length;
     this.wordText.setText(words[this.index]);
@@ -81,6 +82,7 @@ export class FoxSafePuzzle extends PuzzleScene {
     const responses = (this.config.responses as Record<string, string>) ?? {};
     const line = responses[word] ?? String(this.config.defaultResponse ?? '柜身渗出一滴黑墨。狐狸在暗处轻笑。');
     this.foxLine.setText(`狐狸：「${line}」`);
+    this.sfx('sfx_error');
     this.cameras.main.shake(160, 0.005);
   }
 }

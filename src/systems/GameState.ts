@@ -41,6 +41,7 @@ class GameStateImpl extends Phaser.Events.EventEmitter {
   giveItem(item: string): void {
     if (this.hasItem(item)) return;
     this.inventory.push(item);
+    this.emit('gain', item); // 获得新物品（区别于消耗，用于音效）
     this.emit('inventory');
     this.persist();
   }

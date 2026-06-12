@@ -14,7 +14,8 @@
     "art-checklist": "node scripts/art-checklist.mjs",
     "previews": "node scripts/render-previews.mjs",
     "icons": "node scripts/gen-item-icons.mjs",
-    "item-sheet": "node scripts/render-item-sheet.mjs"
+    "item-sheet": "node scripts/render-item-sheet.mjs",
+    "audio": "node scripts/gen-audio.mjs"
   },
   "dependencies": {
     "phaser": "^3.80.1"
