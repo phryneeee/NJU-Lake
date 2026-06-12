@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="80%">
+      <stop offset="42%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+    <radialGradient id="lant" cx="50%" cy="50%" r="50%">
+      <stop offset="20%" stop-color="#e8c84a" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#e8c84a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 夜空 -->
+  <rect width="2048" height="1536" fill="#121826"/>
+  <g fill="#cdd8e6" opacity="0.8">
+    <circle cx="220" cy="200" r="4"/><circle cx="520" cy="120" r="3"/><circle cx="860" cy="240" r="3"/>
+    <circle cx="1180" cy="140" r="4"/><circle cx="1560" cy="200" r="3"/><circle cx="1880" cy="120" r="4"/>
+    <circle cx="380" cy="360" r="3"/><circle cx="1700" cy="340" r="3"/>
+  </g>
+  <circle cx="1500" cy="260" r="92" fill="#e8e2cc"/>
+  <circle cx="1472" cy="234" r="15" fill="#cfc9b2"/>
+  <circle cx="1532" cy="284" r="11" fill="#cfc9b2"/>
+
+  <!-- 对岸树影 -->
+  <g fill="#0a0f14">
+    <ellipse cx="300" cy="560" rx="260" ry="120"/>
+    <ellipse cx="800" cy="540" rx="220" ry="100"/>
+    <ellipse cx="1300" cy="560" rx="240" ry="110"/>
+    <ellipse cx="1800" cy="540" rx="220" ry="100"/>
+  </g>
+
+  <!-- 湖面（热区 360,880,720,360 取左半） -->
+  <rect y="620" width="2048" height="640" fill="#16202a"/>
+  <ellipse cx="1500" cy="640" rx="100" ry="14" fill="#e8e2cc" opacity="0.3"/>
+  <g stroke="#26323e" stroke-width="6" fill="none" opacity="0.9">
+    <path d="M 200 760 q 90 -18 180 0"/><path d="M 600 830 q 110 -22 220 0"/>
+    <path d="M 1100 780 q 90 -18 180 0"/><path d="M 1500 870 q 110 -22 220 0"/>
+    <path d="M 320 960 q 100 -20 200 0"/><path d="M 900 1000 q 90 -18 180 0"/>
+  </g>
+
+  <!-- 湖心纸灯（热区 620,620,160,160） -->
+  <g>
+    <ellipse cx="700" cy="740" rx="160" ry="60" fill="url(#lant)"/>
+    <rect x="668" y="640" width="64" height="80" rx="14" fill="#e8c84a"/>
+    <rect x="668" y="640" width="64" height="80" rx="14" fill="none" stroke="#8C3B2E" stroke-width="5"/>
+    <rect x="688" y="624" width="24" height="16" fill="#8C3B2E"/>
+    <ellipse cx="700" cy="744" rx="40" ry="10" fill="#e8c84a" opacity="0.5"/>
+  </g>
+
+  <!-- 岸：右侧石阶与石桌 -->
+  <rect y="1100" width="2048" height="436" fill="#23201a"/>
+  <path d="M 0 1100 q 500 -40 1000 0 q 524 36 1048 0 l 0 60 q -500 30 -1048 0 q -500 -36 -1000 0 z" fill="#2c2820"/>
+
+  <!-- 石桌（热区 1280,880,360,240） -->
+  <g>
+    <ellipse cx="1460" cy="1130" rx="220 " ry="30" fill="#000" opacity="0.3"/>
+    <rect x="1270" y="900" width="380 " height="36" rx="10" fill="#5a5a52"/>
+    <rect x="1420" y="936" width="80" height="170" fill="#46463e"/>
+    <!-- 桌上：信纸与火柴 -->
+    <rect x="1300" y="852" width="150 " height="56" fill="#e8dcc0" transform="rotate(-4 1375 880)"/>
+    <rect x="1560" y="868" width="70" height="34" fill="#8C3B2E"/>
+    <!-- 蜡烛（热区 1280,700,200,160） -->
+    <rect x="1340" y="740" width="44" height="160" fill="#e8dcc0"/>
+    <ellipse cx="1362" cy="740" rx="22" ry="8" fill="#d4c49a"/>
+    <ellipse cx="1362" cy="700" rx="16" ry="26" fill="#e8c84a"/>
+    <ellipse cx="1362" cy="706" rx="8" ry="14" fill="#f0e2bc"/>
+    <ellipse cx="1362" cy="690" rx="60" ry="70" fill="url(#lant)"/>
+  </g>
+
+  <!-- 岸边芦苇 -->
+  <g stroke="#1a1f17" stroke-width="8" fill="none">
+    <path d="M 160 1140 q 6 -120 -16 -180"/>
+    <path d="M 210 1150 q 10 -140 36 -190"/>
+    <path d="M 1900 1140 q 6 -120 -16 -180"/>
+    <path d="M 1950 1150 q 10 -130 30 -180"/>
+  </g>
+  <g fill="#1a1f17">
+    <ellipse cx="142" cy="952" rx="9" ry="26"/><ellipse cx="248" cy="952" rx="9" ry="26"/>
+    <ellipse cx="1882" cy="952" rx="9" ry="26"/><ellipse cx="1982" cy="962" rx="9" ry="26"/>
+  </g>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

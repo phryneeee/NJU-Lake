@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="82%">
+      <stop offset="38%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.62"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 第七档案库 · 登记台（夜更深了） -->
+  <rect width="2048" height="1536" fill="#142019"/>
+  <rect y="1080" width="2048" height="456" fill="#0f1812"/>
+
+  <!-- 唯一亮着的吊灯 -->
+  <line x1="1024" y1="0" x2="1024" y2="150" stroke="#0a0d0a" stroke-width="6"/>
+  <ellipse cx="1024" cy="162" rx="46" ry="13" fill="#e8dcc0" opacity="0.95"/>
+  <polygon points="978,162 1070,162 1300,1100 748,1100" fill="#e8dcc0" opacity="0.07"/>
+
+  <!-- 背景柜阵剪影 -->
+  <g fill="#1b2620">
+    <rect x="120" y="420" width="300" height="660"/>
+    <rect x="460" y="470" width="240" height="610"/>
+    <rect x="1620" y="440" width="300" height="640"/>
+  </g>
+  <g fill="#22302a">
+    <rect x="140" y="450" width="120" height="90"/><rect x="280" y="450" width="120" height="90"/>
+    <rect x="140" y="560" width="120" height="90"/><rect x="280" y="560" width="120" height="90"/>
+    <rect x="1650" y="470" width="110" height="86"/><rect x="1780" y="470" width="110" height="86"/>
+    <rect x="1650" y="576" width="110" height="86"/><rect x="1780" y="576" width="110" height="86"/>
+  </g>
+
+  <!-- 乌鸦先生：站着，千支笔已收起（热区 840,520,320,520） -->
+  <g>
+    <ellipse cx="1000" cy="1058" rx="150" ry="20" fill="#000" opacity="0.4"/>
+    <!-- 长外套立姿 -->
+    <path d="M 930 700 q 70 -50 140 0 l 36 360 l -212 0 z" fill="#1c1a17"/>
+    <rect x="978" y="688" width="46" height="34" fill="#e8dcc0"/>
+    <!-- 背手而立的翅膀 -->
+    <path d="M 926 760 q -36 80 10 180" fill="none" stroke="#1c1a17" stroke-width="30"/>
+    <!-- 头：微微低着 -->
+    <circle cx="1000" cy="600" r="74" fill="#1c1a17"/>
+    <polygon points="1064,604 1188,634 1062,648" fill="#2b2b33"/>
+    <circle cx="1030" cy="592" r="11" fill="#e8dcc0"/>
+    <circle cx="1032" cy="592" r="4.5" fill="#10130f"/>
+    <!-- 收起的笔挂在胸前 -->
+    <line x1="1000" y1="730" x2="1000" y2="790" stroke="#b08d3f" stroke-width="5"/>
+    <path d="M 988 800 q 12 -22 26 -8 q -10 4 -12 14 q -8 -2 -14 -6 z" fill="#d8c8a8"/>
+  </g>
+
+  <!-- 装订台（热区 1280,800,420,300） -->
+  <g>
+    <ellipse cx="1490" cy="1120" rx="240" ry="24" fill="#000" opacity="0.35"/>
+    <rect x="1260" y="830" width="460 " height="36" fill="#52432f"/>
+    <rect x="1280" y="866" width="420" height="240" fill="#3a2e20"/>
+    <!-- 台面：装订规程图 -->
+    <rect x="1290" y="700" width="180 " height="120 " fill="#d8c8a8"/>
+    <g fill="#3a3326">
+      <rect x="1304" y="716" width="32" height="32"/><rect x="1346" y="716" width="32" height="32"/>
+      <rect x="1388" y="716" width="32" height="32"/><rect x="1430" y="716" width="32" height="32"/>
+    </g>
+    <g stroke="#a59777" stroke-width="4">
+      <line x1="1304" y1="768" x2="1452" y2="768"/><line x1="1304" y1="790" x2="1430" y2="790"/>
+    </g>
+    <!-- 浆糊罐/线轴/照片 -->
+    <rect x="1520" y="760" width="60" height="70" rx="10" fill="#9aa68e"/>
+    <circle cx="1640" cy="800" r="30" fill="#8a7032"/>
+    <circle cx="1640" cy="800" r="12" fill="#3a2e20"/>
+    <rect x="1560" y="690" width="70 " height="90" fill="#e8dcc0"/>
+    <rect x="1572" y="702" width="46" height="56" fill="#8a7558"/>
+  </g>
+
+  <!-- 地上立着的灯箱牌 -->
+  <rect x="320" y="1140" width="240" height="120" rx="10" fill="#1b2620"/>
+  <text x="440" y="1192" font-family="serif" font-size="28" fill="#7FD4C1" text-anchor="middle" opacity="0.8">归 档 处</text>
+  <text x="440" y="1232" font-family="serif" font-size="20" fill="#52606a" text-anchor="middle">B7 — 登记台</text>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

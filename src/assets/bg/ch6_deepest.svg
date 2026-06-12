@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="warm" cx="55%" cy="46%" r="65%">
+      <stop offset="0%" stop-color="#e8c84a" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#e8c84a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="50%" cy="45%" r="80%">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 最深档案室：小得意外，暖得意外 -->
+  <rect width="2048" height="1536" fill="#332818"/>
+  <rect y="0" width="2048" height="90" fill="#1f1810"/>
+  <rect y="1100" width="2048" height="436" fill="#28200f"/>
+  <g fill="#221b0d">
+    <rect y="1190" width="2048" height="8"/><rect y="1310" width="2048" height="8"/><rect y="1430" width="2048" height="8"/>
+  </g>
+  <ellipse cx="1120" cy="700" rx="900" ry="700" fill="url(#warm)"/>
+
+  <!-- 贴满年代标签的柜子（热区 320,480,380,520） -->
+  <g>
+    <rect x="300" y="420" width="420 " height="680" fill="#41372b"/>
+    <rect x="318" y="438" width="384" height="644" fill="#52432f"/>
+    <g fill="#3a2e20">
+      <rect x="318" y="590" width="384" height="12"/><rect x="318" y="742" width="384" height="12"/>
+      <rect x="318" y="894" width="384" height="12"/>
+    </g>
+    <!-- 泛黄的标签：越往上越旧 -->
+    <g>
+      <rect x="350" y="480" width="130 " height="44" fill="#c2b08a"/>
+      <rect x="520" y="480" width="130" height="44" fill="#bda884"/>
+      <rect x="350" y="640" width="130" height="44" fill="#cdbd9b"/>
+      <rect x="520" y="640" width="130" height="44" fill="#c8b894"/>
+      <rect x="350" y="790" width="130" height="44" fill="#d8c8a8"/>
+      <rect x="520" y="790" width="130" height="44" fill="#d4c49e"/>
+      <rect x="350" y="940" width="130" height="44" fill="#e8dcc0"/>
+      <!-- 给下一张标签留的空白 -->
+      <rect x="520" y="940" width="130" height="44" fill="none" stroke="#d8c8a8" stroke-width="3" stroke-dasharray="10 8"/>
+    </g>
+    <g font-family="serif" font-size="22" fill="#3a3326" text-anchor="middle">
+      <text x="415" y="510">1937</text><text x="585" y="510">1952</text>
+      <text x="415" y="670">1978</text><text x="585" y="670">1989</text>
+      <text x="415" y="820">周韵秋·2001</text><text x="585" y="820">2013</text>
+      <text x="415" y="970">林晚·2026</text>
+    </g>
+  </g>
+
+  <!-- 50岁的林晚：银发，围巾，在台灯下（热区 920,540,360,520） -->
+  <g>
+    <ellipse cx="1100" cy="1090" rx="260" ry="24" fill="#000" opacity="0.3"/>
+    <!-- 书桌 -->
+    <rect x="900" y="880" width="560 " height="36" fill="#52432f"/>
+    <rect x="920" y="916" width="520" height="190" fill="#3a2e20"/>
+    <!-- 桌上摊开的档案 -->
+    <rect x="1180" y="836" width="200 " height="56" fill="#e8dcc0" transform="rotate(-2 1280 864)"/>
+    <!-- 那盏台灯（被递过两次的） -->
+    <rect x="1390" y="780" width="12" height="100" fill="#8a7032"/>
+    <path d="M 1330 780 q 65 -50 130 0 z" fill="#3E5C4B"/>
+    <ellipse cx="1396" cy="782" rx="64" ry="11" fill="#e8c84a" opacity="0.7"/>
+    <!-- 人物 -->
+    <path d="M 1010 700 q 64 -44 128 0 l 26 220 l -180 0 z" fill="#6e5f43"/>
+    <!-- 围巾 -->
+    <path d="M 1020 718 q 54 -30 108 0 l -8 40 q -46 -22 -92 0 z" fill="#8C3B2E"/>
+    <rect x="1096" y="740" width="34" height="120" fill="#8C3B2E"/>
+    <!-- 头：银发盘起 -->
+    <circle cx="1074" cy="640" r="54" fill="#caa987"/>
+    <path d="M 1024 630 q 4 -50 50 -52 q 46 2 50 52 q -22 -20 -50 -20 q -28 0 -50 20 z" fill="#d8d2c4"/>
+    <circle cx="1074" cy="580" r="20" fill="#d8d2c4"/>
+    <circle cx="1058" cy="644" r="5" fill="#1c1a17"/>
+    <circle cx="1090" cy="644" r="5" fill="#1c1a17"/>
+    <path d="M 1062 668 q 12 10 24 0" fill="none" stroke="#8a6b52" stroke-width="4"/>
+    <!-- 老花镜挂在胸前 -->
+    <path d="M 1052 700 q 22 26 44 0" fill="none" stroke="#8a7032" stroke-width="4"/>
+    <circle cx="1052" cy="706" r="12" fill="none" stroke="#8a7032" stroke-width="4"/>
+    <circle cx="1096" cy="706" r="12" fill="none" stroke="#8a7032" stroke-width="4"/>
+  </g>
+
+  <!-- 墙上一扇小小的圆窗：外面什么都没有，但很亮 -->
+  <circle cx="1700" cy="420" r="90" fill="#241d14"/>
+  <circle cx="1700" cy="420" r="72" fill="#e8dcc0" opacity="0.85"/>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>
