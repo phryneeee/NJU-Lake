@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="38%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 循环走廊 · 第三圈（再暗半度） -->
+  <rect width="2048" height="1536" fill="#302a3d"/>
+  <rect y="0" width="2048" height="110" fill="#1c1826"/>
+  <rect y="880" width="2048" height="200" fill="#262130"/>
+  <rect y="880" width="2048" height="12" fill="#1c1826"/>
+  <rect y="1080" width="2048" height="456" fill="#1f1a28"/>
+  <g fill="#181420">
+    <rect y="1170" width="2048" height="8"/><rect y="1290" width="2048" height="8"/><rect y="1410" width="2048" height="8"/>
+  </g>
+  <g>
+    <rect x="560" y="150" width="300" height="22" rx="10" fill="#a8b0a8"/>
+    <rect x="1240" y="150" width="300" height="22" rx="10" fill="#52525e"/>
+  </g>
+
+  <!-- 左门（热区 420,600,220,400） -->
+  <g>
+    <rect x="400" y="560" width="260" height="460" fill="#1c1826"/>
+    <rect x="418" y="578" width="224" height="442" fill="#453828"/>
+    <rect x="440" y="610" width="180" height="170" fill="#382d20"/>
+    <rect x="440" y="810" width="180" height="170" fill="#382d20"/>
+    <circle cx="622" cy="800" r="12" fill="#9a7c36"/>
+  </g>
+
+  <!-- 落地镜（热区 920,520,300,460）：镜中走廊多一扇门 -->
+  <g>
+    <rect x="896" y="496" width="348" height="540" fill="#2a2522"/>
+    <rect x="916" y="516" width="308" height="500" fill="#3d4450"/>
+    <!-- 镜中走廊（色调略偏青） -->
+    <rect x="928" y="528" width="284" height="476" fill="#39414d"/>
+    <rect x="928" y="836" width="284" height="80" fill="#2e3641"/>
+    <rect x="928" y="916" width="284" height="88" fill="#272e38"/>
+    <!-- 镜中的灯 -->
+    <rect x="1000" y="560" width="120" height="10" rx="5" fill="#c8d0c8" opacity="0.7"/>
+    <!-- 镜中本不存在的那扇门 -->
+    <rect x="1010" y="640" width="120" height="240" fill="#52432f"/>
+    <rect x="1024" y="656" width="92" height="90" fill="#453828"/>
+    <rect x="1024" y="760" width="92" height="100" fill="#453828"/>
+    <circle cx="1118" cy="770" r="8" fill="#b08d3f"/>
+    <rect x="1010" y="640" width="120" height="240" fill="none" stroke="#7FD4C1" stroke-width="4" opacity="0.55"/>
+    <!-- 镜面反光斜条 -->
+    <polygon points="940,528 1000,528 950,1004 928,1004" fill="#49525e" opacity="0.5"/>
+  </g>
+
+  <!-- 右侧被裁切的门 + 门缝下的档案（热区 1500,980,200,100） -->
+  <g>
+    <rect x="1480" y="560" width="260" height="460" fill="#1c1826"/>
+    <rect x="1498" y="578" width="224" height="442" fill="#453828"/>
+    <rect x="1520" y="610" width="180" height="170" fill="#382d20"/>
+    <rect x="1520" y="810" width="180" height="170" fill="#382d20"/>
+    <circle cx="1702" cy="800" r="12" fill="#9a7c36"/>
+    <!-- 门缝下露出的黄纸 -->
+    <polygon points="1510,1016 1680,1010 1696,1062 1524,1070" fill="#cdbd9b"/>
+    <g stroke="#a59777" stroke-width="4">
+      <line x1="1540" y1="1032" x2="1650" y2="1028"/><line x1="1544" y1="1048" x2="1630" y2="1044"/>
+    </g>
+  </g>
+
+  <rect x="1900" y="110" width="148" height="970" fill="#100d16"/>
+  <rect x="0" y="110" width="120" height="970" fill="#100d16"/>
+
+  <!-- 标语牌：字快没了 -->
+  <rect x="880" y="380" width="320" height="80" fill="#262130"/>
+  <text x="1040" y="434" font-family="serif" font-size="30" fill="#4e4860" text-anchor="middle">宿舍区 · □楼</text>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.58"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 走廊尽头 -->
+  <rect width="2048" height="1536" fill="#322c40"/>
+  <rect y="0" width="2048" height="110" fill="#1e1a28"/>
+  <rect y="880" width="2048" height="200" fill="#2a2535"/>
+  <rect y="880" width="2048" height="12" fill="#1e1a28"/>
+  <rect y="1080" width="2048" height="456" fill="#221d2c"/>
+  <g fill="#1b1724">
+    <rect y="1170" width="2048" height="8"/><rect y="1290" width="2048" height="8"/><rect y="1410" width="2048" height="8"/>
+  </g>
+
+  <!-- 尽头的墙：一扇小高窗，天快亮了 -->
+  <rect x="940" y="200" width="200" height="150" fill="#1e1a28"/>
+  <rect x="954" y="214" width="172" height="122" fill="#3d4a5c"/>
+  <rect x="1036" y="214" width="10" height="122" fill="#1e1a28"/>
+
+  <!-- 地板上发光的时间线轨道 -->
+  <g>
+    <path d="M 200 1240 q 824 -120 1648 0" fill="none" stroke="#7FD4C1" stroke-width="10" opacity="0.5"/>
+    <path d="M 200 1240 q 824 -120 1648 0" fill="none" stroke="#7FD4C1" stroke-width="26" opacity="0.12"/>
+    <g fill="#7FD4C1" opacity="0.7">
+      <circle cx="420" cy="1216" r="10"/><circle cx="760" cy="1190" r="10"/><circle cx="1080" cy="1182" r="10"/>
+      <circle cx="1400" cy="1196" r="10"/><circle cx="1680" cy="1222" r="10"/>
+    </g>
+  </g>
+
+  <!-- 长椅与白兔（热区 560,620,240,420） -->
+  <g>
+    <!-- 长椅 -->
+    <rect x="480" y="900" width="420 " height="30" fill="#4a3d2e"/>
+    <rect x="500" y="930" width="24" height="150" fill="#3a2e20"/>
+    <rect x="850" y="930" width="24" height="150" fill="#3a2e20"/>
+    <rect x="480" y="760" width="420" height="24" fill="#4a3d2e"/>
+    <!-- 白兔先生：白毛、马甲、怀表 -->
+    <ellipse cx="660" cy="916" rx="26" ry="10" fill="#000" opacity="0.3"/>
+    <!-- 身体 -->
+    <path d="M 600 760 q 60 -40 120 0 l 18 150 l -156 0 z" fill="#e8e2dc"/>
+    <!-- 马甲 -->
+    <path d="M 612 768 q 48 -30 96 0 l 12 110 l -120 0 z" fill="#8C3B2E"/>
+    <rect x="648" y="760" width="28" height="26" fill="#e8dcc0"/>
+    <!-- 头 -->
+    <circle cx="660" cy="700" r="62" fill="#e8e2dc"/>
+    <!-- 耳朵：一只立，一只弯 -->
+    <ellipse cx="630" cy="600" rx="20" ry="68" fill="#e8e2dc"/>
+    <ellipse cx="630" cy="608" rx="10" ry="50" fill="#d8b8b8"/>
+    <path d="M 690 644 q 10 -90 56 -86 q 10 26 -22 50 q -16 22 -34 36 z" fill="#e8e2dc"/>
+    <!-- 脸 -->
+    <circle cx="640" cy="692" r="9" fill="#1c1a17"/>
+    <circle cx="684" cy="692" r="9" fill="#1c1a17"/>
+    <polygon points="654,716 670,716 662,730" fill="#d8b8b8"/>
+    <g stroke="#c8beb4" stroke-width="4">
+      <line x1="662" y1="724" x2="610" y2="716"/><line x1="662" y1="724" x2="612" y2="736"/>
+      <line x1="662" y1="724" x2="714" y2="716"/><line x1="662" y1="724" x2="712" y2="736"/>
+    </g>
+    <!-- 怀表（贴耳听） -->
+    <circle cx="586" cy="810" r="40" fill="#b08d3f"/>
+    <circle cx="586" cy="810" r="30" fill="#e8dcc0"/>
+    <line x1="586" y1="810" x2="586" y2="790" stroke="#3a2e20" stroke-width="5"/>
+    <line x1="586" y1="810" x2="600" y2="818" stroke="#3a2e20" stroke-width="4"/>
+    <path d="M 586 850 q 0 40 40 50" fill="none" stroke="#b08d3f" stroke-width="6"/>
+  </g>
+
+  <!-- 墙上的CRT电视（热区 1320,560,400,360） -->
+  <g>
+    <rect x="1300" y="540" width="440 " height="80" fill="#2a2522" transform="translate(0 320)"/>
+    <rect x="1306" y="540" width="428" height="400" rx="22" fill="#4a4038"/>
+    <rect x="1306" y="540" width="428" height="400" rx="22" fill="none" stroke="#322a22" stroke-width="10"/>
+    <rect x="1340" y="574" width="300" height="330" rx="16" fill="#10130f"/>
+    <!-- 屏幕里极弱的雪花与一点远光 -->
+    <g fill="#39414d">
+      <rect x="1340" y="600" width="300" height="6"/><rect x="1340" y="660" width="300" height="4"/>
+      <rect x="1340" y="730" width="300" height="6"/><rect x="1340" y="800" width="300" height="4"/>
+      <rect x="1340" y="860" width="300" height="5"/>
+    </g>
+    <circle cx="1490" cy="740" r="26" fill="#7FD4C1" opacity="0.25"/>
+    <rect x="1652" y="580" width="60" height="320" fill="#3a322a"/>
+    <circle cx="1682" cy="630" r="16" fill="#b08d3f"/>
+    <circle cx="1682" cy="680" r="16" fill="#b08d3f"/>
+    <circle cx="1682" cy="736" r="10" fill="#8C3B2E"/>
+  </g>
+
+  <rect x="0" y="110" width="110" height="970" fill="#14111c"/>
+  <rect x="1940" y="110" width="108" height="970" fill="#14111c"/>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.58"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 循环走廊 · 第二圈（更暗半度） -->
+  <rect width="2048" height="1536" fill="#352e42"/>
+  <rect y="0" width="2048" height="110" fill="#201b2a"/>
+  <rect y="880" width="2048" height="200" fill="#2a2535"/>
+  <rect y="880" width="2048" height="12" fill="#201b2a"/>
+  <rect y="1080" width="2048" height="456" fill="#221d2c"/>
+  <g fill="#1b1724">
+    <rect y="1170" width="2048" height="8"/><rect y="1290" width="2048" height="8"/><rect y="1410" width="2048" height="8"/>
+  </g>
+  <g>
+    <rect x="560" y="150" width="300" height="22" rx="10" fill="#c8d0c8"/>
+    <rect x="1240" y="150" width="300" height="22" rx="10" fill="#6a6a76"/>
+  </g>
+
+  <!-- 左门（热区 420,600,220,400）：很轻的滴答 -->
+  <g>
+    <rect x="400" y="560" width="260" height="460" fill="#201b2a"/>
+    <rect x="418" y="578" width="224" height="442" fill="#4a3d2e"/>
+    <rect x="440" y="610" width="180" height="170" fill="#3d3226"/>
+    <rect x="440" y="810" width="180" height="170" fill="#3d3226"/>
+    <circle cx="622" cy="800" r="12" fill="#b08d3f"/>
+    <path d="M 530 540 q 10 -14 0 -28" fill="none" stroke="#8a8298" stroke-width="5" opacity="0.5"/>
+  </g>
+
+  <!-- 中门（热区 960,600,220,400）：又近又响的滴答 -->
+  <g>
+    <rect x="940" y="560" width="260" height="460" fill="#201b2a"/>
+    <rect x="958" y="578" width="224" height="442" fill="#52432f"/>
+    <rect x="980" y="610" width="180" height="170" fill="#453828"/>
+    <rect x="980" y="810" width="180" height="170" fill="#453828"/>
+    <circle cx="1162" cy="800" r="12" fill="#b08d3f"/>
+    <!-- 贴着门板的声波 -->
+    <g stroke="#7FD4C1" fill="none" opacity="0.75">
+      <path d="M 1070 470 q 16 -26 0 -52" stroke-width="6"/>
+      <path d="M 1100 484 q 26 -40 0 -80" stroke-width="6"/>
+      <path d="M 1130 498 q 38 -54 0 -108" stroke-width="6"/>
+    </g>
+  </g>
+
+  <!-- 右门（热区 1500,600,220,400）：很远的滴答 -->
+  <g>
+    <rect x="1480" y="560" width="260" height="460" fill="#201b2a"/>
+    <rect x="1498" y="578" width="224" height="442" fill="#4a3d2e"/>
+    <rect x="1520" y="610" width="180" height="170" fill="#3d3226"/>
+    <rect x="1520" y="810" width="180" height="170" fill="#3d3226"/>
+    <circle cx="1702" cy="800" r="12" fill="#b08d3f"/>
+  </g>
+
+  <rect x="1900" y="110" width="148" height="970" fill="#130f1a"/>
+  <rect x="0" y="110" width="120" height="970" fill="#130f1a"/>
+
+  <!-- 同一块标语牌：字变了 -->
+  <rect x="880" y="430" width="320" height="80" fill="#2a2535"/>
+  <text x="1040" y="484" font-family="serif" font-size="30" fill="#6e6680" text-anchor="middle">宿舍区 · 三楼？</text>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>
