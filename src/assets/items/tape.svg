@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+
+  <g transform="rotate(-12 128 128)">
+    <circle cx="120" cy="120" r="80" fill="#b5ab8d"/>
+    <circle cx="120" cy="120" r="36" fill="#26231f"/>
+    <circle cx="120" cy="120" r="36" fill="none" stroke="#998f73" stroke-width="8"/>
+    <!-- 撕开搭下来的一段胶带 -->
+    <path d="M 196 138 l 50 28 l 0 34 l -60 -34 q 14 -12 10 -28 z" fill="#cdc4a4"/>
+    <path d="M 246 200 l -14 -2 l 14 -8 z" fill="#cdc4a4"/>
+  </g>
+</svg>

@@ -28,3 +28,14 @@ if (missing.length) {
   console.log('\n待绘制（文件名 → 场景）：');
   for (const r of missing) console.log(`  assets/bg/${r.id}.png → ${r.label}`);
 }
+
+// 物品图标缺口
+const itemsDir = join(root, 'assets/items');
+const itemDone = new Set();
+if (existsSync(itemsDir)) {
+  for (const f of readdirSync(itemsDir)) itemDone.add(f.replace(/\.\w+$/, ''));
+}
+const items = JSON.parse(readFileSync(join(root, 'data/items.json'), 'utf8'));
+const itemMissing = items.filter((i) => !itemDone.has(i.id));
+console.log(`物品图标进度：${items.length - itemMissing.length}/${items.length}`);
+for (const i of itemMissing) console.log(`  assets/items/${i.id}.svg → ${i.name}`);

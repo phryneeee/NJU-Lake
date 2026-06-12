@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+
+  <g transform="rotate(-35 128 128)">
+    <circle cx="128" cy="70" r="40" fill="none" stroke="#B08D3F" stroke-width="20"/>
+    <rect x="118" y="106" width="20" height="110" fill="#B08D3F"/>
+    <rect x="138" y="176" width="28" height="16" fill="#B08D3F"/>
+    <rect x="138" y="200" width="38" height="16" fill="#B08D3F"/>
+    <text x="128" y="80" font-family="serif" font-size="30" fill="#76301f" text-anchor="middle">七</text>
+  </g>
+</svg>

@@ -35,3 +35,16 @@ for (const path of Object.keys(audioModules)) {
   const key = path.replace(/^.*\/([^/]+)\.\w+$/, '$1');
   audioUrls.set(key, audioModules[path]);
 }
+
+// 物品图标：src/assets/items/<itemId>.svg（scripts/gen-item-icons.mjs 生成）
+const itemModules = import.meta.glob<string>('../assets/items/*.svg', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+});
+
+export const itemUrls = new Map<string, string>();
+for (const path of Object.keys(itemModules)) {
+  const id = path.replace(/^.*\/([^/]+)\.\w+$/, '$1');
+  itemUrls.set(id, itemModules[path]);
+}

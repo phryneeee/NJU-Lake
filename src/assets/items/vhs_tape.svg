@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+
+  <rect x="28" y="64" width="200" height="128" rx="10" fill="#1f1b16"/>
+  <rect x="40" y="76" width="176" height="60" rx="6" fill="#2e2a24"/>
+  <circle cx="84" cy="106" r="22" fill="#0e0c09"/><circle cx="84" cy="106" r="10" fill="#4a4440"/>
+  <circle cx="172" cy="106" r="22" fill="#0e0c09"/><circle cx="172" cy="106" r="10" fill="#4a4440"/>
+  <rect x="48" y="148" width="160" height="32" fill="#E8DCC0"/>
+  <text x="128" y="172" font-family="monospace" font-size="22" fill="#3a3326" text-anchor="middle">2001.6.21</text>
+</svg>

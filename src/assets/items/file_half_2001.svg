@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+
+  <g transform="rotate(-5 128 128)">
+    <path d="M 56 52 l 144 0 l 0 90 l -22 12 l 20 16 l -18 12 l 16 18 l -140 6 z" fill="#A98E6F"/>
+    <rect x="72" y="72" width="112" height="40" fill="#E8DCC0"/>
+    <text x="128" y="102" font-family="monospace" font-size="26" fill="#3a3326" text-anchor="middle">404</text>
+    <g stroke="#8a7050" stroke-width="6">
+      <line x1="76" y1="138" x2="170" y2="138"/><line x1="78" y1="164" x2="150" y2="164"/>
+    </g>
+  </g>
+</svg>

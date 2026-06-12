@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import { GameState } from '../systems/GameState';
-import { getItem } from '../data/registry';
+import { getItem, getText } from '../data/registry';
 import { W, H, COLORS } from '../ui/theme';
 import { Settings } from '../systems/Settings';
 import { clearState } from '../systems/SaveSystem';
@@ -15,6 +15,7 @@ const SLOT_GAP = 16;
  */
 export class UIScene extends Phaser.Scene {
   private slots: Phaser.GameObjects.Container[] = [];
+  private itemCaption!: Phaser.GameObjects.Text;
   private subtitle!: Phaser.GameObjects.Text;
   private subtitleBg!: Phaser.GameObjects.Rectangle;
   private sayQueue: string[] = [];
@@ -52,6 +53,18 @@ export class UIScene extends Phaser.Scene {
       const c = this.add.container(startX + i * (SLOT_SIZE + SLOT_GAP), 40 + SLOT_SIZE / 2);
       this.slots.push(c);
     }
+    // 选中物品的名称+描述（物品栏正下方）
+    this.itemCaption = this.add
+      .text(W / 2, 40 + SLOT_SIZE + 36, '', {
+        fontSize: '30px',
+        color: COLORS.crtCyan,
+        fontFamily: 'serif',
+        align: 'center',
+        backgroundColor: '#00000088',
+        padding: { x: 16, y: 8 },
+      })
+      .setOrigin(0.5)
+      .setVisible(false);
   }
 
   private refreshInventory(): void {
@@ -68,24 +81,36 @@ export class UIScene extends Phaser.Scene {
       const item = getItem(itemId);
       const selected = GameState.selectedItem === itemId;
 
-      const tile = this.add
-        .rectangle(0, 0, SLOT_SIZE - 24, SLOT_SIZE - 24, Phaser.Display.Color.HexStringToColor(item.color).color)
-        .setInteractive({ useHandCursor: true });
-      const label = this.add
-        .text(0, 0, item.name, {
-          fontSize: '26px',
-          color: '#1C1A17',
-          fontFamily: 'serif',
-          backgroundColor: '#E8DCC0CC',
-          padding: { x: 6, y: 4 },
-          align: 'center',
-          wordWrap: { width: SLOT_SIZE - 30 },
-        })
-        .setOrigin(0.5);
+      // 有正式图标用图标，否则回退灰盒色块+名字
+      let tile: Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
+      const iconKey = `item_${itemId}`;
+      if (this.textures.exists(iconKey)) {
+        tile = this.add
+          .image(0, 0, iconKey)
+          .setDisplaySize(SLOT_SIZE - 14, SLOT_SIZE - 14)
+          .setInteractive({ useHandCursor: true });
+        c.add(tile);
+      } else {
+        tile = this.add
+          .rectangle(0, 0, SLOT_SIZE - 24, SLOT_SIZE - 24, Phaser.Display.Color.HexStringToColor(item.color).color)
+          .setInteractive({ useHandCursor: true });
+        const label = this.add
+          .text(0, 0, item.name, {
+            fontSize: '26px',
+            color: '#1C1A17',
+            fontFamily: 'serif',
+            backgroundColor: '#E8DCC0CC',
+            padding: { x: 6, y: 4 },
+            align: 'center',
+            wordWrap: { width: SLOT_SIZE - 30 },
+          })
+          .setOrigin(0.5);
+        c.add([tile, label]);
+      }
 
       if (selected) {
         frame.setStrokeStyle(5, 0x7fd4c1, 1);
-        tile.setScale(1.08);
+        tile.setScale(tile.scale * 1.08);
       }
       tile.on('pointerdown', () => {
         const cur = GameState.selectedItem;
@@ -100,7 +125,16 @@ export class UIScene extends Phaser.Scene {
         }
         GameState.select(selected ? null : itemId);
       });
-      c.add([tile, label]);
+    }
+
+    // 选中物品说明条
+    const sel = GameState.selectedItem;
+    if (sel) {
+      const item = getItem(sel);
+      const desc = item.descTextId ? getText(item.descTextId) : '';
+      this.itemCaption.setText(`【${item.name}】${desc}`).setVisible(true);
+    } else {
+      this.itemCaption.setVisible(false);
     }
   }
 

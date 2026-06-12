@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { bgUrls, audioUrls } from '../data/assets';
+import { bgUrls, audioUrls, itemUrls } from '../data/assets';
 import { W, H, COLORS } from '../ui/theme';
 
 /** 按资产清单加载正式美术/音频；清单为空（纯灰盒）时直接进标题。 */
@@ -30,6 +30,8 @@ export class PreloadScene extends Phaser.Scene {
       }
     }
     for (const [key, url] of audioUrls) this.load.audio(key, url);
+    // 物品图标：256px 栅格化（物品栏 140px 槽位下依然清晰）
+    for (const [id, url] of itemUrls) this.load.svg(`item_${id}`, url, { width: 256, height: 256 });
   }
 
   create(): void {
