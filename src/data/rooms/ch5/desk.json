@@ -52,6 +52,7 @@
         { "type": "say", "textId": "ch5.crow_final_1" },
         { "type": "say", "textId": "ch5.crow_final_2" },
         { "type": "setFlag", "flag": "ch5_complete" },
+        { "type": "goRoom", "room": "ch6_theater" },
         {
           "type": "chapterCard",
           "title": "第五章 · 档案404",

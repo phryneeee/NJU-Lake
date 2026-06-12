@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="32%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.68"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 循环走廊 · 第四圈（最暗，尽头出现木门） -->
+  <rect width="2048" height="1536" fill="#2a2436"/>
+  <rect y="0" width="2048" height="110" fill="#181420"/>
+  <rect y="880" width="2048" height="200" fill="#211c2b"/>
+  <rect y="880" width="2048" height="12" fill="#181420"/>
+  <rect y="1080" width="2048" height="456" fill="#1b1623"/>
+  <g fill="#14111c">
+    <rect y="1170" width="2048" height="8"/><rect y="1290" width="2048" height="8"/><rect y="1410" width="2048" height="8"/>
+  </g>
+  <!-- 只剩一支灯亮着 -->
+  <rect x="560" y="150" width="300" height="22" rx="10" fill="#8a948a"/>
+  <rect x="1240" y="150" width="300" height="22" rx="10" fill="#3a3a46"/>
+
+  <!-- 白兔的影子掠过墙角（热区 480,700,220,300） -->
+  <g opacity="0.9">
+    <ellipse cx="600" cy="940" rx="90" ry="40" fill="#e8e2dc"/>
+    <circle cx="676" cy="900" r="36" fill="#e8e2dc"/>
+    <ellipse cx="668" cy="846" rx="12" ry="42" fill="#e8e2dc" transform="rotate(-14 668 846)"/>
+    <ellipse cx="700" cy="852" rx="11" ry="34" fill="#e8e2dc" transform="rotate(16 700 852)"/>
+    <!-- 拖在地上的怀表链 -->
+    <path d="M 520 960 q -60 20 -110 8" fill="none" stroke="#b08d3f" stroke-width="6"/>
+    <circle cx="404" cy="966" r="16" fill="#b08d3f"/>
+  </g>
+
+  <!-- 老木门（热区 920,520,320,520）：不属于这里 -->
+  <g>
+    <!-- 门外渗进的2001年的光 -->
+    <polygon points="900,1060 1280,1060 1420,1300 760,1300" fill="#d9c5a0" opacity="0.10"/>
+    <rect x="880" y="480" width="400 " height="600" fill="#241d14"/>
+    <rect x="904" y="504" width="352" height="576" fill="#5a4326"/>
+    <!-- 剥落的漆与木纹 -->
+    <g fill="#4a3820">
+      <rect x="930" y="530" width="300" height="14"/><rect x="930" y="610" width="300" height="14"/>
+      <rect x="930" y="700" width="300" height="14"/><rect x="930" y="800" width="300" height="14"/>
+      <rect x="930" y="900" width="300" height="14"/><rect x="930" y="990" width="300" height="14"/>
+    </g>
+    <g fill="#6e552f">
+      <polygon points="950,560 1010,560 990,596 950,596"/>
+      <polygon points="1130,830 1210,830 1196,876 1130,876"/>
+    </g>
+    <circle cx="1216" cy="790" r="16" fill="#8a7032"/>
+    <!-- 门缝里的暖光 -->
+    <rect x="1064" y="504" width="10" height="576" fill="#d9c5a0" opacity="0.8"/>
+  </g>
+
+  <!-- 两侧的门已经模糊成影 -->
+  <g fill="#211c2b">
+    <rect x="300" y="580" width="220" height="440"/>
+    <rect x="1540" y="580" width="220" height="440"/>
+  </g>
+
+  <rect x="1920" y="110" width="128" height="970" fill="#0c0a12"/>
+  <rect x="0" y="110" width="100" height="970" fill="#0c0a12"/>
+
+  <!-- 标语牌：空了 -->
+  <rect x="880" y="380" width="320" height="80" fill="#211c2b"/>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

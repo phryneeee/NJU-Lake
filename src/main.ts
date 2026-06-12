@@ -1,6 +1,8 @@
 import Phaser from 'phaser';
 import { W, H } from './ui/theme';
 import { GameState } from './systems/GameState';
+import { Settings } from './systems/Settings';
+import { PreloadScene } from './scenes/PreloadScene';
 import { TitleScene } from './scenes/TitleScene';
 import { RoomScene } from './scenes/RoomScene';
 import { UIScene } from './scenes/UIScene';
@@ -16,10 +18,11 @@ import { MirrorRoomPuzzle } from './puzzles/MirrorRoomPuzzle';
 import { FoxSafePuzzle } from './puzzles/FoxSafePuzzle';
 import { CrtPuzzle } from './puzzles/CrtPuzzle';
 import { DualTimelinePuzzle } from './puzzles/DualTimelinePuzzle';
+import { SignPuzzle } from './puzzles/SignPuzzle';
 
 GameState.restore();
 
-new Phaser.Game({
+const game = new Phaser.Game({
   type: Phaser.AUTO,
   parent: 'game',
   width: W,
@@ -30,6 +33,7 @@ new Phaser.Game({
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
   scene: [
+    PreloadScene,
     TitleScene,
     RoomScene,
     UIScene,
@@ -45,5 +49,8 @@ new Phaser.Game({
     FoxSafePuzzle,
     CrtPuzzle,
     DualTimelinePuzzle,
+    SignPuzzle,
   ],
 });
+
+game.sound.mute = Settings.get().muted;

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="42%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 循环走廊 · 第一圈 -->
+  <rect width="2048" height="1536" fill="#3a3346"/>
+  <rect y="0" width="2048" height="110" fill="#241f2e"/>
+  <rect y="880" width="2048" height="200" fill="#2e2939"/>
+  <rect y="880" width="2048" height="12" fill="#241f2e"/>
+  <rect y="1080" width="2048" height="456" fill="#262130"/>
+  <g fill="#1f1b28">
+    <rect y="1170" width="2048" height="8"/><rect y="1290" width="2048" height="8"/><rect y="1410" width="2048" height="8"/>
+  </g>
+
+  <!-- 日光灯管（一支微弱频闪） -->
+  <g>
+    <rect x="560" y="150" width="300" height="22" rx="10" fill="#e8f0e8"/>
+    <rect x="1240" y="150" width="300" height="22" rx="10" fill="#8a8a96"/>
+  </g>
+
+  <!-- 门 304（热区 520,600,220,400） -->
+  <g>
+    <rect x="500" y="560" width="260" height="460" fill="#241f2e"/>
+    <rect x="518" y="578" width="224" height="442" fill="#4a3d2e"/>
+    <rect x="540" y="610" width="180" height="170" fill="#3d3226"/>
+    <rect x="540" y="810" width="180" height="170" fill="#3d3226"/>
+    <circle cx="722" cy="800" r="12" fill="#b08d3f"/>
+    <rect x="576" y="528" width="108" height="44" fill="#e8dcc0"/>
+    <text x="630" y="560" font-family="monospace" font-size="30" fill="#3a3326" text-anchor="middle">304</text>
+  </g>
+
+  <!-- 灭火器（热区 1060,820,140,220） -->
+  <g>
+    <rect x="1044" y="800" width="172" height="260" fill="#2a2522"/>
+    <rect x="1058" y="814" width="144" height="232" fill="#3d3833"/>
+    <rect x="1090" y="850" width="80" height="160" rx="20" fill="#8C3B2E"/>
+    <rect x="1114" y="826" width="32" height="30" fill="#5a5a5a"/>
+    <path d="M 1146 840 q 40 6 40 50" fill="none" stroke="#1c1a17" stroke-width="9"/>
+  </g>
+
+  <!-- 门 403：数字翻转了（热区 1480,560,200,140 为门牌） -->
+  <g>
+    <rect x="1450" y="560" width="260" height="460" fill="#241f2e"/>
+    <rect x="1468" y="578" width="224" height="442" fill="#4a3d2e"/>
+    <rect x="1490" y="700" width="180" height="170" fill="#3d3226"/>
+    <rect x="1490" y="810" width="180" height="170" fill="#3d3226"/>
+    <circle cx="1672" cy="800" r="12" fill="#b08d3f"/>
+    <!-- 门牌泛着不对劲的微光 -->
+    <rect x="1490" y="572" width="180" height="120" fill="#241f2e"/>
+    <rect x="1502" y="584" width="156" height="96" fill="#e8dcc0"/>
+    <rect x="1502" y="584" width="156" height="96" fill="none" stroke="#7FD4C1" stroke-width="4" opacity="0.7"/>
+    <text x="1580" y="652" font-family="monospace" font-size="44" fill="#3a3326" text-anchor="middle">403</text>
+  </g>
+
+  <!-- 走廊尽头的黑暗 -->
+  <rect x="1900" y="110" width="148" height="970" fill="#16121e"/>
+  <rect x="0" y="110" width="120" height="970" fill="#16121e"/>
+
+  <!-- 墙上的标语牌（褪色） -->
+  <rect x="880" y="430" width="320" height="80" fill="#2e2939"/>
+  <text x="1040" y="484" font-family="serif" font-size="30" fill="#6e6680" text-anchor="middle">宿舍区 · 三楼</text>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="42%" r="82%">
+      <stop offset="36%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 归档室：四个被聚光的档案柜 -->
+  <rect width="2048" height="1536" fill="#142019"/>
+  <rect y="1100" width="2048" height="436" fill="#0f1812"/>
+
+  <!-- 四束顶光 -->
+  <g fill="#e8dcc0" opacity="0.07">
+    <polygon points="360,0 440,0 560,1100 240,1100"/>
+    <polygon points="800,0 880,0 1000,1100 680,1100"/>
+    <polygon points="1240,0 1320,0 1440,1100 1120,1100"/>
+    <polygon points="1680,0 1760,0 1880,1100 1560,1100"/>
+  </g>
+
+  <!-- 柜1：读博（热区 240,560,320,520） -->
+  <g>
+    <rect x="240" y="540" width="320 " height="560" fill="#26352c"/>
+    <rect x="258" y="558" width="284" height="524" fill="#3E5C4B"/>
+    <rect x="278" y="600" width="244" height="200" fill="#324b3d"/>
+    <rect x="278" y="830" width="244" height="220" fill="#324b3d"/>
+    <circle cx="522" cy="820" r="13" fill="#b08d3f"/>
+    <rect x="330" y="498" width="140 " height="48" fill="#d8c8a8"/>
+    <text x="400" y="532" font-family="serif" font-size="30" fill="#3a3326" text-anchor="middle">读 博</text>
+    <!-- 柜里透出的台灯光 -->
+    <rect x="278" y="600" width="244" height="6" fill="#e8c84a" opacity="0.8"/>
+  </g>
+  <!-- 柜2：出国 -->
+  <g>
+    <rect x="680" y="540" width="320" height="560" fill="#26352c"/>
+    <rect x="698" y="558" width="284" height="524" fill="#3E5C4B"/>
+    <rect x="718" y="600" width="244" height="200" fill="#324b3d"/>
+    <rect x="718" y="830" width="244" height="220" fill="#324b3d"/>
+    <circle cx="962" cy="820" r="13" fill="#b08d3f"/>
+    <rect x="770" y="498" width="140" height="48" fill="#d8c8a8"/>
+    <text x="840" y="532" font-family="serif" font-size="30" fill="#3a3326" text-anchor="middle">出 国</text>
+    <g fill="#4a5a66" opacity="0.8">
+      <polygon points="800,700 840,660 880,700 860,700 860,740 820,740 820,700"/>
+    </g>
+  </g>
+  <!-- 柜3：离开 -->
+  <g>
+    <rect x="1120" y="540" width="320" height="560" fill="#26352c"/>
+    <rect x="1138" y="558" width="284" height="524" fill="#3E5C4B"/>
+    <rect x="1158" y="600" width="244" height="200" fill="#324b3d"/>
+    <rect x="1158" y="830" width="244" height="220" fill="#324b3d"/>
+    <circle cx="1402" cy="820" r="13" fill="#b08d3f"/>
+    <rect x="1210" y="498" width="140" height="48" fill="#d8c8a8"/>
+    <text x="1280" y="532" font-family="serif" font-size="30" fill="#3a3326" text-anchor="middle">离 开</text>
+    <g fill="#e8dcc0" opacity="0.6">
+      <rect x="1240" y="690" width="80" height="14"/><rect x="1240" y="712" width="80" height="14"/>
+      <rect x="1240" y="734" width="80" height="14"/>
+    </g>
+  </g>
+  <!-- 柜4：留白 -->
+  <g>
+    <rect x="1560" y="540" width="320" height="560" fill="#26352c"/>
+    <rect x="1578" y="558" width="284" height="524" fill="#46584e"/>
+    <rect x="1598" y="600" width="244" height="200" fill="#3c4f44"/>
+    <rect x="1598" y="830" width="244" height="220" fill="#3c4f44"/>
+    <circle cx="1842" cy="820" r="13" fill="#b08d3f"/>
+    <rect x="1650" y="498" width="140" height="48" fill="#e8dcc0"/>
+    <text x="1720" y="532" font-family="serif" font-size="30" fill="#3a3326" text-anchor="middle">留 白</text>
+  </g>
+
+  <!-- 通向清晨的门（热区 880,1160,320,220） -->
+  <g>
+    <rect x="876" y="1150" width="328" height="250" fill="#0a0d0a"/>
+    <rect x="892" y="1166" width="296" height="234" fill="#4a5a66"/>
+    <polygon points="892,1166 1188,1166 1188,1400 892,1400" fill="#d8c8a8" opacity="0.35"/>
+    <rect x="1030" y="1166" width="16" height="234" fill="#0a0d0a"/>
+    <text x="1040" y="1140" font-family="serif" font-size="24" fill="#d8c8a8" text-anchor="middle" opacity="0.8">→ 清晨</text>
+  </g>
+
+  <!-- B∞ 电梯面板（热区 1700,1160,280,220） -->
+  <g>
+    <rect x="1700" y="1150" width="280" height="240" fill="#1a1a1e"/>
+    <rect x="1716" y="1166" width="248" height="208" fill="#2c2c30"/>
+    <g fill="#1a1a1e" stroke="#b08d3f" stroke-width="3">
+      <circle cx="1780" cy="1220" r="18"/><circle cx="1840" cy="1220" r="18"/><circle cx="1900" cy="1220" r="18"/>
+      <circle cx="1780" cy="1280" r="18"/><circle cx="1840" cy="1280" r="18"/><circle cx="1900" cy="1280" r="18"/>
+    </g>
+    <circle cx="1840" cy="1336" r="22" fill="#10130f" stroke="#7FD4C1" stroke-width="4"/>
+    <text x="1840" y="1345" font-family="serif" font-size="22" fill="#7FD4C1" text-anchor="middle">∞</text>
+  </g>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

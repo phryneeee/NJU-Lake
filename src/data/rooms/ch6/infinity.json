@@ -1,0 +1,50 @@
+{
+  "id": "ch6_infinity",
+  "label": "B∞（电梯下了很久。门外是一扇六兽门环的铜门）",
+  "color": "#141a17",
+  "filter": "grain",
+  "hotspots": [
+    {
+      "id": "bronze_door",
+      "rect": [720, 440, 620, 640],
+      "hiddenIfFlag": "hidden_door_open",
+      "onTap": [
+        { "type": "say", "textId": "ch6.bronze_door" },
+        {
+          "type": "openPuzzle",
+          "puzzle": "SortPuzzle",
+          "config": {
+            "prompt": "六份修复的残缺档案各化出一件信物，对应六个兽首凹槽。\n按它们在这段旅程中登场的顺序，依次嵌入转动。",
+            "slotLabels": ["第一位", "第二位", "第三位", "第四位", "第五位", "第六位"],
+            "cards": [
+              { "id": "t_deer", "label": "鹿角扣\n（时间）" },
+              { "id": "t_crow", "label": "羽毛纹章\n（记录者）" },
+              { "id": "t_koi", "label": "鱼鳞灯\n（命运）" },
+              { "id": "t_owl", "label": "鹰羽袖标\n（知识）" },
+              { "id": "t_fox", "label": "狐狸面具\n（谎言）" },
+              { "id": "t_rabbit", "label": "怀表\n（记忆）" }
+            ],
+            "correctOrder": ["t_crow", "t_owl", "t_rabbit", "t_deer", "t_fox", "t_koi"],
+            "wrongText": "门环全部弹出。门上浮现出已经走过的影子——回忆这一路，谁先来的？",
+            "successActions": [
+              { "type": "take", "item": "burned_slip" },
+              { "type": "take", "item": "archive_r2" },
+              { "type": "take", "item": "archive_r3" },
+              { "type": "take", "item": "archive_r4" },
+              { "type": "take", "item": "archive_r5" },
+              { "type": "take", "item": "archive_r6" },
+              { "type": "setFlag", "flag": "hidden_door_open" },
+              { "type": "say", "textId": "ch6.door_opens" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "door_open",
+      "rect": [720, 440, 620, 640],
+      "requiresFlag": "hidden_door_open",
+      "onTap": [{ "type": "goRoom", "room": "ch6_deepest" }]
+    }
+  ]
+}

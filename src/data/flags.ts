@@ -49,6 +49,18 @@ export const FLAGS = {
   ch5_got_r5: '【残缺档案⑤】2001书架深处（需传手电筒）',
   ch5_assembled: '重组档案404（谜题5-4）',
   ch5_complete: '第五章完成（明天答辩）',
+
+  // 第六章 · 毕业答辩 + 双结局
+  ch6_slides_done: '幻灯片按年代排列（谜题6-1）',
+  ch6_gave_lamp: '把台灯还给26岁（坚持需要被照亮）',
+  ch6_gave_photo: '把半张合影还给30岁（远行的人需要牵挂）',
+  ch6_gave_chalk: '把粉笔还给35岁（平凡是一种传承）',
+  ch6_got_r6: '【残缺档案⑥】狐狸空座下',
+  ch6_signed: '签署自己的档案（谜题6-3）',
+  ch6_archived: '归档完成（真结局触发）',
+  ch6_complete: '真结局 · 归档',
+  hidden_door_open: '六兽门环开启（谜题H-1）',
+  hidden_complete: '隐藏结局 · 历史学者',
 } as const;
 
 export type FlagId = keyof typeof FLAGS;

@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import type { PuzzleConfig, RoomAction } from '../types/room';
 import { runActions } from '../systems/actions';
+import { AudioSystem } from '../systems/AudioSystem';
 import { W, H, COLORS } from '../ui/theme';
 
 /**
@@ -54,9 +55,15 @@ export abstract class PuzzleScene extends Phaser.Scene {
   /** 谜题完成：关闭模态并在 RoomScene 上执行 successActions */
   protected succeed(): void {
     const room = this.scene.get('Room');
+    AudioSystem.sfx(this, 'sfx_solve');
     this.scene.stop();
     this.scene.resume('Room');
     runActions(room, this.successActions);
+  }
+
+  /** 子类可用的轻音效 */
+  protected sfx(key: string): void {
+    AudioSystem.sfx(this, key);
   }
 
   /** 玩家主动退出（不算完成） */

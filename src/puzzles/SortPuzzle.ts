@@ -101,6 +101,7 @@ export class SortPuzzle extends PuzzleScene {
     const empty = this.slotContents.indexOf(null);
     if (empty === -1) return;
     this.slotContents[empty] = id;
+    this.sfx('sfx_page');
     const card = this.trayCards.get(id);
     if (!card) return;
     this.tweens.add({ targets: card, x: this.slotXs[empty], y: -200, duration: 160 });
@@ -130,6 +131,7 @@ export class SortPuzzle extends PuzzleScene {
       this.cameras.main.flash(300, 127, 212, 193);
       this.time.delayedCall(400, () => this.succeed());
     } else {
+      this.sfx('sfx_error');
       this.cameras.main.shake(180, 0.006);
       const text = this.add
         .text(0, 0, String(this.config.wrongText ?? '顺序不对……再想想。'), {

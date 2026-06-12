@@ -72,6 +72,7 @@ export class QuizPuzzle extends PuzzleScene {
     const questions = (this.config.questions as QuizQuestion[]) ?? [];
     if (!right) {
       this.missed = true;
+      this.sfx('sfx_error');
       this.cameras.main.shake(200, 0.008);
       this.index = 0;
       const t = this.add

@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { GameState } from '../systems/GameState';
 import { hasSave, clearState } from '../systems/SaveSystem';
+import { AudioSystem } from '../systems/AudioSystem';
 import { W, H, COLORS } from '../ui/theme';
 
 export class TitleScene extends Phaser.Scene {
@@ -10,6 +11,8 @@ export class TitleScene extends Phaser.Scene {
 
   create(): void {
     this.add.rectangle(W / 2, H / 2, W, H, 0x1c1a17);
+    // 主题曲《归档》（iOS 需首次触摸后才出声，Phaser 会自动排队）
+    AudioSystem.setAmbience(this, 'theme_main', 0.45);
 
     this.add
       .text(W / 2, H / 2 - 220, '第七档案库', {
@@ -51,7 +54,10 @@ export class TitleScene extends Phaser.Scene {
     this.add
       .text(W / 2, y, label, { fontSize: '48px', color: COLORS.paper, fontFamily: 'serif' })
       .setOrigin(0.5);
-    btn.on('pointerdown', onTap);
+    btn.on('pointerdown', () => {
+      AudioSystem.sfx(this, 'sfx_click');
+      onTap();
+    });
   }
 
   private startGame(fresh: boolean): void {

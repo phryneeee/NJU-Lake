@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="80%">
+      <stop offset="50%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2a1f10" stop-opacity="0.4"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 2001年初夏的天 -->
+  <rect width="2048" height="1536" fill="#d9c5a0"/>
+  <circle cx="1640" cy="220" r="90" fill="#f0e2bc"/>
+  <circle cx="1640" cy="220" r="130" fill="#f0e2bc" opacity="0.4"/>
+  <g fill="#e8d6ae">
+    <ellipse cx="400" cy="180" rx="180" ry="40"/>
+    <ellipse cx="900" cy="120" rx="220" ry="36"/>
+    <ellipse cx="1300" cy="260" rx="160" ry="30"/>
+  </g>
+
+  <!-- 远处的羊山 -->
+  <path d="M 0 560 q 300 -130 620 -40 q 300 80 700 -60 q 400 -100 728 60 l 0 200 l -2048 0 z" fill="#a98e6f"/>
+  <path d="M 0 620 q 400 -90 900 -20 q 500 60 1148 -40 l 0 220 l -2048 0 z" fill="#8a7558"/>
+
+  <!-- 田野 -->
+  <rect y="700" width="2048" height="836" fill="#6b5a3f"/>
+  <g fill="#5d4e36">
+    <polygon points="0,800 2048,760 2048,790 0,830"/>
+    <polygon points="0,950 2048,900 2048,934 0,984"/>
+    <polygon points="0,1130 2048,1070 2048,1110 0,1170"/>
+    <polygon points="0,1340 2048,1270 2048,1316 0,1386"/>
+  </g>
+
+  <!-- 测绘红旗 -->
+  <g>
+    <line x1="760" y1="900" x2="760" y2="800" stroke="#3a2e20" stroke-width="6"/>
+    <polygon points="760,800 830,816 760,832" fill="#8C3B2E"/>
+    <line x1="1340" y1="1000" x2="1340" y2="890" stroke="#3a2e20" stroke-width="6"/>
+    <polygon points="1340,890 1410,906 1340,922" fill="#8C3B2E"/>
+  </g>
+
+  <!-- 三棵幼小的水杉（热区 820,480,460,320） -->
+  <g>
+    <polygon points="880,820 902,470 924,820" fill="#5a6b4f"/>
+    <g fill="#6e7f5f">
+      <polygon points="868,600 902,520 936,600"/><polygon points="862,700 902,600 942,700"/>
+      <polygon points="856,800 902,690 948,800"/>
+    </g>
+    <polygon points="1020,830 1044,440 1068,830" fill="#5a6b4f"/>
+    <g fill="#6e7f5f">
+      <polygon points="1006,580 1044,490 1082,580"/><polygon points="1000,690 1044,580 1088,690"/>
+      <polygon points="992,810 1044,680 1096,810"/>
+    </g>
+    <polygon points="1170,820 1190,480 1210,820" fill="#5a6b4f"/>
+    <g fill="#6e7f5f">
+      <polygon points="1158,610 1190,530 1222,610"/><polygon points="1152,710 1190,610 1228,710"/>
+      <polygon points="1146,806 1190,700 1234,806"/>
+    </g>
+    <!-- 树坑 -->
+    <ellipse cx="902" cy="826" rx="56" ry="14" fill="#4a3d28"/>
+    <ellipse cx="1044" cy="836" rx="60" ry="15" fill="#4a3d28"/>
+    <ellipse cx="1190" cy="826" rx="54" ry="13" fill="#4a3d28"/>
+  </g>
+
+  <!-- 挖掘点（热区 980,980,260,220）：中间那棵东侧三步 -->
+  <g>
+    <ellipse cx="1110" cy="1090" rx="130" ry="46" fill="#57462e"/>
+    <ellipse cx="1110" cy="1080" rx="100" ry="32" fill="#4a3d28"/>
+    <line x1="1110" y1="1010" x2="1110" y2="940" stroke="#3a2e20" stroke-width="8"/>
+    <polygon points="1110,940 1160,952 1110,964" fill="#e8dcc0"/>
+  </g>
+
+  <!-- 工棚（热区 1480,600,340,440） -->
+  <g>
+    <polygon points="1430,640 1880,640 1850,560 1460,560" fill="#5a5a5a"/>
+    <rect x="1450" y="640" width="400" height="400" fill="#8a7050"/>
+    <g fill="#75603f">
+      <rect x="1450" y="660" width="400" height="16"/><rect x="1450" y="730" width="400" height="16"/>
+      <rect x="1450" y="800" width="400" height="16"/><rect x="1450" y="870" width="400" height="16"/>
+      <rect x="1450" y="940" width="400" height="16"/>
+    </g>
+    <rect x="1530" y="760" width="150" height="280" fill="#4a3820"/>
+    <rect x="1700" y="700" width="110" height="100" fill="#3a3a30"/>
+    <rect x="1712" y="712" width="86" height="76" fill="#d9c5a0" opacity="0.7"/>
+  </g>
+  <!-- 工棚墙根的老照片（热区 1480,1080,220,160） -->
+  <g transform="rotate(-6 1590 1160)">
+    <rect x="1490" y="1090" width="200" height="150" fill="#e8dcc0"/>
+    <rect x="1504" y="1104" width="172" height="100" fill="#b9a982"/>
+    <g fill="#6e5f43">
+      <polygon points="1540,1198 1552,1130 1564,1198"/>
+      <polygon points="1580,1198 1594,1120 1608,1198"/>
+      <polygon points="1624,1198 1636,1126 1648,1198"/>
+    </g>
+    <ellipse cx="1594" cy="1180" rx="14" ry="22" fill="#e8dcc0"/>
+  </g>
+
+  <!-- 广播（热区 340,760,220,180）：木箱上的收音机 -->
+  <g>
+    <rect x="330" y="860" width="240 " height="120 " fill="#75603f"/>
+    <g fill="#5d4c32">
+      <rect x="330" y="884" width="240" height="10"/><rect x="330" y="930" width="240" height="10"/>
+    </g>
+    <rect x="356" y="764" width="190" height="100" rx="12" fill="#8C3B2E"/>
+    <circle cx="400" cy="814" r="30" fill="#3a2e20"/>
+    <g fill="#e8dcc0" opacity="0.8">
+      <rect x="448" y="788" width="76" height="12"/><rect x="448" y="812" width="76" height="12"/>
+      <rect x="448" y="836" width="50" height="12"/>
+    </g>
+    <line x1="530" y1="764" x2="566" y2="700" stroke="#1c1a17" stroke-width="6"/>
+    <!-- 飘出的音符 -->
+    <g fill="#8a7050">
+      <circle cx="600" cy="700" r="9"/><rect x="606" y="660" width="5" height="42"/>
+      <circle cx="650" cy="664" r="8"/><rect x="655" y="628" width="5" height="38"/>
+    </g>
+  </g>
+
+  <!-- 田里孤零零立着的那扇门（热区 180,480,220,480）：回去的路 -->
+  <g>
+    <ellipse cx="294" cy="980" rx="130 " ry="22" fill="#4a3d28"/>
+    <rect x="170" y="460" width="250" height="520" fill="#241d14"/>
+    <rect x="188" y="478" width="214" height="502" fill="#5a4326"/>
+    <g fill="#4a3820">
+      <rect x="204" y="500" width="182" height="12"/><rect x="204" y="580" width="182" height="12"/>
+      <rect x="204" y="680" width="182" height="12"/><rect x="204" y="790" width="182" height="12"/>
+      <rect x="204" y="890" width="182" height="12"/>
+    </g>
+    <circle cx="376" cy="740" r="14" fill="#8a7032"/>
+    <!-- 门缝里渗出的2026年的夜 -->
+    <rect x="286" y="478" width="8" height="502" fill="#2a2436" opacity="0.9"/>
+  </g>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

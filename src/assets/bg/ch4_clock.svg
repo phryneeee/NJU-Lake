@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="42%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 鹿的时钟走廊 -->
+  <rect width="2048" height="1536" fill="#383028"/>
+  <rect y="0" width="2048" height="100" fill="#221d16"/>
+  <rect y="1080" width="2048" height="456" fill="#28221c"/>
+  <g fill="#201b16">
+    <rect y="1170" width="2048" height="8"/><rect y="1290" width="2048" height="8"/><rect y="1410" width="2048" height="8"/>
+  </g>
+
+  <!-- 天花板垂下的巨大钟摆 -->
+  <line x1="1024" y1="0" x2="1024" y2="220" stroke="#14110c" stroke-width="10"/>
+  <circle cx="1024" cy="250" r="44" fill="#8a7032"/>
+  <circle cx="1024" cy="250" r="32" fill="#b08d3f"/>
+
+  <!-- 四扇年代之门（热区 820,540,700,460） -->
+  <g>
+    <!-- 1919 -->
+    <g>
+      <rect x="800" y="560" width="160" height="420" fill="#241d14"/>
+      <rect x="812" y="572" width="136" height="408" fill="#5d4c38"/>
+      <rect x="826" y="600" width="108" height="120" fill="#4a3c2c"/>
+      <rect x="826" y="760" width="108" height="180" fill="#4a3c2c"/>
+      <rect x="824" y="520" width="112" height="40" fill="#d8c8a8"/>
+      <text x="880" y="550" font-family="serif" font-size="26" fill="#3a3326" text-anchor="middle">1919</text>
+      <rect x="826" y="990" width="108" height="50" fill="#41372b"/>
+    </g>
+    <!-- 2001 -->
+    <g>
+      <rect x="980" y="560" width="160" height="420" fill="#241d14"/>
+      <rect x="992" y="572" width="136" height="408" fill="#75603f"/>
+      <rect x="1006" y="600" width="108" height="120" fill="#5f4e33"/>
+      <rect x="1006" y="760" width="108" height="180" fill="#5f4e33"/>
+      <rect x="1004" y="520" width="112" height="40" fill="#d8c8a8"/>
+      <text x="1060" y="550" font-family="serif" font-size="26" fill="#3a3326" text-anchor="middle">2001</text>
+      <rect x="1006" y="990" width="108" height="50" fill="#41372b"/>
+    </g>
+    <!-- 2009 -->
+    <g>
+      <rect x="1160" y="560" width="160" height="420" fill="#241d14"/>
+      <rect x="1172" y="572" width="136" height="408" fill="#3E5C4B"/>
+      <rect x="1186" y="600" width="108" height="120" fill="#324b3d"/>
+      <rect x="1186" y="760" width="108" height="180" fill="#324b3d"/>
+      <rect x="1184" y="520" width="112" height="40" fill="#d8c8a8"/>
+      <text x="1240" y="550" font-family="serif" font-size="26" fill="#3a3326" text-anchor="middle">2009</text>
+      <rect x="1186" y="990" width="108" height="50" fill="#41372b"/>
+    </g>
+    <!-- 2026 -->
+    <g>
+      <rect x="1340" y="560" width="160" height="420" fill="#241d14"/>
+      <rect x="1352" y="572" width="136" height="408" fill="#4a5a66"/>
+      <rect x="1366" y="600" width="108" height="120" fill="#3c4a54"/>
+      <rect x="1366" y="760" width="108" height="180" fill="#3c4a54"/>
+      <rect x="1364" y="520" width="112" height="40" fill="#d8c8a8"/>
+      <text x="1420" y="550" font-family="serif" font-size="26" fill="#3a3326" text-anchor="middle">2026</text>
+      <rect x="1366" y="990" width="108" height="50" fill="#41372b"/>
+    </g>
+  </g>
+
+  <!-- 鹿女士（热区 380,560,260,480）：旗袍剪影+鹿角时针 -->
+  <g>
+    <ellipse cx="510" cy="1056" rx="100" ry="16" fill="#000" opacity="0.35"/>
+    <!-- 旗袍身形 -->
+    <path d="M 460 720 q 50 -36 100 0 l 30 336 l -160 0 z" fill="#5a3a30"/>
+    <path d="M 470 740 l 80 0 l -8 60 l -64 0 z" fill="#6e463a"/>
+    <!-- 颈与头 -->
+    <rect x="494" y="650" width="32" height="60" fill="#caa987"/>
+    <path d="M 478 600 q 32 -44 76 -10 q 20 16 8 44 q -50 26 -84 0 z" fill="#caa987"/>
+    <!-- 鹿耳与鹿角：角即指针 -->
+    <ellipse cx="476" cy="588" rx="22" ry="11" fill="#caa987" transform="rotate(-30 476 588)"/>
+    <g stroke="#8a6b42" stroke-width="12" fill="none" stroke-linecap="round">
+      <path d="M 500 572 q -10 -70 -50 -100"/>
+      <path d="M 480 520 q -30 -10 -44 -40"/>
+      <path d="M 530 570 q 20 -80 70 -96"/>
+      <path d="M 560 510 q 26 -16 30 -46"/>
+    </g>
+    <!-- 鹿角上挂的怀表 -->
+    <line x1="588" y1="478" x2="596" y2="530" stroke="#b08d3f" stroke-width="5"/>
+    <circle cx="596" cy="552" r="28" fill="#b08d3f"/>
+    <circle cx="596" cy="552" r="20" fill="#e8dcc0"/>
+    <line x1="596" y1="552" x2="596" y2="538" stroke="#3a2e20" stroke-width="4"/>
+    <line x1="596" y1="552" x2="606" y2="558" stroke="#3a2e20" stroke-width="3"/>
+    <!-- 眼睛 -->
+    <circle cx="520" cy="600" r="7" fill="#1c1a17"/>
+  </g>
+
+  <!-- 镜之门（热区 1700,560,240,480）：尽头泛光的落地镜 -->
+  <g>
+    <rect x="1680" y="520" width="280" height="560" fill="#2a2522"/>
+    <rect x="1700" y="540" width="240" height="520" fill="#49545c"/>
+    <rect x="1700" y="540" width="240" height="520" fill="none" stroke="#7FD4C1" stroke-width="5" opacity="0.6"/>
+    <polygon points="1716,540 1776,540 1726,1060 1700,1060" fill="#5d6a72" opacity="0.6"/>
+  </g>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="45%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 深夜宿舍 -->
+  <rect width="2048" height="1536" fill="#332e3a"/>
+  <rect y="0" width="2048" height="100" fill="#1f1c26"/>
+  <rect y="1120" width="2048" height="416" fill="#262230"/>
+  <g fill="#1f1c26">
+    <rect y="1210" width="2048" height="8"/><rect y="1330" width="2048" height="8"/><rect y="1440" width="2048" height="8"/>
+  </g>
+
+  <!-- 窗：城市夜光 -->
+  <g>
+    <rect x="840" y="240" width="420" height="400" fill="#1c1814"/>
+    <rect x="858" y="258" width="384" height="364" fill="#141826"/>
+    <g fill="#e8c84a" opacity="0.5">
+      <rect x="900" y="480" width="14" height="20"/><rect x="950" y="510" width="14" height="20"/>
+      <rect x="1080" y="495" width="14" height="20"/><rect x="1150" y="520" width="14" height="20"/>
+    </g>
+    <rect x="1040" y="258" width="16" height="364" fill="#1c1814"/>
+    <rect x="858" y="430" width="384" height="14" fill="#1c1814"/>
+    <!-- 窗帘 -->
+    <polygon points="840,240 990,240 940,660 840,660" fill="#4a3d56" opacity="0.92"/>
+  </g>
+
+  <!-- 镜子（热区 420,520,240,360）：右下角一闪而过的白耳朵 -->
+  <g>
+    <rect x="404" y="500" width="272" height="400" fill="#2a2522"/>
+    <rect x="424" y="520" width="232" height="360" fill="#3d4450"/>
+    <rect x="436" y="532" width="100" height="336" fill="#49525e" opacity="0.7"/>
+    <!-- 镜中白耳朵 -->
+    <g transform="rotate(-18 610 830)">
+      <ellipse cx="600" cy="830" rx="16" ry="46" fill="#e8e2dc"/>
+      <ellipse cx="632" cy="842" rx="14" ry="38" fill="#e8e2dc"/>
+      <ellipse cx="600" cy="838" rx="7" ry="30" fill="#d8b8b8"/>
+    </g>
+    <!-- 洗漱台 -->
+    <rect x="404" y="900" width="272" height="30" fill="#4a4440"/>
+    <rect x="430" y="930" width="220" height="120" fill="#3a3530"/>
+    <rect x="500" y="884" width="60" height="18" fill="#7FD4C1" opacity="0.6"/>
+  </g>
+
+  <!-- 床（热区 820,800,460,320） -->
+  <g>
+    <rect x="790" y="820" width="520" height="60" fill="#4a3d2e"/>
+    <rect x="790" y="880" width="520" height="220" fill="#5a4a38"/>
+    <rect x="790" y="700" width="36" height="400" fill="#4a3d2e"/>
+    <rect x="1274" y="760" width="36" height="340" fill="#4a3d2e"/>
+    <!-- 被褥与枕头 -->
+    <rect x="826" y="800" width="448" height="90" rx="20" fill="#8a8298"/>
+    <rect x="850" y="770" width="130" height="56" rx="16" fill="#d8d2c4"/>
+    <polygon points="980,800 1274,800 1274,890 1040,890" fill="#6e6680"/>
+  </g>
+
+  <!-- 书桌（热区 1380,760,380,280）：第十一版PPT -->
+  <g>
+    <rect x="1360" y="800" width="420" height="34" fill="#52432f"/>
+    <rect x="1380" y="834" width="380" height="240" fill="#41372b"/>
+    <!-- 笔记本电脑 -->
+    <polygon points="1430,800 1620,800 1600,690 1450,690" fill="#2a2a2e"/>
+    <rect x="1456" y="700" width="138" height="92" fill="#16332a"/>
+    <g fill="#7FD4C1" opacity="0.8">
+      <rect x="1470" y="714" width="100" height="8"/><rect x="1470" y="732" width="76" height="8"/>
+      <rect x="1470" y="750" width="90" height="8"/>
+    </g>
+    <!-- 草稿纸堆 -->
+    <rect x="1620" y="760" width="140" height="20" fill="#d8c8a8" transform="rotate(-3 1690 770)"/>
+    <rect x="1628" y="742" width="140" height="20" fill="#cdbd9b" transform="rotate(2 1698 752)"/>
+    <rect x="1616" y="724" width="140" height="20" fill="#e8dcc0" transform="rotate(-1 1686 734)"/>
+    <!-- 马克杯 -->
+    <rect x="1404" y="760" width="44" height="40" rx="6" fill="#8C3B2E"/>
+  </g>
+
+  <!-- 桌上方便利贴墙 -->
+  <g>
+    <rect x="1420" y="420" width="70" height="70" fill="#e8dcc0" transform="rotate(-4 1455 455)"/>
+    <rect x="1520" y="440" width="70" height="70" fill="#d4c89a" transform="rotate(5 1555 475)"/>
+    <rect x="1620" y="416" width="70" height="70" fill="#c9b8d4" transform="rotate(-7 1655 451)"/>
+    <rect x="1540" y="540" width="70" height="70" fill="#a8c4b8" transform="rotate(3 1575 575)"/>
+  </g>
+
+  <ellipse cx="1050" cy="1130" rx="340" ry="24" fill="#000" opacity="0.3"/>
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.58"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 镜像档案室 -->
+  <rect width="2048" height="1536" fill="#2c3d34"/>
+  <rect y="0" width="2048" height="100" fill="#1a2620"/>
+  <rect y="1080" width="2048" height="456" fill="#20302a"/>
+  <g fill="#1a2822">
+    <rect y="1170" width="2048" height="8"/><rect y="1290" width="2048" height="8"/><rect y="1410" width="2048" height="8"/>
+  </g>
+
+  <!-- 现实侧档案柜（左） -->
+  <g>
+    <rect x="160" y="420" width="400 " height="640" fill="#26352c"/>
+    <g fill="#3E5C4B">
+      <rect x="178" y="440" width="110" height="140"/><rect x="300" y="440" width="110" height="140"/><rect x="422" y="440" width="110" height="140"/>
+      <rect x="178" y="596" width="110" height="140"/><rect x="300" y="596" width="110" height="140"/><rect x="422" y="596" width="110" height="140"/>
+      <rect x="178" y="752" width="110" height="140"/><rect x="300" y="752" width="110" height="140"/><rect x="422" y="752" width="110" height="140"/>
+      <rect x="178" y="908" width="110" height="140"/><rect x="300" y="908" width="110" height="140"/><rect x="422" y="908" width="110" height="140"/>
+    </g>
+    <g fill="#b08d3f">
+      <rect x="216" y="500" width="34" height="10"/><rect x="338" y="500" width="34" height="10"/><rect x="460" y="500" width="34" height="10"/>
+      <rect x="216" y="656" width="34" height="10"/><rect x="338" y="656" width="34" height="10"/><rect x="460" y="656" width="34" height="10"/>
+      <rect x="216" y="812" width="34" height="10"/><rect x="338" y="812" width="34" height="10"/><rect x="460" y="812" width="34" height="10"/>
+      <rect x="216" y="968" width="34" height="10"/><rect x="338" y="968" width="34" height="10"/><rect x="460" y="968" width="34" height="10"/>
+    </g>
+    <!-- 锁死的第3列 -->
+    <rect x="422" y="440" width="110" height="608" fill="#000" opacity="0.25"/>
+    <circle cx="477" cy="744" r="16" fill="#8a7032"/>
+  </g>
+
+  <!-- 落地镜（热区 620,480,820,560）：镜中房间 -->
+  <g>
+    <rect x="596" y="420" width="868" height="700" fill="#2a2522"/>
+    <rect x="620" y="444" width="820" height="652" fill="#3d4a50"/>
+    <!-- 镜中的房间（左右颠倒、偏青） -->
+    <rect x="636" y="460" width="788" height="620" fill="#36444a"/>
+    <!-- 镜中档案柜（在右边=现实的左边的镜像） -->
+    <g opacity="0.92">
+      <rect x="1070" y="500" width="320" height="500" fill="#22332c"/>
+      <g fill="#35514a">
+        <rect x="1086" y="516" width="88" height="110"/><rect x="1184" y="516" width="88" height="110"/><rect x="1282" y="516" width="88" height="110"/>
+        <rect x="1086" y="638" width="88" height="110"/><rect x="1184" y="638" width="88" height="110"/><rect x="1282" y="638" width="88" height="110"/>
+        <rect x="1086" y="760" width="88" height="110"/><rect x="1184" y="760" width="88" height="110"/><rect x="1282" y="760" width="88" height="110"/>
+        <rect x="1086" y="882" width="88" height="110"/><rect x="1184" y="882" width="88" height="110"/><rect x="1282" y="882" width="88" height="110"/>
+      </g>
+      <!-- 镜中虚掩的那格：金色描边 -->
+      <rect x="1086" y="638" width="88" height="110" fill="#3f5e54"/>
+      <rect x="1086" y="638" width="88" height="110" fill="none" stroke="#e8c84a" stroke-width="5"/>
+      <polygon points="1086,638 1100,638 1100,748 1086,748" fill="#e8c84a" opacity="0.5"/>
+    </g>
+    <!-- 镜中的"你"：背对着的人影 -->
+    <g fill="#1c1a17" opacity="0.55">
+      <circle cx="820" cy="700" r="34"/>
+      <path d="M 786 730 q 34 -22 68 0 l 12 150 l -92 0 z"/>
+    </g>
+    <!-- 镜面涟漪 -->
+    <g stroke="#7FD4C1" stroke-width="4" fill="none" opacity="0.4">
+      <ellipse cx="1030" cy="770" rx="60" ry="20"/>
+      <ellipse cx="1030" cy="770" rx="110" ry="38"/>
+    </g>
+    <!-- 镜面反光 -->
+    <polygon points="660,460 760,460 690,1080 640,1080" fill="#49545c" opacity="0.45"/>
+  </g>
+
+  <!-- 右侧墙的旧挂钟：指针反着走 -->
+  <circle cx="1700" cy="300" r="58" fill="#d8c8a8"/>
+  <circle cx="1700" cy="300" r="58" fill="none" stroke="#2a2522" stroke-width="10"/>
+  <line x1="1700" y1="300" x2="1672" y2="270" stroke="#2a2522" stroke-width="7"/>
+  <line x1="1700" y1="300" x2="1668" y2="318" stroke="#8C3B2E" stroke-width="4"/>
+
+  <ellipse cx="1030" cy="1130" rx="380" ry="26" fill="#000" opacity="0.3"/>
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

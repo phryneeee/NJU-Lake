@@ -21,7 +21,7 @@ npm run validate   # 数据一致性校验（房间JSON引用的flag/物品/文�
 npm run build      # 产物在 dist/，可直接作为 Capacitor webDir
 ```
 
-当前进度：**阶段0–5 完成**——第1–5章灰盒连续可玩（26个房间、18个谜题、双时空联动、残缺档案①–⑤）。
+当前进度：**阶段0–7主体完成**——全流程可玩+31张正式SVG背景全部就位（六兽与四个年龄的林晚全员登场）。剩余：音频制作、细节打磨、Capacitor打包TestFlight。
 灰盒模式下热区有描边和 id 标注（`RoomScene.ts` 的 `GREYBOX` 开关）。
 
 ## 设计文档索引

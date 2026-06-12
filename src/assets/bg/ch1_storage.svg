@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="42%" r="80%">
+      <stop offset="35%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 黑暗的房间 -->
+  <rect width="2048" height="1536" fill="#191510"/>
+  <rect y="1080" width="2048" height="456" fill="#211b14"/>
+
+  <!-- 灯泡与光锥 -->
+  <line x1="1030" y1="0" x2="1030" y2="180" stroke="#0e0c09" stroke-width="8"/>
+  <circle cx="1030" cy="208" r="30" fill="#f0e6c4"/>
+  <polygon points="1030,208 380,1380 1680,1380" fill="#e8dcc0" opacity="0.09"/>
+  <polygon points="1030,208 560,1240 1500,1240" fill="#e8dcc0" opacity="0.07"/>
+  <!-- 尘埃 -->
+  <g fill="#e8dcc0" opacity="0.35">
+    <circle cx="900" cy="520" r="4"/><circle cx="1090" cy="640" r="3"/><circle cx="990" cy="760" r="4"/>
+    <circle cx="1150" cy="880" r="3"/><circle cx="860" cy="940" r="3"/><circle cx="1060" cy="420" r="3"/>
+  </g>
+
+  <!-- 两侧暗处的货架剪影 -->
+  <g fill="#100d0a">
+    <rect x="0" y="300" width="280" height="900"/>
+    <rect x="1840" y="300" width="208" height="900"/>
+  </g>
+  <g fill="#241d14">
+    <rect x="30" y="360" width="220" height="18"/><rect x="30" y="560" width="220" height="18"/>
+    <rect x="30" y="760" width="220" height="18"/><rect x="30" y="960" width="220" height="18"/>
+    <rect x="1870" y="360" width="178" height="18"/><rect x="1870" y="560" width="178" height="18"/>
+    <rect x="1870" y="760" width="178" height="18"/><rect x="1870" y="960" width="178" height="18"/>
+  </g>
+
+  <!-- 档案柜（热区 620,420,820,620）：6列×6行 -->
+  <g>
+    <rect x="600" y="400" width="860" height="680" fill="#26352c"/>
+    <!-- 列标 壹-陆 / 行标 甲-己 -->
+    <g font-family="serif" font-size="24" fill="#9aa68e" text-anchor="middle">
+      <text x="694" y="392">壹</text><text x="830" y="392">贰</text><text x="966" y="392">叁</text>
+      <text x="1102" y="392">肆</text><text x="1238" y="392">伍</text><text x="1374" y="392">陆</text>
+    </g>
+    <g font-family="serif" font-size="24" fill="#9aa68e" text-anchor="middle">
+      <text x="580" y="478">甲</text><text x="580" y="586">乙</text><text x="580" y="694">丙</text>
+      <text x="580" y="802">丁</text><text x="580" y="910">戊</text><text x="580" y="1018">己</text>
+    </g>
+    <!-- 抽屉网格 -->
+    <g fill="#3E5C4B">
+      <rect x="632" y="432" width="124" height="92"/><rect x="768" y="432" width="124" height="92"/><rect x="904" y="432" width="124" height="92"/><rect x="1040" y="432" width="124" height="92"/><rect x="1176" y="432" width="124" height="92"/><rect x="1312" y="432" width="124" height="92"/>
+      <rect x="632" y="540" width="124" height="92"/><rect x="768" y="540" width="124" height="92"/><rect x="904" y="540" width="124" height="92"/><rect x="1040" y="540" width="124" height="92"/><rect x="1176" y="540" width="124" height="92"/><rect x="1312" y="540" width="124" height="92"/>
+      <rect x="632" y="648" width="124" height="92"/><rect x="768" y="648" width="124" height="92"/><rect x="904" y="648" width="124" height="92"/><rect x="1040" y="648" width="124" height="92"/><rect x="1176" y="648" width="124" height="92"/><rect x="1312" y="648" width="124" height="92"/>
+      <rect x="632" y="756" width="124" height="92"/><rect x="768" y="756" width="124" height="92"/><rect x="904" y="756" width="124" height="92"/><rect x="1040" y="756" width="124" height="92"/><rect x="1176" y="756" width="124" height="92"/><rect x="1312" y="756" width="124" height="92"/>
+      <rect x="632" y="864" width="124" height="92"/><rect x="768" y="864" width="124" height="92"/><rect x="904" y="864" width="124" height="92"/><rect x="1040" y="864" width="124" height="92"/><rect x="1176" y="864" width="124" height="92"/><rect x="1312" y="864" width="124" height="92"/>
+      <rect x="632" y="972" width="124" height="92"/><rect x="768" y="972" width="124" height="92"/><rect x="904" y="972" width="124" height="92"/><rect x="1040" y="972" width="124" height="92"/><rect x="1176" y="972" width="124" height="92"/><rect x="1312" y="972" width="124" height="92"/>
+    </g>
+    <!-- 拉手与标签框 -->
+    <g fill="#b08d3f">
+      <rect x="676" y="500" width="36" height="10"/><rect x="812" y="500" width="36" height="10"/><rect x="948" y="500" width="36" height="10"/><rect x="1084" y="500" width="36" height="10"/><rect x="1220" y="500" width="36" height="10"/><rect x="1356" y="500" width="36" height="10"/>
+      <rect x="676" y="608" width="36" height="10"/><rect x="812" y="608" width="36" height="10"/><rect x="948" y="608" width="36" height="10"/><rect x="1084" y="608" width="36" height="10"/><rect x="1220" y="608" width="36" height="10"/><rect x="1356" y="608" width="36" height="10"/>
+      <rect x="676" y="716" width="36" height="10"/><rect x="812" y="716" width="36" height="10"/><rect x="948" y="716" width="36" height="10"/><rect x="1084" y="716" width="36" height="10"/><rect x="1220" y="716" width="36" height="10"/><rect x="1356" y="716" width="36" height="10"/>
+      <rect x="676" y="824" width="36" height="10"/><rect x="812" y="824" width="36" height="10"/><rect x="948" y="824" width="36" height="10"/><rect x="1084" y="824" width="36" height="10"/><rect x="1220" y="824" width="36" height="10"/><rect x="1356" y="824" width="36" height="10"/>
+      <rect x="676" y="932" width="36" height="10"/><rect x="812" y="932" width="36" height="10"/><rect x="948" y="932" width="36" height="10"/><rect x="1084" y="932" width="36" height="10"/><rect x="1220" y="932" width="36" height="10"/><rect x="1356" y="932" width="36" height="10"/>
+      <rect x="676" y="1040" width="36" height="10"/><rect x="812" y="1040" width="36" height="10"/><rect x="948" y="1040" width="36" height="10"/><rect x="1084" y="1040" width="36" height="10"/><rect x="1220" y="1040" width="36" height="10"/><rect x="1356" y="1040" width="36" height="10"/>
+    </g>
+    <g fill="#e8dcc0" opacity="0.75">
+      <rect x="664" y="452" width="60" height="26"/><rect x="800" y="452" width="60" height="26"/><rect x="936" y="452" width="60" height="26"/><rect x="1072" y="452" width="60" height="26"/><rect x="1208" y="452" width="60" height="26"/><rect x="1344" y="452" width="60" height="26"/>
+      <rect x="664" y="560" width="60" height="26"/><rect x="800" y="560" width="60" height="26"/><rect x="936" y="560" width="60" height="26"/><rect x="1072" y="560" width="60" height="26"/><rect x="1208" y="560" width="60" height="26"/><rect x="1344" y="560" width="60" height="26"/>
+      <rect x="664" y="668" width="60" height="26"/><rect x="800" y="668" width="60" height="26"/><rect x="936" y="668" width="60" height="26"/><rect x="1072" y="668" width="60" height="26"/><rect x="1208" y="668" width="60" height="26"/><rect x="1344" y="668" width="60" height="26"/>
+      <rect x="664" y="776" width="60" height="26"/><rect x="800" y="776" width="60" height="26"/><rect x="936" y="776" width="60" height="26"/><rect x="1072" y="776" width="60" height="26"/><rect x="1208" y="776" width="60" height="26"/><rect x="1344" y="776" width="60" height="26"/>
+      <rect x="664" y="884" width="60" height="26"/><rect x="800" y="884" width="60" height="26"/><rect x="936" y="884" width="60" height="26"/><rect x="1072" y="884" width="60" height="26"/><rect x="1208" y="884" width="60" height="26"/><rect x="1344" y="884" width="60" height="26"/>
+      <rect x="664" y="992" width="60" height="26"/><rect x="800" y="992" width="60" height="26"/><rect x="936" y="992" width="60" height="26"/><rect x="1072" y="992" width="60" height="26"/><rect x="1208" y="992" width="60" height="26"/><rect x="1344" y="992" width="60" height="26"/>
+    </g>
+    <!-- 暗部压两侧 -->
+    <rect x="600" y="400" width="160" height="680" fill="#000" opacity="0.30"/>
+    <rect x="1300" y="400" width="160" height="680" fill="#000" opacity="0.30"/>
+    <!-- 柜脚 -->
+    <rect x="620" y="1080" width="40" height="30" fill="#1a241e"/>
+    <rect x="1400" y="1080" width="40" height="30" fill="#1a241e"/>
+  </g>
+  <ellipse cx="1030" cy="1120" rx="460" ry="30" fill="#000" opacity="0.4"/>
+
+  <!-- 角落的烧痕借阅单（热区 1700,1150,160,140） -->
+  <g transform="rotate(8 1780 1220)">
+    <polygon points="1712,1168 1842,1158 1856,1240 1820,1276 1724,1268" fill="#cdbd9b"/>
+    <polygon points="1820,1158 1856,1240 1820,1276 1798,1232" fill="#3a2e20"/>
+    <g stroke="#a59777" stroke-width="4">
+      <line x1="1730" y1="1196" x2="1810" y2="1192"/><line x1="1732" y1="1220" x2="1800" y2="1216"/>
+      <line x1="1734" y1="1244" x2="1786" y2="1240"/>
+    </g>
+  </g>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

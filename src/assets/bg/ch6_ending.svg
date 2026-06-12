@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <linearGradient id="dawnsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a6a82"/>
+      <stop offset="55%" stop-color="#c9a380"/>
+      <stop offset="100%" stop-color="#e8c89a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="30%" stop-color="#f5e6c0"/>
+      <stop offset="100%" stop-color="#f5e6c0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 清晨六点的天 -->
+  <rect width="2048" height="900" fill="url(#dawnsky)"/>
+  <circle cx="1500" cy="760" r="220" fill="url(#sun)"/>
+  <circle cx="1500" cy="780" r="80" fill="#f5e6c0"/>
+
+  <!-- 远处的杜厦图书馆剪影 -->
+  <g fill="#6e6252">
+    <rect x="200" y="480" width="900 " height="340"/>
+    <rect x="320" y="420" width="660" height="60"/>
+    <polygon points="200,480 260,440 1040,440 1100,480"/>
+  </g>
+  <g fill="#5d5244">
+    <rect x="260" y="540" width="70" height="90"/><rect x="370" y="540" width="70" height="90"/>
+    <rect x="480" y="540" width="70" height="90"/><rect x="590" y="540" width="70" height="90"/>
+    <rect x="700" y="540" width="70" height="90"/><rect x="810" y="540" width="70" height="90"/>
+    <rect x="920" y="540" width="70" height="90"/>
+    <rect x="260" y="680" width="70" height="90"/><rect x="370" y="680" width="70" height="90"/>
+    <rect x="480" y="680" width="70" height="90"/><rect x="590" y="680" width="70" height="90"/>
+    <rect x="700" y="680" width="70" height="90"/><rect x="810" y="680" width="70" height="90"/>
+    <rect x="920" y="680" width="70" height="90"/>
+  </g>
+
+  <!-- 湖与晨雾 -->
+  <rect y="820" width="2048" height="380" fill="#8a96a0"/>
+  <ellipse cx="1500" cy="880" rx="180" ry="20" fill="#f5e6c0" opacity="0.5"/>
+  <g fill="#c9c4b4" opacity="0.5">
+    <ellipse cx="400" cy="860" rx="300" ry="36"/>
+    <ellipse cx="1100" cy="920" rx="380" ry="40"/>
+    <ellipse cx="1750" cy="870" rx="260" ry="32"/>
+  </g>
+  <g stroke="#9aa6ae" stroke-width="6" fill="none" opacity="0.8">
+    <path d="M 300 980 q 90 -16 180 0"/><path d="M 800 1040 q 110 -20 220 0"/>
+    <path d="M 1400 1000 q 90 -16 180 0"/>
+  </g>
+
+  <!-- 台阶 -->
+  <g fill="#b0a48c">
+    <rect y="1200" width="2048" height="80"/>
+    <rect y="1300" width="2048" height="90" fill="#a2967e"/>
+    <rect y="1410" width="2048" height="126" fill="#948870"/>
+  </g>
+
+  <!-- 林晚坐在台阶上，手机屏幕亮着 -->
+  <g>
+    <ellipse cx="660" cy="1310" rx="120" ry="16" fill="#000" opacity="0.18"/>
+    <!-- 身体：灰绿风衣 -->
+    <path d="M 600 1080 q 60 -40 120 0 l 24 200 l -168 0 z" fill="#5f6e5f"/>
+    <!-- 腿坐姿 -->
+    <rect x="596" y="1270" width="150" height="34" rx="14" fill="#3c4038"/>
+    <!-- 头 -->
+    <circle cx="660" cy="1030" r="52" fill="#caa987"/>
+    <path d="M 612 1018 q 4 -48 48 -50 q 44 2 48 50 q -20 -20 -48 -20 q -28 0 -48 20 z" fill="#2a2018"/>
+    <path d="M 706 1024 q 18 30 10 64 l -12 -8 z" fill="#2a2018"/>
+    <circle cx="644" cy="1034" r="5" fill="#1c1a17"/>
+    <circle cx="678" cy="1034" r="5" fill="#1c1a17"/>
+    <!-- 微微上扬的嘴角 -->
+    <path d="M 650 1058 q 12 8 24 0" fill="none" stroke="#8a6b52" stroke-width="4"/>
+    <!-- 手机的光 -->
+    <rect x="690" y="1150" width="52" height="80" rx="8" fill="#1c1a17"/>
+    <rect x="696" y="1158" width="40" height="64" rx="5" fill="#e8dcc0"/>
+    <!-- 帆布包在身边 -->
+    <rect x="520" y="1200" width="100" height="90" rx="12" fill="#a98e6f"/>
+    <path d="M 540 1200 q 30 -40 60 0" fill="none" stroke="#8a7050" stroke-width="10"/>
+  </g>
+
+  <!-- 一只飞远的乌鸦，几乎看不见 -->
+  <g fill="#5d5244" opacity="0.8">
+    <path d="M 320 300 q 14 -12 28 0 q -14 -4 -28 0 z"/>
+    <path d="M 360 280 q 12 -10 24 0 q -12 -4 -24 0 z"/>
+  </g>
+</svg>

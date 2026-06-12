@@ -140,6 +140,7 @@ export class CrtPuzzle extends PuzzleScene {
   }
 
   private bump(i: number, d: number): void {
+    this.sfx('sfx_dial');
     this.values[i] = (this.values[i] + d + 10) % 10;
     this.digits[i].setText(String(this.values[i]));
   }
@@ -149,6 +150,7 @@ export class CrtPuzzle extends PuzzleScene {
       this.values.join('') === String(this.config.code ?? '') &&
       this.selectedTerm === String(this.config.correctTerm ?? '');
     if (!ok) {
+      this.sfx('sfx_error');
       this.cameras.main.shake(180, 0.006);
       const err = this.add
         .text(0, 430, '> 认证失败。', { fontSize: '28px', color: '#c0392b', fontFamily: 'monospace' })

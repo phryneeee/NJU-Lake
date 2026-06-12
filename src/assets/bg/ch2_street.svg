@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="80%">
+      <stop offset="42%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 夜空 -->
+  <rect width="2048" height="1536" fill="#10151c"/>
+  <g fill="#cdd8e6" opacity="0.8">
+    <circle cx="180" cy="160" r="4"/><circle cx="420" cy="90" r="3"/><circle cx="700" cy="200" r="3"/>
+    <circle cx="950" cy="120" r="4"/><circle cx="1240" cy="80" r="3"/><circle cx="1330" cy="240" r="4"/>
+    <circle cx="560" cy="300" r="3"/><circle cx="850" cy="330" r="3"/><circle cx="100" cy="380" r="3"/>
+  </g>
+  <circle cx="620" cy="240" r="86" fill="#e8e2cc"/>
+  <circle cx="594" cy="216" r="14" fill="#cfc9b2"/>
+  <circle cx="652" cy="262" r="10" fill="#cfc9b2"/>
+
+  <!-- 远处树影 -->
+  <g fill="#0c1210">
+    <ellipse cx="160" cy="700" rx="190" ry="160"/>
+    <ellipse cx="960" cy="720" rx="240" ry="150"/>
+    <ellipse cx="1300" cy="680" rx="170" ry="140"/>
+    <rect x="140" y="760" width="28" height="160"/>
+    <rect x="950" y="790" width="28" height="130"/>
+  </g>
+
+  <!-- 地面与小路 -->
+  <rect y="860" width="2048" height="676" fill="#23201a"/>
+  <polygon points="900,860 1300,860 1700,1536 560,1536" fill="#332e25"/>
+  <g fill="#23201a">
+    <ellipse cx="1080" cy="1060" rx="36" ry="12"/><ellipse cx="1180" cy="1240" rx="44" ry="14"/>
+    <ellipse cx="1020" cy="1400" rx="40" ry="13"/>
+  </g>
+
+  <!-- 湖（热区 320,880,520,360）：倒影里的图书馆亮着一盏灯 -->
+  <g>
+    <path d="M 230 920 q 320 -70 660 0 q 40 200 -80 320 q -290 60 -500 0 q -110 -140 -80 -320 z" fill="#16202a"/>
+    <!-- 月亮倒影 -->
+    <ellipse cx="560" cy="1000" rx="56" ry="18" fill="#e8e2cc" opacity="0.5"/>
+    <ellipse cx="540" cy="1040" rx="30" ry="8" fill="#e8e2cc" opacity="0.3"/>
+    <!-- 图书馆倒影（倒置剪影） -->
+    <g opacity="0.55">
+      <rect x="380" y="1060" width="240 " height="150" fill="#1f2a30"/>
+      <rect x="430" y="1210" width="140" height="40" fill="#1f2a30"/>
+      <g fill="#141c22">
+        <rect x="400" y="1080" width="40" height="50"/><rect x="456" y="1080" width="40" height="50"/>
+        <rect x="512" y="1080" width="40" height="50"/><rect x="568" y="1080" width="36" height="50"/>
+        <rect x="400" y="1146" width="40" height="50"/><rect x="512" y="1146" width="40" height="50"/><rect x="568" y="1146" width="36" height="50"/>
+      </g>
+      <!-- 那盏不该亮的灯 -->
+      <rect x="456" y="1146" width="40" height="50" fill="#e8c84a"/>
+    </g>
+    <!-- 涟漪 -->
+    <g stroke="#2a3a44" stroke-width="5" fill="none" opacity="0.8">
+      <path d="M 300 1120 q 60 -14 120 0"/><path d="M 640 1180 q 70 -16 140 0"/>
+      <path d="M 360 1230 q 50 -12 100 0"/>
+    </g>
+  </g>
+
+  <!-- 路灯 -->
+  <g>
+    <rect x="880" y="600" width="14" height="400" fill="#2a2f2a"/>
+    <path d="M 887 600 q 0 -50 60 -50" fill="none" stroke="#2a2f2a" stroke-width="14"/>
+    <ellipse cx="952" cy="560" rx="30" ry="22" fill="#e8c84a"/>
+    <polygon points="922,575 982,575 1060,880 850,880" fill="#e8c84a" opacity="0.10"/>
+  </g>
+
+  <!-- 路牌（热区 1060,520,220,180） -->
+  <g>
+    <rect x="1146" y="560" width="16" height="450" fill="#3a3a3a"/>
+    <rect x="1056" y="520" width="240" height="110" rx="10" fill="#2c5a3e"/>
+    <rect x="1064" y="528" width="224" height="94" rx="8" fill="none" stroke="#e8dcc0" stroke-width="4"/>
+    <text x="1176" y="578" font-family="serif" font-size="40" fill="#e8dcc0" text-anchor="middle">嫏 嬛 路</text>
+    <text x="1176" y="610" font-family="sans-serif" font-size="20" fill="#e8dcc0" text-anchor="middle" opacity="0.8">LANGHUAN RD.</text>
+  </g>
+
+  <!-- 怀安楼入口（热区 1480,540,340,520） -->
+  <g>
+    <rect x="1400" y="430" width="560 " height="640" fill="#22282a"/>
+    <rect x="1400" y="430" width="560" height="30" fill="#171c1e"/>
+    <g fill="#171c1e">
+      <rect x="1430" y="500" width="90" height="120"/><rect x="1560" y="500" width="90" height="120"/>
+      <rect x="1820" y="500" width="90" height="120"/>
+      <rect x="1430" y="680" width="90" height="120"/><rect x="1820" y="680" width="90" height="120"/>
+    </g>
+    <!-- 门洞：虚掩，漏出暖光 -->
+    <rect x="1580" y="640" width="220 " height="430" fill="#10130f"/>
+    <rect x="1596" y="656" width="90" height="414" fill="#3a2e20"/>
+    <rect x="1686" y="656" width="98" height="414" fill="#46382a"/>
+    <polygon points="1686,656 1700,656 1700,1070 1686,1070" fill="#e8c84a" opacity="0.9"/>
+    <polygon points="1690,1070 1700,656 1780,1070" fill="#e8c84a" opacity="0.12"/>
+    <!-- 楼名石匾 -->
+    <rect x="1560" y="540" width="260" height="70" fill="#3a3a36"/>
+    <text x="1690" y="590" font-family="serif" font-size="40" fill="#d8c8a8" text-anchor="middle">怀 安 楼</text>
+  </g>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

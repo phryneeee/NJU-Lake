@@ -126,6 +126,7 @@ export class TamperedFilePuzzle extends PuzzleScene {
     const lies = new Set(file.lines.map((l, i) => (l.truth ? i : -1)).filter((i) => i >= 0));
     const ok = lies.size === this.marked.size && [...lies].every((i) => this.marked.has(i));
     if (!ok) {
+      this.sfx('sfx_error');
       this.cameras.main.shake(180, 0.006);
       const t = this.add
         .text(-440, 470, '不对。墨迹未干的句子才是新补上去的谎。', {

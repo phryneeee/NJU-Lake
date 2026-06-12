@@ -1,9 +1,11 @@
 /** 房间/热区/动作的数据驱动定义。新增房间 = 一张背景 + 一个 JSON，不写新代码。 */
 
 export interface RoomAction {
-  type: 'say' | 'give' | 'take' | 'setFlag' | 'goRoom' | 'openPuzzle' | 'chapterCard';
+  type: 'say' | 'give' | 'take' | 'setFlag' | 'goRoom' | 'openPuzzle' | 'chapterCard' | 'playSfx';
   /** say: 文案 id（dialogue/chN.json 的 key） */
   textId?: string;
+  /** playSfx: 音效 key（assets/audio/sfx_*.wav） */
+  sfx?: string;
   /** give/take: 物品 id */
   item?: string;
   /** setFlag: flag id */
@@ -33,6 +35,10 @@ export interface HotspotDef {
   rect: [number, number, number, number];
   /** 仅当持有该 flag 时显示 */
   requiresFlag?: string;
+  /** 仅当同时持有这些 flag 时显示（如三件信物都已归还） */
+  requiresFlags?: string[];
+  /** 仅当物品栏持有这些物品时显示（如隐藏结局需集齐6份残缺档案） */
+  requiresItems?: string[];
   /** 持有该 flag 后隐藏（如已解开的锁） */
   hiddenIfFlag?: string;
   /** 直接点击触发 */
@@ -56,6 +62,8 @@ export interface RoomDef {
   color: string;
   /** 后期滤镜：grain=2026/梦境胶片颗粒，vhs=2001时间线 */
   filter?: 'grain' | 'vhs';
+  /** 环境底噪 key（对应 src/assets/audio/<key>.*），缺资产时静默 */
+  ambience?: string;
   exits?: { left?: string; right?: string };
   hotspots: HotspotDef[];
 }

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="78%">
+      <stop offset="45%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 校史博物馆三层，清晨 -->
+  <rect width="2048" height="1536" fill="#46413a"/>
+  <rect y="0" width="2048" height="100" fill="#2a2620"/>
+  <rect y="1100" width="2048" height="436" fill="#34302a"/>
+  <g fill="#2a2722">
+    <rect y="1190" width="2048" height="8"/><rect y="1310" width="2048" height="8"/><rect y="1430" width="2048" height="8"/>
+  </g>
+
+  <!-- 天窗晨光 -->
+  <rect x="700" y="0" width="640" height="60" fill="#d8c8a8" opacity="0.6"/>
+  <polygon points="700,60 1340,60 1500,700 540,700" fill="#e8dcc0" opacity="0.07"/>
+
+  <!-- 展柜：校史长卷（热区 420,600,480,360） -->
+  <g>
+    <rect x="396" y="560" width="528" height="440" fill="#2c2318"/>
+    <rect x="416" y="580" width="488" height="340" fill="#52432f"/>
+    <!-- 玻璃 -->
+    <rect x="432" y="596" width="456" height="280" fill="#5a6a72" opacity="0.35"/>
+    <!-- 长卷 -->
+    <rect x="456" y="700" width="408" height="120" fill="#e8dcc0"/>
+    <circle cx="466" cy="760" r="34" fill="#8a7032"/>
+    <circle cx="854" cy="760" r="34" fill="#8a7032"/>
+    <g stroke="#a59777" stroke-width="5">
+      <line x1="520" y1="730" x2="800" y2="730"/><line x1="520" y1="760" x2="780" y2="760"/>
+      <line x1="520" y1="790" x2="800" y2="790"/>
+    </g>
+    <!-- 玻璃上的反光：一道不存在的楼梯 -->
+    <g fill="#d8c8a8" opacity="0.28">
+      <rect x="700" y="840" width="120" height="16"/><rect x="724" y="800" width="120" height="16"/>
+      <rect x="748" y="760" width="120" height="16"/><rect x="772" y="720" width="120" height="16"/>
+      <rect x="796" y="680" width="92" height="16"/>
+    </g>
+    <rect x="416" y="920" width="488" height="80" fill="#3a2e20"/>
+    <text x="660" y="972" font-family="serif" font-size="28" fill="#d8c8a8" text-anchor="middle">校史长卷 · 1902—2026</text>
+  </g>
+
+  <!-- 导览牌（热区 1100,480,240,200） -->
+  <g>
+    <rect x="1096" y="470" width="248" height="220" fill="#2c2318"/>
+    <rect x="1112" y="486" width="216" height="188" fill="#d8c8a8"/>
+    <text x="1220" y="528" font-family="serif" font-size="26" fill="#3a3326" text-anchor="middle">参观导览</text>
+    <g stroke="#a59777" stroke-width="5">
+      <line x1="1136" y1="560" x2="1304" y2="560"/><line x1="1136" y1="592" x2="1290" y2="592"/>
+      <line x1="1136" y1="624" x2="1304" y2="624"/>
+    </g>
+    <text x="1220" y="662" font-family="serif" font-size="22" fill="#8C3B2E" text-anchor="middle">本馆共三层</text>
+  </g>
+
+  <!-- 玻璃幕墙：倒影里的第四层楼梯（热区 1480,520,340,520） -->
+  <g>
+    <rect x="1440" y="420" width="420" height="700" fill="#3a4248"/>
+    <rect x="1456" y="436" width="388" height="668" fill="#49545c"/>
+    <g fill="#2a3238">
+      <rect x="1644" y="436" width="12" height="668"/>
+      <rect x="1456" y="700" width="388" height="12"/>
+    </g>
+    <!-- 倒影楼梯：向上消失 -->
+    <g fill="#d8c8a8" opacity="0.5">
+      <rect x="1500" y="1000" width="180" height="22"/>
+      <rect x="1530" y="930" width="180" height="22"/>
+      <rect x="1560" y="860" width="180" height="22"/>
+      <rect x="1590" y="790" width="180" height="22"/>
+      <rect x="1620" y="720" width="180" height="22"/>
+      <rect x="1650" y="650" width="170" height="22"/>
+      <rect x="1680" y="580" width="140" height="22"/>
+      <rect x="1710" y="510" width="110" height="22"/>
+    </g>
+    <!-- 倒影里的扶手 -->
+    <line x1="1500" y1="990" x2="1790" y2="470" stroke="#d8c8a8" stroke-width="8" opacity="0.4"/>
+    <!-- 微弱的人影站在楼梯口 -->
+    <g fill="#1c1a17" opacity="0.25">
+      <circle cx="1748" cy="468" r="20"/>
+      <path d="M 1724 488 q 24 -16 48 0 l 8 70 l -64 0 z"/>
+    </g>
+  </g>
+
+  <ellipse cx="660" cy="1110" rx="280" ry="24" fill="#000" opacity="0.25"/>
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

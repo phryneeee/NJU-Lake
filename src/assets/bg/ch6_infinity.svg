@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="44%" r="80%">
+      <stop offset="30%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.7"/>
+    </radialGradient>
+  </defs>
+
+  <!-- B∞：电梯下了很久 -->
+  <rect width="2048" height="1536" fill="#100f14"/>
+  <rect y="1100" width="2048" height="436" fill="#0c0b10"/>
+
+  <!-- 顶上一线极远的光 -->
+  <rect x="940" y="0" width="170 " height="14" fill="#7FD4C1" opacity="0.4"/>
+
+  <!-- 六兽铜门（热区 720,440,620,640） -->
+  <g>
+    <!-- 门框 -->
+    <rect x="660" y="360" width="740 " height="780" fill="#241d14"/>
+    <rect x="690" y="390" width="680" height="750" fill="#5d4a28"/>
+    <rect x="1020" y="390" width="20" height="750" fill="#3a2e18"/>
+    <!-- 门钉 -->
+    <g fill="#8a7032">
+      <circle cx="730" cy="430" r="10"/><circle cx="850" cy="430" r="10"/><circle cx="970" cy="430" r="10"/>
+      <circle cx="1090" cy="430" r="10"/><circle cx="1210" cy="430" r="10"/><circle cx="1330" cy="430" r="10"/>
+      <circle cx="730" cy="1100" r="10"/><circle cx="850" cy="1100" r="10"/><circle cx="970" cy="1100" r="10"/>
+      <circle cx="1090" cy="1100" r="10"/><circle cx="1210" cy="1100" r="10"/><circle cx="1330" cy="1100" r="10"/>
+    </g>
+    <!-- 六个兽首浮雕（左列：乌鸦/白兔/狐狸，右列：猫头鹰/鹿/鲤鱼） -->
+    <!-- 乌鸦 -->
+    <g transform="translate(780 500)">
+      <circle cx="0" cy="0" r="62" fill="#4a3a20"/>
+      <circle cx="-6" cy="-4" r="34" fill="#8a7032"/>
+      <polygon points="22,-6 66,4 22,12" fill="#8a7032"/>
+      <circle cx="4" cy="-10" r="6" fill="#3a2e18"/>
+      <circle cx="0" cy="64" r="12" fill="#3a2e18"/>
+    </g>
+    <!-- 白兔 -->
+    <g transform="translate(780 740)">
+      <circle cx="0" cy="0" r="62" fill="#4a3a20"/>
+      <circle cx="0" cy="8" r="30" fill="#8a7032"/>
+      <ellipse cx="-14" cy="-34" rx="9" ry="30" fill="#8a7032"/>
+      <ellipse cx="16" cy="-32" rx="9" ry="26" fill="#8a7032" transform="rotate(20 16 -32)"/>
+      <circle cx="0" cy="64" r="12" fill="#3a2e18"/>
+    </g>
+    <!-- 狐狸 -->
+    <g transform="translate(780 980)">
+      <circle cx="0" cy="0" r="62" fill="#4a3a20"/>
+      <polygon points="-30,-22 0,-44 30,-22 22,18 0,34 -22,18" fill="#8a7032"/>
+      <polygon points="-26,-30 -14,-48 -6,-28" fill="#8a7032"/>
+      <polygon points="26,-30 14,-48 6,-28" fill="#8a7032"/>
+      <circle cx="0" cy="64" r="12" fill="#3a2e18"/>
+    </g>
+    <!-- 猫头鹰 -->
+    <g transform="translate(1280 500)">
+      <circle cx="0" cy="0" r="62" fill="#4a3a20"/>
+      <circle cx="0" cy="0" r="34" fill="#8a7032"/>
+      <circle cx="-12" cy="-6" r="11" fill="#3a2e18"/>
+      <circle cx="12" cy="-6" r="11" fill="#3a2e18"/>
+      <polygon points="-5,8 5,8 0,18" fill="#3a2e18"/>
+      <circle cx="0" cy="64" r="12" fill="#3a2e18"/>
+    </g>
+    <!-- 鹿 -->
+    <g transform="translate(1280 740)">
+      <circle cx="0" cy="0" r="62" fill="#4a3a20"/>
+      <ellipse cx="0" cy="8" rx="22" ry="30" fill="#8a7032"/>
+      <g stroke="#8a7032" stroke-width="7" fill="none">
+        <path d="M -12 -16 q -14 -26 -34 -34"/><path d="M -26 -34 q -12 -2 -20 -14"/>
+        <path d="M 12 -16 q 14 -26 34 -34"/><path d="M 26 -34 q 12 -2 20 -14"/>
+      </g>
+      <circle cx="0" cy="64" r="12" fill="#3a2e18"/>
+    </g>
+    <!-- 鲤鱼 -->
+    <g transform="translate(1280 980)">
+      <circle cx="0" cy="0" r="62" fill="#4a3a20"/>
+      <ellipse cx="-4" cy="0" rx="34" ry="22" fill="#8a7032"/>
+      <polygon points="28,-10 52,0 28,10" fill="#8a7032"/>
+      <circle cx="-16" cy="-4" r="6" fill="#3a2e18"/>
+      <circle cx="0" cy="64" r="12" fill="#3a2e18"/>
+    </g>
+    <!-- 中央门环 -->
+    <circle cx="1030" cy="760" r="56" fill="#8a7032"/>
+    <circle cx="1030" cy="790" r="38" fill="none" stroke="#b08d3f" stroke-width="14"/>
+  </g>
+
+  <!-- 门楣 -->
+  <rect x="850" y="300" width="360 " height="70" fill="#1c1812"/>
+  <text x="1030" y="350" font-family="serif" font-size="40" fill="#7FD4C1" text-anchor="middle" opacity="0.9">B ∞</text>
+
+  <ellipse cx="1030" cy="1160" rx="420" ry="30" fill="#000" opacity="0.4"/>
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

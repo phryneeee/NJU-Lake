@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1536">
+  <defs>
+    <radialGradient id="vig" cx="50%" cy="45%" r="82%">
+      <stop offset="38%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.62"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 深绿的库房虚空 -->
+  <rect width="2048" height="1536" fill="#15211a"/>
+  <rect y="1080" width="2048" height="456" fill="#101a13"/>
+
+  <!-- 一排吊灯没入黑暗 -->
+  <g>
+    <line x1="500" y1="0" x2="500" y2="200" stroke="#0a0d0a" stroke-width="6"/>
+    <ellipse cx="500" cy="212" rx="40" ry="12" fill="#e8dcc0" opacity="0.8"/>
+    <line x1="1024" y1="0" x2="1024" y2="170" stroke="#0a0d0a" stroke-width="6"/>
+    <ellipse cx="1024" cy="182" rx="44" ry="13" fill="#e8dcc0" opacity="0.9"/>
+    <line x1="1540" y1="0" x2="1540" y2="220" stroke="#0a0d0a" stroke-width="6"/>
+    <ellipse cx="1540" cy="232" rx="36" ry="11" fill="#e8dcc0" opacity="0.6"/>
+  </g>
+  <polygon points="980,182 1068,182 1240,1100 808,1100" fill="#e8dcc0" opacity="0.06"/>
+
+  <!-- 左侧：没入黑暗的档案柜阵列（热区 260,480,440,560） -->
+  <g>
+    <g opacity="0.95">
+      <rect x="240" y="460" width="220 " height="620" fill="#26352c"/>
+      <g fill="#3E5C4B">
+        <rect x="256" y="480" width="84" height="100"/><rect x="352" y="480" width="84" height="100"/>
+        <rect x="256" y="596" width="84" height="100"/><rect x="352" y="596" width="84" height="100"/>
+        <rect x="256" y="712" width="84" height="100"/><rect x="352" y="712" width="84" height="100"/>
+        <rect x="256" y="828" width="84" height="100"/><rect x="352" y="828" width="84" height="100"/>
+        <rect x="256" y="944" width="84" height="100"/><rect x="352" y="944" width="84" height="100"/>
+      </g>
+      <g fill="#e8dcc0" opacity="0.6">
+        <rect x="276" y="500" width="44" height="20"/><rect x="372" y="500" width="44" height="20"/>
+        <rect x="276" y="616" width="44" height="20"/><rect x="372" y="616" width="44" height="20"/>
+        <rect x="276" y="732" width="44" height="20"/><rect x="372" y="732" width="44" height="20"/>
+        <rect x="276" y="848" width="44" height="20"/><rect x="372" y="848" width="44" height="20"/>
+        <rect x="276" y="964" width="44" height="20"/><rect x="372" y="964" width="44" height="20"/>
+      </g>
+    </g>
+    <!-- 第二、三排柜没入黑暗（实色渐暗，不透明叠影） -->
+    <g>
+      <rect x="500" y="520" width="170" height="500" fill="#1b2620"/>
+      <g fill="#22302a">
+        <rect x="514" y="538" width="64" height="80"/><rect x="588" y="538" width="64" height="80"/>
+        <rect x="514" y="632" width="64" height="80"/><rect x="588" y="632" width="64" height="80"/>
+        <rect x="514" y="726" width="64" height="80"/><rect x="588" y="726" width="64" height="80"/>
+        <rect x="514" y="820" width="64" height="80"/><rect x="588" y="820" width="64" height="80"/>
+        <rect x="514" y="914" width="64" height="80"/><rect x="588" y="914" width="64" height="80"/>
+      </g>
+      <rect x="700" y="560" width="120" height="420" fill="#131c16"/>
+    </g>
+  </g>
+
+  <!-- 登记台与乌鸦先生（热区 840,520,320,520） -->
+  <g>
+    <ellipse cx="1010" cy="1120" rx="260" ry="24" fill="#000" opacity="0.35"/>
+    <!-- 台 -->
+    <rect x="800" y="880" width="440" height="36" fill="#52432f"/>
+    <rect x="820" y="916" width="400" height="200" fill="#3a2e20"/>
+    <!-- 台上：墨水瓶与登记簿 -->
+    <rect x="850" y="846" width="150 " height="34" fill="#e8dcc0" transform="rotate(-2 925 863)"/>
+    <rect x="1130" y="838" width="44" height="44" fill="#10130f"/>
+    <!-- 绿罩台灯 -->
+    <rect x="1190" y="800" width="10" height="80" fill="#8a7032"/>
+    <path d="M 1140 800 q 55 -42 110 0 z" fill="#3E5C4B"/>
+    <ellipse cx="1195" cy="802" rx="54" ry="9" fill="#7FD4C1" opacity="0.5"/>
+    <!-- 乌鸦先生：黑色长外套，侧脸长喙，正在写字 -->
+    <path d="M 920 700 q 90 -56 180 0 l 30 184 l -240 0 z" fill="#1c1a17"/>
+    <rect x="986" y="684" width="50" height="36" fill="#e8dcc0"/>
+    <!-- 执笔的翅膀 -->
+    <path d="M 1090 760 q 60 30 60 80" fill="none" stroke="#1c1a17" stroke-width="28"/>
+    <path d="M 1146 832 l 36 -60" stroke="#d8c8a8" stroke-width="8"/>
+    <path d="M 1178 766 q 14 -22 4 -38 q -10 14 -22 18 z" fill="#1c1a17"/>
+    <!-- 头：侧向，长喙 -->
+    <circle cx="1010" cy="600" r="78" fill="#1c1a17"/>
+    <polygon points="1078,594 1210,616 1080,640" fill="#2b2b33"/>
+    <circle cx="1042" cy="588" r="12" fill="#e8dcc0"/>
+    <circle cx="1044" cy="588" r="5" fill="#10130f"/>
+    <!-- 袖套 -->
+    <rect x="1108" y="788" width="48" height="30" rx="10" fill="#3E5C4B"/>
+  </g>
+
+  <!-- 右侧：虚掩的柜门，暖光（热区 1480,560,320,480） -->
+  <g>
+    <rect x="1460" y="520" width="360" height="580" fill="#1b2620"/>
+    <!-- 左门关着 -->
+    <rect x="1478" y="538" width="156" height="544" fill="#3E5C4B"/>
+    <rect x="1496" y="560" width="120" height="200" fill="#324b3d"/>
+    <rect x="1496" y="790" width="120" height="270" fill="#324b3d"/>
+    <!-- 门缝暖光 -->
+    <rect x="1638" y="538" width="22" height="544" fill="#e8c84a"/>
+    <!-- 右门微开（向内） -->
+    <polygon points="1660,538 1800,560 1800,1082 1660,1082" fill="#2e4538"/>
+    <polygon points="1676,580 1786,598 1786,760 1676,746" fill="#27392f"/>
+    <!-- 漏到地上的光 -->
+    <polygon points="1638,1082 1660,1082 1760,1260 1560,1260" fill="#e8c84a" opacity="0.12"/>
+    <!-- 柜上标签 -->
+    <rect x="1500" y="580" width="110" height="44" fill="#e8dcc0" opacity="0.9"/>
+    <text x="1556" y="612" font-family="serif" font-size="24" fill="#3a3326" text-anchor="middle">林晚</text>
+    <circle cx="1620" cy="820" r="12" fill="#b08d3f"/>
+  </g>
+
+  <rect width="2048" height="1536" fill="url(#vig)"/>
+</svg>

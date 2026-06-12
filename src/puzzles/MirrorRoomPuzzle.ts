@@ -135,6 +135,7 @@ export class MirrorRoomPuzzle extends PuzzleScene {
           this.stepIndex++;
           this.showStep();
         } else {
+          this.sfx('sfx_error');
           this.cameras.main.shake(220, 0.008);
           this.flashText('镜中的手和你的手反着动——咔，全部弹回了原位。');
           this.time.delayedCall(900, () => this.buildGrids());
